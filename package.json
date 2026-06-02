@@ -1,0 +1,42 @@
+{
+  "name": "flashback",
+  "version": "1.0.0",
+  "description": "> An agentic design tool with a time machine for taste.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/index.ts",
+    "start": "tsx src/index.ts",
+    "check": "tsc --noEmit -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesmontemagno/flashback.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/jamesmontemagno/flashback/issues"
+  },
+  "homepage": "https://github.com/jamesmontemagno/flashback#readme",
+  "dependencies": {
+    "commander": "^15.0.0",
+    "gray-matter": "^4.0.3",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.8"
+  },
+  "bin": {
+    "flashback": "dist/index.js"
+  }
+}

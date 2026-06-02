@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2000 Example Index | Flashback</title>
+  <meta name="description" content="A corpus-linked 2000 example index for Flashback: Portal utility glow, Translucent device optimism, Nokia text-social, Boutique minimal service, Millennium chrome current.">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #07111b;
+      --bg2: #112635;
+      --ink: #eef8ff;
+      --muted: #b8d0da;
+      --card: rgba(255, 255, 255, 0.08);
+      --line: rgba(255, 255, 255, 0.16);
+      --a: #b8ff65;
+      --b: #69d6ff;
+      --c: #f7fbff;
+      --d: #7fddff;
+      --e: #8ea4ff;
+      --shadow: 10px 10px 0 rgba(0, 0, 0, 0.4);
+      --max: 1120px;
+      --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --serif: Georgia, "Times New Roman", serif;
+      --mono: "Courier New", Courier, monospace;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; color: var(--ink); font-family: var(--sans); line-height: 1.5;
+      background: radial-gradient(circle at 12% 8%, rgba(105, 214, 255, 0.28), transparent 18rem), radial-gradient(circle at 82% 14%, rgba(184, 255, 101, 0.18), transparent 20rem), linear-gradient(135deg, var(--bg), var(--bg2));
+    }
+    a { color: inherit; }
+    .page { width: min(100% - 32px, var(--max)); margin: 0 auto; padding: 24px 0 48px; }
+    .panel, .rule { border: 1px solid var(--line); background: rgba(255, 255, 255, 0.05); box-shadow: var(--shadow); }
+    .hero { padding: 28px; min-height: 72vh; display: grid; align-content: space-between; position: relative; overflow: hidden; }
+    .hero::before { content: ""; position: absolute; right: 2rem; bottom: 2rem; width: 22rem; height: 4.5rem; background: linear-gradient(90deg, rgba(255,255,255,0.55), rgba(105,214,255,0.3)); border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; transform: rotate(-6deg); }
+    .eyebrow { display: inline-block; padding: 8px 12px; font: 700 0.8rem var(--mono); letter-spacing: 0.15em; text-transform: uppercase; background: var(--c); color: #112635; box-shadow: 6px 6px 0 var(--b); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin: 18px 0; font-size: clamp(4.5rem, 15vw, 11rem); line-height: 0.82; letter-spacing: -0.11em; text-transform: uppercase; text-shadow: 0.03em 0.03em 0 var(--b), -0.03em 0.05em 0 rgba(184,255,101,0.35); }
+    .hero-grid { display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr) minmax(260px, 340px); align-items: end; }
+    .thesis { max-width: 42rem; font: clamp(1.4rem, 3vw, 2.7rem)/1.05 var(--serif); }
+    .note { padding: 16px; background: rgba(247, 251, 255, 0.94); color: #112635; border-radius: 18px; }
+    .note h2 { font: 700 0.78rem var(--mono); letter-spacing: 0.14em; text-transform: uppercase; }
+    .note p { margin: 0; font: 0.92rem/1.45 var(--mono); }
+    .nav { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; margin: 18px 0 0; }
+    .nav a, .map a, .recipe { text-decoration: none; }
+    .nav a { display: inline-block; padding: 8px 12px; border: 1px solid var(--line); font: 0.82rem var(--mono); text-transform: uppercase; background: rgba(255,255,255,0.06); border-radius: 999px; }
+    .section { margin-top: 28px; padding: 24px; }
+    .section-head { display: flex; flex-wrap: wrap; gap: 16px; align-items: end; justify-content: space-between; margin-bottom: 18px; }
+    .section-head h2 { margin: 0; font-size: clamp(1.8rem, 5vw, 4rem); letter-spacing: -0.08em; text-transform: uppercase; }
+    .section-head p { max-width: 28rem; margin: 0; color: var(--muted); font: 0.88rem var(--mono); }
+    .grid, .recipes, .map, .anti { display: grid; gap: 14px; }
+    .grid { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+    .recipes { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .map, .anti { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); list-style: none; padding: 0; margin: 0; }
+    .signal, .recipe, .map a, .prompt, .artifact, .anti li { border: 1px solid var(--line); background: var(--card); }
+    .signal, .artifact, .prompt, .anti li { padding: 16px; }
+    .signal b, .recipe small { display: block; margin-bottom: 12px; color: var(--a); font: 700 0.76rem var(--mono); letter-spacing: 0.14em; text-transform: uppercase; }
+    .signal p { margin: 0; color: var(--muted); }
+    .recipe { padding: 18px; color: #112635; background: rgba(247, 251, 255, 0.95); border-radius: 18px; }
+    .recipe:nth-child(2n) { background: rgba(105, 214, 255, 0.9); }
+    .recipe:nth-child(3n) { background: rgba(184, 255, 101, 0.92); }
+    .recipe h3 { margin-bottom: 10px; font-size: 1.55rem; line-height: 0.92; text-transform: uppercase; }
+    .recipe dl { margin: 0 0 14px; display: grid; gap: 6px; font-size: 0.92rem; }
+    .recipe dd { margin: 0; }
+    .recipe .risk { margin: 0; padding-top: 12px; border-top: 1px solid rgba(17, 38, 53, 0.16); font: 0.82rem var(--mono); }
+    .map a { display: grid; min-height: 110px; padding: 14px; border-radius: 16px; }
+    .map strong { font-size: 1rem; text-transform: uppercase; }
+    .map span { align-self: end; color: var(--muted); font-size: 0.88rem; }
+    .prompt { white-space: pre-wrap; font: 0.9rem/1.45 var(--mono); color: var(--a); background: #10212f; border-radius: 16px; }
+    .artifact h3 { margin-bottom: 10px; font-size: 0.96rem; letter-spacing: 0.12em; text-transform: uppercase; }
+    .artifact ul { margin: 0; padding-left: 1.1rem; }
+    .rule { display: grid; grid-template-columns: minmax(150px, 0.3fr) minmax(0, 1fr); gap: 16px; margin-top: 28px; overflow: hidden; border-radius: 24px; }
+    .rule b { display: grid; place-items: center; background: rgba(247, 251, 255, 0.95); color: #112635; font-size: clamp(3rem, 8vw, 6rem); letter-spacing: -0.12em; }
+    .rule p { margin: 0; padding: 24px; font: clamp(1.3rem, 3vw, 2.5rem)/1.06 var(--serif); }
+    .footer { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; padding: 18px 0 0; margin-top: 26px; border-top: 1px solid var(--line); color: var(--muted); font: 0.82rem var(--mono); }
+    @media (max-width: 760px) { .hero-grid, .rule { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="panel hero" aria-labelledby="title">
+      <div><p class="eyebrow">Flashback example index / corpus 2000</p><h1 id="title">2000</h1></div>
+      <div>
+        <div class="hero-grid">
+          <p class="thesis">2000: the screen becomes a household utility with style.</p>
+          <aside class="note"><h2>Habit-forming future</h2><p>Search, texting, translucent electronics, portal layouts, and boutique minimalism make digital life feel ordinary and desirable.</p></aside>
+        </div>
+        <ul class="nav" aria-label="Example sections"><li><a href="#climate">Climate</a></li><li><a href="#recipes">Recipes</a></li><li><a href="#map">Corpus map</a></li><li><a href="#prompts">Prompt seeds</a></li><li><a href="../../corpus/2000.md">Full corpus</a></li></ul>
+      </div>
+    </section>
+
+    <section class="panel section" id="climate"><div class="section-head"><h2>Climate</h2><p>2000 balances consumer warmth with market pressure.</p></div><div class="grid"><article class="signal"><b>01</b><p>Search starts replacing browsing as the default web behavior.</p></article><article class="signal"><b>02</b><p>Tiny phone screens become fully social through texting.</p></article><article class="signal"><b>03</b><p>Translucent plastics and brushed aluminum domesticate digital hardware.</p></article><article class="signal"><b>04</b><p>Portal logic organizes screens into modules, tabs, and utility blocks.</p></article><article class="signal"><b>05</b><p>Boutique retail minimalism turns service calm into a premium signal.</p></article><article class="signal"><b>06</b><p>Identity compresses into handles, buddy lists, profile fragments, and device choices.</p></article></div></section>
+
+    <section class="panel section" id="recipes"><div class="section-head"><h2>Example recipes</h2><p>Five fast entry points into the 2000 corpus recipes.</p></div><div class="recipes">
+      <a class="recipe" href="../../corpus/2000.md#recipe-1-portal-utility-glow"><small>Recipe 01</small><h3>Portal utility glow</h3><p><strong>Use for:</strong> dashboards, search products, account systems.</p><dl><div><dt>Palette</dt><dd>ice blue, white, navy, alert orange.</dd></div><div><dt>Layout</dt><dd>portal blocks, search bars, utility rails.</dd></div><div><dt>Motion</dt><dd>load, expand, search, refresh.</dd></div></dl><p class="risk"><strong>Risk:</strong> retro web kitsch.<br><strong>Accuracy:</strong> keep the task focus strong.</p></a>
+      <a class="recipe" href="../../corpus/2000.md#recipe-2-translucent-device-optimism"><small>Recipe 02</small><h3>Translucent device optimism</h3><p><strong>Use for:</strong> hardware launches, accessories, onboarding surfaces.</p><dl><div><dt>Palette</dt><dd>aqua, milk white, lime, silver.</dd></div><div><dt>Layout</dt><dd>object-first compositions, floating callouts.</dd></div><div><dt>Motion</dt><dd>glow, dock, snap, wake, charge.</dd></div></dl><p class="risk"><strong>Risk:</strong> generic Y2K slime aesthetics.<br><strong>Accuracy:</strong> keep industrial precision visible.</p></a>
+      <a class="recipe" href="../../corpus/2000.md#recipe-3-nokia-text-social"><small>Recipe 03</small><h3>Nokia text-social</h3><p><strong>Use for:</strong> messaging tools, notification systems, compact social features.</p><dl><div><dt>Palette</dt><dd>graphite, screen green, pale silver, amber.</dd></div><div><dt>Layout</dt><dd>compact modules, message stacks, keyed navigation.</dd></div><div><dt>Motion</dt><dd>type, send, vibrate, scroll, store.</dd></div></dl><p class="risk"><strong>Risk:</strong> generic phone nostalgia.<br><strong>Accuracy:</strong> preserve one-thumb constraint.</p></a>
+      <a class="recipe" href="../../corpus/2000.md#recipe-4-boutique-minimal-service"><small>Recipe 04</small><h3>Boutique minimal service</h3><p><strong>Use for:</strong> hospitality brands, premium commerce, architecture-led products.</p><dl><div><dt>Palette</dt><dd>warm white, stone, glass grey, pale wood.</dd></div><div><dt>Layout</dt><dd>wide margins, clear pathways, image breathing room.</dd></div><div><dt>Motion</dt><dd>fade, slide, open, welcome.</dd></div></dl><p class="risk"><strong>Risk:</strong> generic luxury minimalism.<br><strong>Accuracy:</strong> keep turn-of-millennium service cues.</p></a>
+      <a class="recipe" href="../../corpus/2000.md#recipe-5-millennium-chrome-current"><small>Recipe 05</small><h3>Millennium chrome current</h3><p><strong>Use for:</strong> entertainment, sports, promo microsites, motion campaigns.</p><dl><div><dt>Palette</dt><dd>chrome, electric blue, black, white flare.</dd></div><div><dt>Layout</dt><dd>diagonal sweeps, metallic frames, reflective panels.</dd></div><div><dt>Motion</dt><dd>sweep, rotate, shimmer, accelerate.</dd></div></dl><p class="risk"><strong>Risk:</strong> parody chrome overload.<br><strong>Accuracy:</strong> keep the composition tight.</p></a>
+    </div></section>
+
+    <section class="panel section" id="map"><div class="section-head"><h2>Corpus map</h2><p>Links into the most useful 2000 anchors.</p></div><ul class="map"><li><a href="../../corpus/2000.md#year-thesis"><strong>Year thesis</strong><span>digital life becomes infrastructural.</span></a></li><li><a href="../../corpus/2000.md#design-climate"><strong>Design climate</strong><span>Consumer warmth versus market pressure.</span></a></li><li><a href="../../corpus/2000.md#graphic-design"><strong>Graphic design</strong><span>Translucent friendliness versus chrome velocity.</span></a></li><li><a href="../../corpus/2000.md#product-and-interaction-design"><strong>Product design</strong><span>Search, send, sync, carry, charge.</span></a></li><li><a href="../../corpus/2000.md#color-material-and-surface"><strong>Surface</strong><span>Polycarbonate, frosted glass, browser gradients.</span></a></li><li><a href="../../corpus/2000.md#anti-cliches"><strong>Anti-cliches</strong><span>Avoid random metallic noise and pure 1999 cyber fantasy.</span></a></li></ul></section>
+
+    <section class="panel section" id="prompts"><div class="section-head"><h2>Prompt seeds</h2><p>Ready-to-run prompts with a 2000 frame.</p></div><div class="grid"><pre class="prompt">Design this through a 2000 lens: the web has become habitual, portals and search are everyday utilities, texting has made tiny screens social, and translucent consumer electronics have made the digital future feel domestic.</pre><pre class="prompt">Give me three 2000-informed directions:
+1. Portal utility glow
+2. Translucent device optimism
+3. Boutique minimal service
+For each, define the palette, interaction verbs, typography, and what would make it feel too 1999 or too 2005.</pre><pre class="prompt">Critique this interface as if it launched in 2000. Is it more portal dashboard, text-message social surface, polished retail service, or millennium promo chrome?</pre></div></section>
+
+    <section class="panel section"><div class="section-head"><h2>Reference artifacts</h2><p>Everyday internet life and consumer-tech tactility.</p></div><div class="grid"><article class="artifact"><h3>Objects</h3><ul><li>Translucent consumer hardware</li><li>Nokia handsets and SMS screens</li><li>Portable CD and MP3 players</li><li>Wi-Fi and modem hardware</li><li>Retail fixtures in early-2000s boutiques</li></ul></article><article class="artifact"><h3>Print and graphics</h3><ul><li>Portal homepages and search layouts</li><li>Chrome-heavy magazine and album packaging</li><li>Telecom ads and handset manuals</li><li>Quiet minimal boutique branding</li></ul></article><article class="artifact"><h3>Spaces</h3><ul><li>Loft offices and startup rooms</li><li>Boutique hotel lobbies</li><li>Telecom retail displays</li><li>Bedroom desks with translucent peripherals</li><li>Airport lounges and service counters</li></ul></article></div></section>
+
+    <section class="panel section"><div class="section-head"><h2>Anti-cliches</h2><p>Use these to keep 2000 anchored.</p></div><ul class="anti"><li>Random metallic gradients everywhere</li><li>Matrix code rain as a universal reference</li><li>Pure 1999 cyber-fantasy</li><li>Flat 2010 startup interfaces</li><li>Minimalism stripped of service logic</li></ul></section>
+
+    <section class="rule"><b>00</b><p>2000 rule: make the network feel searchable, portable, and friendly enough to live with.</p></section>
+    <footer class="footer"><span>Flashback / examples / 2000</span><a href="../../corpus/2000.md">Read the full 2000 corpus</a></footer>
+  </main>
+</body>
+</html>

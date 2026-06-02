@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.tmp-artifact.json
+*.log
+coverage/
+.nyc_output/
+.env
+.env.*
+!.env.example
