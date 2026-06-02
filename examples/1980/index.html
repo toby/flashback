@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1980 Example Index | Flashback</title>
+  <meta name="description" content="A styled 1980 example index for Flashback: post-punk archive, New Wave operating manual, portable private world, and pre-Memphis threshold.">
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #11100e;
+      --paper: #f2ead8;
+      --paper-dim: #d8cfbb;
+      --bone: #fff7e5;
+      --signal: #ff3b1f;
+      --cyan: #00b8d9;
+      --yellow: #f2cc2f;
+      --blue: #2847ff;
+      --wine: #741b24;
+      --smoke: rgba(17, 16, 14, 0.72);
+      --line: rgba(242, 234, 216, 0.22);
+      --shadow: 12px 12px 0 rgba(0, 0, 0, 0.55);
+      --max: 1180px;
+      --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --mono: "Courier New", Courier, monospace;
+      --serif: Georgia, "Times New Roman", serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--paper);
+      font-family: var(--sans);
+      background:
+        linear-gradient(90deg, rgba(255, 59, 31, 0.08) 1px, transparent 1px) 0 0 / 58px 58px,
+        linear-gradient(rgba(0, 184, 217, 0.06) 1px, transparent 1px) 0 0 / 58px 58px,
+        radial-gradient(circle at 18% 10%, rgba(0, 184, 217, 0.22), transparent 28rem),
+        radial-gradient(circle at 82% 22%, rgba(255, 59, 31, 0.2), transparent 26rem),
+        linear-gradient(135deg, #0d0d0f 0%, #17120f 42%, #060607 100%);
+      line-height: 1.5;
+    }
+
+    body::before {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      content: "";
+      opacity: 0.23;
+      background-image:
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 3px),
+        repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0 1px, transparent 1px 5px);
+      mix-blend-mode: screen;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 0.1em;
+      text-underline-offset: 0.18em;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--yellow);
+      outline-offset: 4px;
+    }
+
+    .page {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+      padding: 24px 0 56px;
+    }
+
+    .hero {
+      position: relative;
+      display: grid;
+      min-height: 78vh;
+      margin: 0 0 32px;
+      padding: clamp(22px, 4vw, 48px);
+      overflow: hidden;
+      isolation: isolate;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(115deg, rgba(242, 234, 216, 0.08), rgba(242, 234, 216, 0.02)),
+        linear-gradient(135deg, rgba(0, 0, 0, 0.78), rgba(17, 16, 14, 0.52));
+      box-shadow: var(--shadow);
+    }
+
+    .hero::before,
+    .hero::after {
+      position: absolute;
+      content: "";
+      pointer-events: none;
+    }
+
+    .hero::before {
+      inset: 18px auto auto -36px;
+      width: min(42vw, 430px);
+      aspect-ratio: 1;
+      border: 34px solid var(--signal);
+      transform: rotate(-9deg);
+      opacity: 0.8;
+      z-index: -1;
+    }
+
+    .hero::after {
+      right: clamp(18px, 5vw, 72px);
+      bottom: clamp(18px, 6vw, 88px);
+      width: min(34vw, 340px);
+      aspect-ratio: 1.45;
+      border: 2px solid var(--cyan);
+      background:
+        linear-gradient(90deg, transparent 46%, rgba(0, 184, 217, 0.85) 46% 54%, transparent 54%),
+        repeating-linear-gradient(0deg, rgba(242, 234, 216, 0.18) 0 2px, transparent 2px 12px);
+      transform: rotate(6deg);
+      opacity: 0.65;
+      z-index: -1;
+    }
+
+    .eyebrow {
+      width: max-content;
+      max-width: 100%;
+      margin: 0 0 18px;
+      padding: 7px 12px 6px;
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: clamp(0.72rem, 1.7vw, 0.92rem);
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      background: var(--yellow);
+      box-shadow: 6px 6px 0 var(--signal);
+      transform: rotate(-1deg);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 9ch;
+      margin-bottom: 20px;
+      color: var(--bone);
+      font-size: clamp(5.5rem, 19vw, 15.5rem);
+      font-weight: 900;
+      line-height: 0.74;
+      letter-spacing: -0.12em;
+      text-transform: uppercase;
+      text-shadow:
+        0.035em 0.03em 0 var(--cyan),
+        -0.025em 0.055em 0 var(--signal),
+        0.06em 0.08em 0 rgba(0, 0, 0, 0.72);
+    }
+
+    .hero-copy {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(240px, 360px);
+      gap: clamp(22px, 5vw, 58px);
+      align-items: end;
+      margin-top: auto;
+    }
+
+    .thesis {
+      max-width: 710px;
+      margin-bottom: 0;
+      color: var(--paper);
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 3vw, 2.6rem);
+      line-height: 1.05;
+    }
+
+    .control-card {
+      position: relative;
+      padding: 18px;
+      color: var(--ink);
+      background: var(--paper);
+      box-shadow: 9px 9px 0 rgba(0, 0, 0, 0.64);
+      transform: rotate(1.7deg);
+    }
+
+    .control-card::before {
+      position: absolute;
+      top: -12px;
+      left: 22px;
+      width: 42%;
+      height: 22px;
+      content: "";
+      background: rgba(242, 204, 47, 0.72);
+      transform: rotate(-2deg);
+    }
+
+    .control-card h2 {
+      margin-bottom: 10px;
+      font-size: 0.86rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .control-card p {
+      margin-bottom: 0;
+      font-family: var(--mono);
+      font-size: 0.9rem;
+      line-height: 1.45;
+    }
+
+    .nav-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 32px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-strip a {
+      display: block;
+      padding: 10px 13px;
+      border: 1px solid var(--line);
+      color: var(--paper);
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      text-transform: uppercase;
+      background: rgba(255, 247, 229, 0.07);
+    }
+
+    .nav-strip a:hover {
+      color: var(--ink);
+      background: var(--cyan);
+    }
+
+    .section {
+      margin-top: 32px;
+      padding: clamp(20px, 4vw, 34px);
+      border: 1px solid var(--line);
+      background: rgba(9, 9, 10, 0.74);
+      box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.34);
+    }
+
+    .section-header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 22px;
+    }
+
+    .section h2 {
+      margin-bottom: 0;
+      color: var(--bone);
+      font-size: clamp(1.55rem, 4vw, 3.5rem);
+      line-height: 0.9;
+      letter-spacing: -0.06em;
+      text-transform: uppercase;
+    }
+
+    .stamp {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 7px 11px;
+      border: 1px solid currentColor;
+      color: var(--cyan);
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      transform: rotate(1.2deg);
+    }
+
+    .signal-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .signal {
+      min-height: 190px;
+      padding: 18px;
+      border: 1px solid rgba(242, 234, 216, 0.28);
+      background:
+        linear-gradient(180deg, rgba(255, 247, 229, 0.08), rgba(255, 247, 229, 0.02)),
+        var(--smoke);
+    }
+
+    .signal:nth-child(2n) {
+      transform: translateY(18px);
+    }
+
+    .signal b {
+      display: block;
+      margin-bottom: 22px;
+      color: var(--signal);
+      font-family: var(--mono);
+      font-size: 0.76rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .signal h3 {
+      margin-bottom: 10px;
+      color: var(--bone);
+      font-size: 1.18rem;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .signal p {
+      margin-bottom: 0;
+      color: var(--paper-dim);
+      font-size: 0.95rem;
+    }
+
+    .directions {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .direction {
+      position: relative;
+      display: flex;
+      min-height: 360px;
+      flex-direction: column;
+      padding: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(242, 234, 216, 0.26);
+      color: var(--paper);
+      text-decoration: none;
+      background:
+        linear-gradient(135deg, rgba(255, 247, 229, 0.13), rgba(255, 247, 229, 0.02)),
+        #14120f;
+    }
+
+    .direction::before {
+      position: absolute;
+      inset: auto -18% 18px auto;
+      width: 130px;
+      height: 130px;
+      content: "";
+      border: 18px solid var(--accent);
+      opacity: 0.78;
+      transform: rotate(12deg);
+    }
+
+    .direction:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: 10px 10px 0 var(--accent);
+    }
+
+    .direction small {
+      margin-bottom: 22px;
+      color: var(--accent);
+      font-family: var(--mono);
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .direction h3 {
+      margin-bottom: 14px;
+      font-size: clamp(1.55rem, 3vw, 2.2rem);
+      line-height: 0.9;
+      letter-spacing: -0.05em;
+      text-transform: uppercase;
+    }
+
+    .direction p {
+      color: var(--paper-dim);
+    }
+
+    .direction .avoid {
+      margin-top: auto;
+      padding-top: 18px;
+      color: var(--bone);
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      border-top: 1px solid rgba(242, 234, 216, 0.24);
+    }
+
+    .direction:nth-child(1) {
+      --accent: var(--wine);
+    }
+
+    .direction:nth-child(2) {
+      --accent: var(--cyan);
+    }
+
+    .direction:nth-child(3) {
+      --accent: var(--blue);
+    }
+
+    .direction:nth-child(4) {
+      --accent: var(--yellow);
+      color: var(--bone);
+    }
+
+    .map {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .map a {
+      display: grid;
+      min-height: 118px;
+      padding: 16px;
+      border: 1px solid rgba(242, 234, 216, 0.22);
+      color: var(--paper);
+      text-decoration: none;
+      background: rgba(242, 234, 216, 0.06);
+    }
+
+    .map a:hover {
+      color: var(--ink);
+      background: var(--paper);
+    }
+
+    .map strong {
+      align-self: start;
+      font-size: 1.05rem;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .map span {
+      align-self: end;
+      color: inherit;
+      opacity: 0.78;
+      font-size: 0.88rem;
+    }
+
+    .prompt-deck {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .prompt {
+      margin: 0;
+      padding: 18px;
+      border: 1px solid rgba(242, 234, 216, 0.24);
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 0.92rem;
+      line-height: 1.45;
+      white-space: pre-wrap;
+      background:
+        linear-gradient(90deg, rgba(255, 59, 31, 0.12), transparent 9%),
+        var(--paper);
+      box-shadow: 7px 7px 0 rgba(0, 0, 0, 0.58);
+    }
+
+    .artifact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr 1fr;
+      gap: 16px;
+    }
+
+    .artifact {
+      padding: 20px;
+      color: var(--ink);
+      background: var(--paper);
+    }
+
+    .artifact:nth-child(2) {
+      background: var(--cyan);
+    }
+
+    .artifact:nth-child(3) {
+      background: var(--signal);
+    }
+
+    .artifact h3 {
+      margin-bottom: 12px;
+      font-size: 1rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .artifact ul {
+      margin: 0;
+      padding-left: 1.1rem;
+    }
+
+    .artifact li + li {
+      margin-top: 8px;
+    }
+
+    .rule {
+      display: grid;
+      grid-template-columns: minmax(160px, 0.35fr) minmax(0, 1fr);
+      gap: 18px;
+      align-items: stretch;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .rule b {
+      display: grid;
+      place-items: center;
+      min-height: 190px;
+      padding: 20px;
+      color: var(--ink);
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      line-height: 0.8;
+      letter-spacing: -0.12em;
+      background: var(--yellow);
+    }
+
+    .rule p {
+      align-self: center;
+      max-width: 760px;
+      margin: 0;
+      padding: clamp(20px, 4vw, 38px);
+      color: var(--bone);
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 4vw, 3.25rem);
+      line-height: 1.02;
+    }
+
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: space-between;
+      margin-top: 32px;
+      padding: 20px 0 0;
+      color: var(--paper-dim);
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 980px) {
+      .hero-copy,
+      .signal-grid,
+      .directions,
+      .map,
+      .prompt-deck,
+      .artifact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .signal:nth-child(2n) {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .page {
+        width: min(100% - 20px, var(--max));
+        padding-top: 10px;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-copy,
+      .signal-grid,
+      .directions,
+      .map,
+      .prompt-deck,
+      .artifact-grid,
+      .rule {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: clamp(4.7rem, 28vw, 8rem);
+      }
+
+      .direction {
+        min-height: 280px;
+      }
+
+      .rule b {
+        min-height: 120px;
+      }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .direction,
+      .nav-strip a,
+      .map a {
+        transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, color 160ms ease;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero" aria-labelledby="title">
+      <p class="eyebrow">Flashback example index / corpus 1980</p>
+      <h1 id="title">1980</h1>
+      <div class="hero-copy">
+        <p class="thesis">The hinge year: modernism loses its monopoly, analog tools start dreaming in video, and culture learns to design the self.</p>
+        <aside class="control-card" aria-label="1980 design control panel">
+          <h2>Operating note</h2>
+          <p>Keep the future assembled by hand: Letraset, cassette plastic, CRT glow, severe grids, broken surfaces, and one hot signal color.</p>
+        </aside>
+      </div>
+    </section>
+
+    <nav aria-label="Page sections">
+      <ul class="nav-strip">
+        <li><a href="#signals">Signals</a></li>
+        <li><a href="#directions">Directions</a></li>
+        <li><a href="#corpus-map">Corpus map</a></li>
+        <li><a href="#prompts">Prompt seeds</a></li>
+        <li><a href="#artifacts">Artifacts</a></li>
+        <li><a href="../../corpus/1980.md">Full corpus</a></li>
+      </ul>
+    </nav>
+
+    <section class="section" id="signals" aria-labelledby="signals-title">
+      <div class="section-header">
+        <h2 id="signals-title">Signals</h2>
+        <span class="stamp">Control vs breakage</span>
+      </div>
+      <div class="signal-grid">
+        <article class="signal">
+          <b>01</b>
+          <h3>Postmodern public language</h3>
+          <p>Facades, quotation, double-coding, symbolism, and history move from theory into staged public argument.</p>
+        </article>
+        <article class="signal">
+          <b>02</b>
+          <h3>New Wave and post-punk</h3>
+          <p>Punk refusal gets edited into style systems: angular, severe, synthetic, theatrical, and commercially legible.</p>
+        </article>
+        <article class="signal">
+          <b>03</b>
+          <h3>Portable media identity</h3>
+          <p>The Walkman turns private sound into visible public behavior. Products become worn, carried, displayed, and socially read.</p>
+        </article>
+        <article class="signal">
+          <b>04</b>
+          <h3>Pre-digital digitality</h3>
+          <p>Early computer graphics and video textures appear while production remains physical, noisy, cropped, and handmade.</p>
+        </article>
+        <article class="signal">
+          <b>05</b>
+          <h3>Designed self</h3>
+          <p>Magazines, record sleeves, clubs, fashion, music, hair, makeup, and places become a single identity surface.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="directions" aria-labelledby="directions-title">
+      <div class="section-header">
+        <h2 id="directions-title">Example directions</h2>
+        <span class="stamp">Four usable recipes</span>
+      </div>
+      <div class="directions">
+        <a class="direction" href="../../corpus/1980.md#recipe-1-post-punk-archive">
+          <small>Recipe 1</small>
+          <h3>Post-punk archive</h3>
+          <p>For memory tools, writing apps, research systems, local-first software, archives, and personal knowledge tools.</p>
+          <span class="avoid">Avoid: joyless funeral minimalism.</span>
+        </a>
+        <a class="direction" href="../../corpus/1980.md#recipe-2-new-wave-operating-manual">
+          <small>Recipe 2</small>
+          <h3>New Wave operating manual</h3>
+          <p>For creative tools, music software, experimental interfaces, and developer tools with personality.</p>
+          <span class="avoid">Avoid: "80s party" costume.</span>
+        </a>
+        <a class="direction" href="../../corpus/1980.md#recipe-3-portable-private-world">
+          <small>Recipe 3</small>
+          <h3>Portable private world</h3>
+          <p>For audio products, journaling, wearables, focus tools, and personal AI companions.</p>
+          <span class="avoid">Avoid: nostalgia gadget cosplay.</span>
+        </a>
+        <a class="direction" href="../../corpus/1980.md#recipe-4-pre-memphis-threshold">
+          <small>Recipe 4</small>
+          <h3>Pre-Memphis threshold</h3>
+          <p>For brand refreshes, furniture concepts, playful AI tools, education products, and symbolic components.</p>
+          <span class="avoid">Avoid: lazy 1981-1987 Memphis shorthand.</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="corpus-map" aria-labelledby="map-title">
+      <div class="section-header">
+        <h2 id="map-title">Corpus map</h2>
+        <span class="stamp">Fast entry points</span>
+      </div>
+      <ul class="map">
+        <li><a href="../../corpus/1980.md#year-thesis"><strong>Year thesis</strong><span>Modernism losing its monopoly.</span></a></li>
+        <li><a href="../../corpus/1980.md#design-climate"><strong>Design climate</strong><span>Clean control interrupted by expressive signals.</span></a></li>
+        <li><a href="../../corpus/1980.md#timeline-signals"><strong>Timeline signals</strong><span>Venice Biennale, Walkman, The Face, Blitz, key films.</span></a></li>
+        <li><a href="../../corpus/1980.md#typography"><strong>Typography</strong><span>Broken grids, rotated type, hard contrast, paste-up friction.</span></a></li>
+        <li><a href="../../corpus/1980.md#graphic-design"><strong>Graphic design</strong><span>Style press, sleeves, zines, photocopy-to-computer threshold.</span></a></li>
+        <li><a href="../../corpus/1980.md#product-and-industrial-design"><strong>Product design</strong><span>Portable behavior, tactile controls, headphones as interface.</span></a></li>
+        <li><a href="../../corpus/1980.md#architecture-and-interiors"><strong>Architecture</strong><span>Facades, signs, thresholds, staged rooms, hotel unease.</span></a></li>
+        <li><a href="../../corpus/1980.md#fashion-and-self-design"><strong>Fashion</strong><span>New Romantic theater, Armani softness, post-punk severity.</span></a></li>
+        <li><a href="../../corpus/1980.md#music"><strong>Music</strong><span>Angular bass, dry drums, synth surfaces, private cassette worlds.</span></a></li>
+        <li><a href="../../corpus/1980.md#film-and-moving-image"><strong>Film</strong><span>Designed worlds before MTV becomes the climate.</span></a></li>
+        <li><a href="../../corpus/1980.md#color-material-and-surface"><strong>Surface</strong><span>Reflect, transmit, or reproduce badly.</span></a></li>
+        <li><a href="../../corpus/1980.md#anti-cliches"><strong>Anti-cliches</strong><span>No vaporwave, smooth cyberpunk, neon-grid wallpaper, or Mac nostalgia.</span></a></li>
+      </ul>
+    </section>
+
+    <section class="section" id="prompts" aria-labelledby="prompts-title">
+      <div class="section-header">
+        <h2 id="prompts-title">Prompt seeds</h2>
+        <span class="stamp">Copy into Flashback</span>
+      </div>
+      <div class="prompt-deck">
+        <pre class="prompt">Design this as if it were made in 1980, at the exact moment when Swiss typography starts absorbing post-punk, cassette culture, and primitive computer graphics. Keep it analog, severe, stylish, and slightly unstable.</pre>
+        <pre class="prompt">Give me three 1980-informed directions:
+1. Post-punk archive
+2. New Wave operating manual
+3. Portable private world
+For each, explain the historical lineage, typography, color, motion, and what to avoid.</pre>
+        <pre class="prompt">Critique this interface through a 1980 lens. Where is it too frictionless? Where could it use stronger materiality, identity, rhythm, or cultural tension?</pre>
+      </div>
+    </section>
+
+    <section class="section" id="artifacts" aria-labelledby="artifacts-title">
+      <div class="section-header">
+        <h2 id="artifacts-title">Reference artifacts</h2>
+        <span class="stamp">Anchor the year</span>
+      </div>
+      <div class="artifact-grid">
+        <article class="artifact">
+          <h3>Objects</h3>
+          <ul>
+            <li>Sony TPS-L2 Walkman</li>
+            <li>Cassette tapes and cases</li>
+            <li>CRT monitors and broadcast gear</li>
+            <li>Arcade cabinets and control panels</li>
+          </ul>
+        </article>
+        <article class="artifact">
+          <h3>Print and graphics</h3>
+          <ul>
+            <li><em>The Face</em>, first issue and early identity</li>
+            <li>Joy Division, <em>Closer</em></li>
+            <li>Talking Heads, <em>Remain in Light</em></li>
+            <li>Punk and post-punk flyers</li>
+          </ul>
+        </article>
+        <article class="artifact">
+          <h3>Spaces</h3>
+          <ul>
+            <li><em>La Strada Novissima</em></li>
+            <li>Blitz club</li>
+            <li>The Overlook Hotel</li>
+            <li>Cloud City and <em>American Gigolo</em> interiors</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section rule" aria-label="1980 rule of thumb">
+      <b>1980</b>
+      <p>For 1980, the future should still look assembled by hand.</p>
+    </section>
+
+    <footer class="footer">
+      <span>Flashback / examples / 1980</span>
+      <a href="../../corpus/1980.md">Read the full 1980 corpus</a>
+    </footer>
+  </main>
+</body>
+</html>
