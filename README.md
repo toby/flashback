@@ -172,4 +172,6 @@ not just storage. It gives the interface a reason to feel alive.
 
 Flashback is at the concept seed stage. This README defines the product direction, agent behavior, and first implementation target.
 
+The agentic interface/tooling implementation plan is published as a gist: https://gist.github.com/toby/c12172e7c6dc2f2b1cf12f1b4ff63912
+
 The next step is to turn this into a working CLI agent.
