@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2010 Example Index | Flashback</title>
+  <meta name="description" content="A corpus-linked 2010 example index for Flashback: App store confidence, Social photo feed, Startup map service, Tablet living room, Indie-web softness.">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #eef4f7;
+      --bg2: #dce7ed;
+      --ink: #0e1b24;
+      --muted: #55707f;
+      --card: rgba(255, 255, 255, 0.86);
+      --line: rgba(14, 27, 36, 0.12);
+      --a: #1da1f2;
+      --b: #ff6b6b;
+      --c: #ffffff;
+      --d: #97c6d8;
+      --e: #ffe9d2;
+      --shadow: 0 18px 40px rgba(14, 27, 36, 0.1);
+      --max: 1120px;
+      --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --serif: Georgia, "Times New Roman", serif;
+      --mono: "Courier New", Courier, monospace;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; color: var(--ink); font-family: var(--sans); line-height: 1.5;
+      background: radial-gradient(circle at 15% 10%, rgba(29,161,242,0.16), transparent 18rem), radial-gradient(circle at 84% 12%, rgba(255,107,107,0.12), transparent 18rem), linear-gradient(180deg, var(--bg), var(--bg2));
+    }
+    a { color: inherit; }
+    .page { width: min(100% - 32px, var(--max)); margin: 0 auto; padding: 24px 0 48px; }
+    .panel, .rule { border: 1px solid var(--line); background: var(--card); box-shadow: var(--shadow); }
+    .hero { padding: 28px; min-height: 70vh; display: grid; align-content: space-between; border-radius: 28px; position: relative; overflow: hidden; }
+    .hero::after { content: ""; position: absolute; right: 28px; top: 20px; width: 220px; height: 220px; border-radius: 32px; background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(151,198,216,0.7)); transform: rotate(12deg); }
+    .eyebrow { display: inline-block; padding: 8px 12px; font: 700 0.8rem var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: white; background: var(--a); border-radius: 999px; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin: 18px 0; font-size: clamp(4.4rem, 15vw, 10rem); line-height: 0.82; letter-spacing: -0.11em; text-transform: uppercase; }
+    .hero-grid { display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr) minmax(260px, 330px); align-items: end; }
+    .thesis { max-width: 42rem; font: clamp(1.35rem, 3vw, 2.55rem)/1.06 var(--serif); }
+    .note { padding: 16px; background: #fff; border-radius: 20px; border: 1px solid var(--line); }
+    .note h2 { font: 700 0.78rem var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+    .note p { margin: 0; font: 0.92rem/1.45 var(--mono); }
+    .nav { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; margin: 18px 0 0; }
+    .nav a, .map a, .recipe { text-decoration: none; }
+    .nav a { display: inline-block; padding: 8px 12px; border: 1px solid var(--line); font: 0.82rem var(--mono); text-transform: uppercase; border-radius: 999px; background: rgba(255,255,255,0.78); }
+    .section { margin-top: 28px; padding: 24px; border-radius: 24px; }
+    .section-head { display: flex; flex-wrap: wrap; gap: 16px; align-items: end; justify-content: space-between; margin-bottom: 18px; }
+    .section-head h2 { margin: 0; font-size: clamp(1.8rem, 5vw, 3.8rem); letter-spacing: -0.08em; text-transform: uppercase; }
+    .section-head p { max-width: 28rem; margin: 0; color: var(--muted); font: 0.88rem var(--mono); }
+    .grid, .recipes, .map, .anti { display: grid; gap: 14px; }
+    .grid { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+    .recipes { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .map, .anti { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); list-style: none; padding: 0; margin: 0; }
+    .signal, .recipe, .map a, .prompt, .artifact, .anti li { border: 1px solid var(--line); background: rgba(255,255,255,0.86); }
+    .signal, .artifact, .prompt, .anti li { padding: 16px; border-radius: 18px; }
+    .signal b, .recipe small { display: block; margin-bottom: 12px; color: var(--a); font: 700 0.76rem var(--mono); letter-spacing: 0.14em; text-transform: uppercase; }
+    .signal p { margin: 0; color: var(--muted); }
+    .recipe { padding: 18px; border-radius: 22px; }
+    .recipe:nth-child(2n) { background: #f5fbff; }
+    .recipe:nth-child(3n) { background: #fff7ee; }
+    .recipe h3 { margin-bottom: 10px; font-size: 1.52rem; line-height: 0.92; text-transform: uppercase; }
+    .recipe dl { margin: 0 0 14px; display: grid; gap: 6px; font-size: 0.92rem; }
+    .recipe dd { margin: 0; }
+    .recipe .risk { margin: 0; padding-top: 12px; border-top: 1px solid var(--line); font: 0.82rem var(--mono); color: var(--muted); }
+    .map a { display: grid; min-height: 110px; padding: 14px; border-radius: 18px; }
+    .map strong { font-size: 1rem; text-transform: uppercase; }
+    .map span { align-self: end; color: var(--muted); font-size: 0.88rem; }
+    .prompt { white-space: pre-wrap; font: 0.9rem/1.45 var(--mono); color: #0d4d70; background: #f6fbfd; }
+    .artifact h3 { margin-bottom: 10px; font-size: 0.96rem; letter-spacing: 0.12em; text-transform: uppercase; }
+    .artifact ul { margin: 0; padding-left: 1.1rem; }
+    .rule { display: grid; grid-template-columns: minmax(150px, 0.3fr) minmax(0, 1fr); gap: 16px; margin-top: 28px; overflow: hidden; border-radius: 26px; }
+    .rule b { display: grid; place-items: center; background: var(--a); color: white; font-size: clamp(3rem, 8vw, 6rem); letter-spacing: -0.12em; }
+    .rule p { margin: 0; padding: 24px; font: clamp(1.25rem, 3vw, 2.4rem)/1.06 var(--serif); }
+    .footer { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; padding: 18px 0 0; margin-top: 26px; border-top: 1px solid var(--line); color: var(--muted); font: 0.82rem var(--mono); }
+    @media (max-width: 760px) { .hero-grid, .rule { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="panel hero" aria-labelledby="title">
+      <div><p class="eyebrow">Flashback example index / corpus 2010</p><h1 id="title">2010</h1></div>
+      <div>
+        <div class="hero-grid"><p class="thesis">2010: life arrives as a stream of touchable cards.</p><aside class="note"><h2>Feed default</h2><p>Smartphones, app stores, social photos, tablet domesticity, and startup service UX make the feed the baseline interface frame.</p></aside></div>
+        <ul class="nav" aria-label="Example sections"><li><a href="#climate">Climate</a></li><li><a href="#recipes">Recipes</a></li><li><a href="#map">Corpus map</a></li><li><a href="#prompts">Prompt seeds</a></li><li><a href="../../corpus/2010.md">Full corpus</a></li></ul>
+      </div>
+    </section>
+
+    <section class="panel section" id="climate"><div class="section-head"><h2>Climate</h2><p>2010 balances clean utility with performative sharing.</p></div><div class="grid"><article class="signal"><b>01</b><p>App-icon identity becomes a real brand surface.</p></article><article class="signal"><b>02</b><p>Feed logic organizes experience into cards, timestamps, likes, and comments.</p></article><article class="signal"><b>03</b><p>Tablet touch UI extends computing into the sofa and coffee table.</p></article><article class="signal"><b>04</b><p>Startup services promise immediate action with low-friction trust cues.</p></article><article class="signal"><b>05</b><p>Soft flatness begins displacing heavier skeuomorphic drama.</p></article><article class="signal"><b>06</b><p>Maps and location-aware services become daily coordination tools.</p></article></div></section>
+
+    <section class="panel section" id="recipes"><div class="section-head"><h2>Example recipes</h2><p>Recipe links into the new 2010 corpus.</p></div><div class="recipes">
+      <a class="recipe" href="../../corpus/2010.md#recipe-1-app-store-confidence"><small>Recipe 01</small><h3>App store confidence</h3><p><strong>Use for:</strong> mobile products, onboarding flows, platform launches.</p><dl><div><dt>Palette</dt><dd>white, blue, charcoal, notification red.</dd></div><div><dt>Layout</dt><dd>hero phone frames, cards, tab bars, feature stacks.</dd></div><div><dt>Motion</dt><dd>tap, slide, refresh, install, confirm.</dd></div></dl><p class="risk"><strong>Risk:</strong> generic startup blandness.<br><strong>Accuracy:</strong> keep some 2010 skeuo residue.</p></a>
+      <a class="recipe" href="../../corpus/2010.md#recipe-2-social-photo-feed"><small>Recipe 02</small><h3>Social photo feed</h3><p><strong>Use for:</strong> community products, creator tools, visual archives.</p><dl><div><dt>Palette</dt><dd>cream, faded black, warm filter tones, app blue.</dd></div><div><dt>Layout</dt><dd>image-first cards, comments, likes, stacked posts.</dd></div><div><dt>Motion</dt><dd>scroll, like, post, comment, refresh.</dd></div></dl><p class="risk"><strong>Risk:</strong> modern creator-platform polish.<br><strong>Accuracy:</strong> keep earlier, simpler social rhythms.</p></a>
+      <a class="recipe" href="../../corpus/2010.md#recipe-3-startup-map-service"><small>Recipe 03</small><h3>Startup map service</h3><p><strong>Use for:</strong> logistics, booking, delivery, travel, mobility.</p><dl><div><dt>Palette</dt><dd>white, map green, route blue, graphite.</dd></div><div><dt>Layout</dt><dd>split map/card views, buttons, route summaries.</dd></div><div><dt>Motion</dt><dd>locate, request, track, confirm, rate.</dd></div></dl><p class="risk"><strong>Risk:</strong> drifting into 2016 platform design.<br><strong>Accuracy:</strong> keep visible reassurance and novelty.</p></a>
+      <a class="recipe" href="../../corpus/2010.md#recipe-4-tablet-living-room"><small>Recipe 04</small><h3>Tablet living room</h3><p><strong>Use for:</strong> media products, reading tools, home control systems.</p><dl><div><dt>Palette</dt><dd>black glass, linen white, warm grey, cyan.</dd></div><div><dt>Layout</dt><dd>roomy touch zones, carousels, magazine-like panels.</dd></div><div><dt>Motion</dt><dd>swipe, flip, browse, dock, pinch.</dd></div></dl><p class="risk"><strong>Risk:</strong> later ultra-flat tablet UI.<br><strong>Accuracy:</strong> keep more chrome and early-touch optimism.</p></a>
+      <a class="recipe" href="../../corpus/2010.md#recipe-5-indie-web-softness"><small>Recipe 05</small><h3>Indie-web softness</h3><p><strong>Use for:</strong> editorial products, culture brands, portfolios.</p><dl><div><dt>Palette</dt><dd>off-white, washed denim, coral, slate.</dd></div><div><dt>Layout</dt><dd>column stacks, large images, quote blocks, soft dividers.</dd></div><div><dt>Motion</dt><dd>fade, scroll, hover, expand.</dd></div></dl><p class="risk"><strong>Risk:</strong> slipping into 2014 Tumblr maximalism.<br><strong>Accuracy:</strong> stay more restrained and early-social.</p></a>
+    </div></section>
+
+    <section class="panel section" id="map"><div class="section-head"><h2>Corpus map</h2><p>Useful anchors for the 2010 year slice.</p></div><ul class="map"><li><a href="../../corpus/2010.md#year-thesis"><strong>Year thesis</strong><span>The feed becomes the baseline frame.</span></a></li><li><a href="../../corpus/2010.md#design-climate"><strong>Design climate</strong><span>Clean utility versus performative sharing.</span></a></li><li><a href="../../corpus/2010.md#product-and-interaction-design"><strong>Product design</strong><span>Services are made to feel inevitable.</span></a></li><li><a href="../../corpus/2010.md#color-material-and-surface"><strong>Surface</strong><span>Glass, aluminum, feed white space, filter grain.</span></a></li><li><a href="../../corpus/2010.md#fashion-and-self-design"><strong>Fashion</strong><span>Curated but casual self-design for photos and feeds.</span></a></li><li><a href="../../corpus/2010.md#anti-cliches"><strong>Anti-cliches</strong><span>Avoid flattening the year into later startup minimalism.</span></a></li></ul></section>
+
+    <section class="panel section" id="prompts"><div class="section-head"><h2>Prompt seeds</h2><p>Three fast prompts for 2010-driven work.</p></div><div class="grid"><pre class="prompt">Design this through a 2010 lens: smartphones are the default personal screen, the feed has become the core interface pattern, app ecosystems define brand surfaces, and startup services promise immediate action.</pre><pre class="prompt">Give me three 2010-informed directions:
+1. App store confidence
+2. Social photo feed
+3. Tablet living room
+For each, describe the layout, motion, materials, and what would make it feel too early or too late.</pre><pre class="prompt">Critique this interface as if it launched in 2010. Is it closer to a social feed, a service app, a tablet reading surface, or an indie-web editorial system?</pre></div></section>
+
+    <section class="panel section"><div class="section-head"><h2>Reference artifacts</h2><p>The touch-first surfaces and spaces that define the year.</p></div><div class="grid"><article class="artifact"><h3>Objects</h3><ul><li>iPhone 4-era hardware</li><li>iPad launch-era UI and marketing</li><li>Early Instagram interfaces</li><li>App Store badges and icons</li><li>Portable mobile accessories</li></ul></article><article class="artifact"><h3>Print and graphics</h3><ul><li>Startup landing pages and decks</li><li>Early-2010s blog layouts</li><li>Service-app screenshots and maps</li><li>Cover art designed for thumbnails</li></ul></article><article class="artifact"><h3>Spaces</h3><ul><li>Coworking interiors</li><li>Coffee shops full of laptops and tablets</li><li>Startup offices with whiteboards and plywood</li><li>Airport lounges and mobility touchpoints</li><li>Domestic tablet-and-sofa scenes</li></ul></article></div></section>
+
+    <section class="panel section"><div class="section-head"><h2>Anti-cliches</h2><p>Specificity beats a flattened startup-memory version of the year.</p></div><ul class="anti"><li>Pure flat-design 2015 interfaces</li><li>Ultra-minimal fintech UI</li><li>2007 iPhone launch gloss</li><li>Social media without timestamps or counters</li><li>Service apps without maps, ratings, or app-icon logic</li></ul></section>
+
+    <section class="rule"><b>10</b><p>2010 rule: design the stream, not just the screen.</p></section>
+    <footer class="footer"><span>Flashback / examples / 2010</span><a href="../../corpus/2010.md">Read the full 2010 corpus</a></footer>
+  </main>
+</body>
+</html>

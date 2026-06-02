@@ -1,0 +1,923 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1990 Example Index | Flashback</title>
+  <meta name="description" content="A corpus-linked 1990 example index for Flashback: Photoshop workstation, Rave flyer pressure, Soft office GUI, Deconstructed retail calm, Dream lodge interface.">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0a0d12;
+      --bg2: #1c1320;
+      --ink: #f3eedf;
+      --muted: #beb6c7;
+      --card: rgba(255, 255, 255, 0.08);
+      --line: rgba(255, 255, 255, 0.16);
+      --a: #d9ff3e;
+      --b: #ff7b26;
+      --c: #68d3ff;
+      --d: #d63d6c;
+      --shadow: 10px 10px 0 rgba(0, 0, 0, 0.45);
+      --max: 1120px;
+      --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --serif: Georgia, "Times New Roman", serif;
+      --mono: "Courier New", Courier, monospace;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.5;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(214, 61, 108, 0.32), transparent 20rem),
+        radial-gradient(circle at 86% 18%, rgba(104, 211, 255, 0.26), transparent 24rem),
+        linear-gradient(135deg, var(--bg), var(--bg2));
+    }
+    a { color: inherit; }
+    .page { width: min(100% - 32px, var(--max)); margin: 0 auto; padding: 24px 0 48px; }
+    .panel, .rule { border: 1px solid var(--line); background: rgba(0, 0, 0, 0.28); box-shadow: var(--shadow); }
+    .hero { padding: 28px; min-height: 72vh; display: grid; align-content: space-between; overflow: hidden; position: relative; }
+    .hero::after { content: ""; position: absolute; right: -40px; top: -30px; width: 240px; height: 240px; border: 24px solid var(--c); border-radius: 50%; opacity: 0.7; }
+    .eyebrow { display: inline-block; padding: 8px 12px; font: 700 0.8rem var(--mono); letter-spacing: 0.14em; text-transform: uppercase; background: var(--a); color: #111; box-shadow: 6px 6px 0 var(--d); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin: 18px 0; font-size: clamp(4.8rem, 15vw, 12rem); line-height: 0.8; letter-spacing: -0.12em; text-transform: uppercase; text-shadow: 0.03em 0.03em 0 var(--d), -0.03em 0.06em 0 var(--c); }
+    .hero-grid { display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr) minmax(260px, 340px); align-items: end; }
+    .thesis { max-width: 42rem; font: clamp(1.4rem, 3vw, 2.8rem)/1.04 var(--serif); }
+    .note { padding: 16px; background: #f3eedf; color: #111; transform: rotate(1.3deg); }
+    .note h2 { font: 700 0.78rem var(--mono); letter-spacing: 0.14em; text-transform: uppercase; }
+    .note p { margin: 0; font: 0.92rem/1.45 var(--mono); }
+    .nav { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 18px 0 0; list-style: none; }
+    .nav a, .map a { text-decoration: none; }
+    .nav a { display: inline-block; padding: 8px 12px; border: 1px solid var(--line); font: 0.82rem var(--mono); text-transform: uppercase; background: rgba(255, 255, 255, 0.06); }
+    .section { margin-top: 28px; padding: 24px; }
+    .section-head { display: flex; flex-wrap: wrap; gap: 16px; align-items: end; justify-content: space-between; margin-bottom: 18px; }
+    .section-head h2 { margin: 0; font-size: clamp(1.8rem, 5vw, 4rem); letter-spacing: -0.08em; text-transform: uppercase; }
+    .section-head p { max-width: 28rem; margin: 0; color: var(--muted); font: 0.88rem var(--mono); }
+    .grid, .recipes, .map, .anti { display: grid; gap: 14px; }
+    .grid { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+    .recipes { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .map, .anti { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); list-style: none; padding: 0; margin: 0; }
+    .signal, .recipe, .map a, .prompt, .artifact, .anti li { border: 1px solid var(--line); background: var(--card); }
+    .signal, .artifact, .anti li, .prompt { padding: 16px; }
+    .signal b, .recipe small { display: block; margin-bottom: 12px; color: var(--a); font: 700 0.76rem var(--mono); letter-spacing: 0.14em; text-transform: uppercase; }
+    .signal p { margin: 0; color: var(--muted); }
+    .recipe { padding: 18px; color: #111; background: #f3eedf; box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.4); }
+    .recipe:nth-child(odd) { background: #d9ff3e; }
+    .recipe:nth-child(3n) { background: #68d3ff; }
+    .recipe h3 { margin-bottom: 10px; font-size: 1.6rem; line-height: 0.9; text-transform: uppercase; }
+    .recipe dl { margin: 0 0 14px; display: grid; gap: 6px; font-size: 0.92rem; }
+    .recipe dd { margin: 0; }
+    .recipe .risk { margin: 0; padding-top: 12px; border-top: 1px solid rgba(0, 0, 0, 0.18); font: 0.82rem var(--mono); }
+    .map a { display: grid; min-height: 110px; padding: 14px; }
+    .map strong { font-size: 1rem; text-transform: uppercase; }
+    .map span { align-self: end; color: var(--muted); font-size: 0.88rem; }
+    .prompt { white-space: pre-wrap; font: 0.9rem/1.45 var(--mono); color: var(--a); background: #111; }
+    .artifact h3 { margin-bottom: 10px; font-size: 0.96rem; letter-spacing: 0.12em; text-transform: uppercase; }
+    .artifact ul { margin: 0; padding-left: 1.1rem; }
+    .rule { display: grid; grid-template-columns: minmax(150px, 0.3fr) minmax(0, 1fr); gap: 16px; margin-top: 28px; overflow: hidden; }
+    .rule b { display: grid; place-items: center; background: var(--a); color: #111; font-size: clamp(3rem, 8vw, 6rem); letter-spacing: -0.12em; }
+    .rule p { margin: 0; padding: 24px; font: clamp(1.3rem, 3vw, 2.6rem)/1.06 var(--serif); }
+    .footer { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; padding: 18px 0 0; margin-top: 26px; border-top: 1px solid var(--line); color: var(--muted); font: 0.82rem var(--mono); }
+    @media (max-width: 760px) {
+      .hero-grid, .rule { grid-template-columns: 1fr; }
+      h1 { letter-spacing: -0.08em; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="panel hero" aria-labelledby="title">
+      <div>
+        <p class="eyebrow">Flashback example index / corpus 1990</p>
+        <h1 id="title">1990</h1>
+      </div>
+      <div>
+        <div class="hero-grid">
+          <p class="thesis">1990: everything becomes a layer you can move, sample, or tune.</p>
+          <aside class="note">
+            <h2>Editable culture</h2>
+            <p>Photoshop, Windows 3.0, rave graphics, cool retail, and dream-logic television make culture feel linked and adjustable.</p>
+          </aside>
+        </div>
+        <ul class="nav" aria-label="Example sections">
+          <li><a href="#climate">Climate</a></li>
+          <li><a href="#recipes">Recipes</a></li>
+          <li><a href="#map">Corpus map</a></li>
+          <li><a href="#prompts">Prompt seeds</a></li>
+          <li><a href="../../corpus/1990.md">Full corpus</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel section" id="climate">
+      <div class="section-head">
+        <h2>Climate</h2>
+        <p>1990 sits between soft utility and hallucinatory atmosphere.</p>
+      </div>
+      <div class="grid">
+        <article class="signal"><b>01</b><p>Layer-based image making becomes normal through Photoshop and desktop editing.</p></article>
+        <article class="signal"><b>02</b><p>Windowed desktops make GUI work a mainstream habit.</p></article>
+        <article class="signal"><b>03</b><p>Network imagination reframes information as linked space.</p></article>
+        <article class="signal"><b>04</b><p>Rave flyers turn warnings, smileys, and photocopy grit into cultural identity.</p></article>
+        <article class="signal"><b>05</b><p>Cool retail minimalism uses white space, codes, and material honesty.</p></article>
+        <article class="signal"><b>06</b><p>Twin Peaks proves mood, props, and interiors can run the whole visual system.</p></article>
+      </div>
+    </section>
+
+    <section class="panel section" id="recipes">
+      <div class="section-head">
+        <h2>Example recipes</h2>
+        <p>Direct links into the five recipe blocks in the 1990 corpus.</p>
+      </div>
+      <div class="recipes">
+        <a class="recipe" href="../../corpus/1990.md#recipe-1-photoshop-workstation"><small>Recipe 01</small><h3>Photoshop workstation</h3><p><strong>Use for:</strong> creative tools, editing suites, modular dashboards, maker software.</p><dl><div><dt>Palette</dt><dd>monitor grey, teal, pale blue, tool-shadow black.</dd></div><div><dt>Layout</dt><dd>floating palettes, image canvas, status bars, tool columns.</dd></div><div><dt>Motion</dt><dd>select, mask, drag, composite, undo.</dd></div></dl><p class="risk"><strong>Risk:</strong> late-90s skeuomorphism.<br><strong>Accuracy:</strong> keep early desktop modesty visible.</p></a>
+        <a class="recipe" href="../../corpus/1990.md#recipe-2-rave-flyer-pressure"><small>Recipe 02</small><h3>Rave flyer pressure</h3><p><strong>Use for:</strong> nightlife identities, event systems, youth brands, campaign pages.</p><dl><div><dt>Palette</dt><dd>acid yellow, black, hot orange, UV blue.</dd></div><div><dt>Layout</dt><dd>collisions, circles, arrows, stamps, repeated dates.</dd></div><div><dt>Motion</dt><dd>pulse, strobe, blink, repeat, scatter.</dd></div></dl><p class="risk"><strong>Risk:</strong> generic smiley nostalgia.<br><strong>Accuracy:</strong> keep the cheap local-flyer logic.</p></a>
+        <a class="recipe" href="../../corpus/1990.md#recipe-3-soft-office-gui"><small>Recipe 03</small><h3>Soft office GUI</h3><p><strong>Use for:</strong> productivity products, archival tools, admin systems.</p><dl><div><dt>Palette</dt><dd>beige, warm white, slate, muted teal.</dd></div><div><dt>Layout</dt><dd>tiled windows, control panels, icons, document stacks.</dd></div><div><dt>Motion</dt><dd>open, minimize, select, save, route.</dd></div></dl><p class="risk"><strong>Risk:</strong> drifting into 1995 office software.<br><strong>Accuracy:</strong> stay chunkier and more transitional.</p></a>
+        <a class="recipe" href="../../corpus/1990.md#recipe-4-deconstructed-retail-calm"><small>Recipe 04</small><h3>Deconstructed retail calm</h3><p><strong>Use for:</strong> fashion brands, gallery shops, quiet luxury systems.</p><dl><div><dt>Palette</dt><dd>white, stone, graphite, unbleached cotton.</dd></div><div><dt>Layout</dt><dd>modular shelving, blank margins, tag systems, asymmetry.</dd></div><div><dt>Motion</dt><dd>drift, reveal, slow pan, material close-up.</dd></div></dl><p class="risk"><strong>Risk:</strong> generic contemporary minimalism.<br><strong>Accuracy:</strong> keep stronger material evidence.</p></a>
+        <a class="recipe" href="../../corpus/1990.md#recipe-5-dream-lodge-interface"><small>Recipe 05</small><h3>Dream lodge interface</h3><p><strong>Use for:</strong> cultural products, fiction-led brands, media archives.</p><dl><div><dt>Palette</dt><dd>curtain red, coffee brown, fir green, cream, chrome.</dd></div><div><dt>Layout</dt><dd>staged rooms, clue clusters, recurring symbols.</dd></div><div><dt>Motion</dt><dd>dissolve, loop, hum, curtain pull, static drift.</dd></div></dl><p class="risk"><strong>Risk:</strong> quirky nostalgia.<br><strong>Accuracy:</strong> keep the tension between comfort and unease.</p></a>
+      </div>
+    </section>
+
+    <section class="panel section" id="map">
+      <div class="section-head"><h2>Corpus map</h2><p>Jump straight into the most useful 1990 sections.</p></div>
+      <ul class="map">
+        <li><a href="../../corpus/1990.md#year-thesis"><strong>Year thesis</strong><span>digitality becomes editable.</span></a></li>
+        <li><a href="../../corpus/1990.md#design-climate"><strong>Design climate</strong><span>Soft utility versus hallucinatory atmosphere.</span></a></li>
+        <li><a href="../../corpus/1990.md#typography"><strong>Typography</strong><span>Stacked signals, not one voice.</span></a></li>
+        <li><a href="../../corpus/1990.md#graphic-design"><strong>Graphic design</strong><span>Clean frames meet contamination and rave noise.</span></a></li>
+        <li><a href="../../corpus/1990.md#product-and-interaction-design"><strong>Product design</strong><span>Visible operation, approachable system grammar.</span></a></li>
+        <li><a href="../../corpus/1990.md#fashion-and-self-design"><strong>Fashion</strong><span>Deconstruction and reduction cool the decade down.</span></a></li>
+        <li><a href="../../corpus/1990.md#anti-cliches"><strong>Anti-cliches</strong><span>Keep it specific, not generic grunge or cyber gloss.</span></a></li>
+      </ul>
+    </section>
+
+    <section class="panel section" id="prompts">
+      <div class="section-head"><h2>Prompt seeds</h2><p>Short prompts pulled from the new corpus.</p></div>
+      <div class="grid">
+        <pre class="prompt">Design this through a 1990 lens: Photoshop has made images editable, Windows 3.0 has normalized GUI work, the early web has reframed information as linked space, and rave graphics plus deconstruction fashion are pulling culture in opposite but equally systemic directions.</pre>
+        <pre class="prompt">Give me three 1990-informed directions:
+1. Photoshop workstation
+2. Rave flyer pressure
+3. Deconstructed retail calm
+For each, explain the typography, material choices, motion behavior, and what would make it feel too late or too nostalgic.</pre>
+        <pre class="prompt">Critique this interface as if it launched in 1990. Is it closer to a Windows 3.0 desktop, a rave information system, a Muji retail field, or a dreamlike broadcast environment?</pre>
+      </div>
+    </section>
+
+    <section class="panel section">
+      <div class="section-head"><h2>Reference artifacts</h2><p>Objects, graphics, and spaces that hold the year together.</p></div>
+      <div class="grid">
+        <article class="artifact"><h3>Objects</h3><ul><li>Windows 3.0 desktop screenshots</li><li>Photoshop 1.0 interface</li><li>Flatbed scanners and desktop printers</li><li>Muji packaging and fixtures</li><li>Pagers, fax machines, answering machines</li></ul></article>
+        <article class="artifact"><h3>Print and graphics</h3><ul><li>UK rave flyers and acid-house graphics</li><li>Early-90s club posters and sleeves</li><li>Twin Peaks title cards and props</li><li>Muji labels and packaging systems</li><li>Margiela and Jil Sander lookbooks</li></ul></article>
+        <article class="artifact"><h3>Spaces</h3><ul><li>Warehouse rave interiors</li><li>Transitional GUI office desks</li><li>Quiet white retail shells</li><li>Diner and lodge interiors from Twin Peaks</li><li>Small postproduction suites</li></ul></article>
+      </div>
+    </section>
+
+    <section class="panel section">
+      <div class="section-head"><h2>Anti-cliches</h2><p>Guardrails to keep 1990 on-model.</p></div>
+      <ul class="anti"><li>Generic grunge</li><li>Mid-90s web pages</li><li>Fully glossy cyberculture</li><li>Minimalism with no construction details</li><li>Twin Peaks reduced to pie memes</li></ul>
+    </section>
+
+    <section class="rule"><b>90</b><p>1990 rule: treat culture as a linked stack of editable layers.</p></section>
+
+    <footer class="footer"><span>Flashback / examples / 1990</span><a href="../../corpus/1990.md">Read the full 1990 corpus</a></footer>
+  </main>
+</body>
+</html><!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1990 Example Index | Flashback</title>
+  <meta name="description" content="A corpus-synced 1990 example index for Flashback: Windows workspace, Photoshop lab, Early web, Rave logistics, Boutique minimalism.">
+  <!-- Generated by scripts/flashback-examples.mjs from corpus. Do not hand-edit corpus-derived content. -->
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #0a0d12;
+      --paper: #f2efe7;
+      --muted: #c3cad4;
+      --bg-a: #080b11;
+      --bg-b: #112030;
+      --bg-c: #1a1821;
+      --accent-a: #6be76c;
+      --accent-b: #5cc8ff;
+      --accent-c: #ffe84c;
+      --accent-d: #ff6f3c;
+      --line: color-mix(in srgb, var(--paper) 24%, transparent);
+      --shadow: 12px 12px 0 rgba(0, 0, 0, 0.56);
+      --max: 1180px;
+      --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --mono: "Courier New", Courier, monospace;
+      --serif: Georgia, "Times New Roman", serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--paper);
+      font-family: var(--sans);
+      line-height: 1.5;
+      background:
+        radial-gradient(circle at 14% 10%, color-mix(in srgb, var(--accent-a) 34%, transparent), transparent 26rem),
+        radial-gradient(circle at 84% 18%, color-mix(in srgb, var(--accent-b) 30%, transparent), transparent 28rem),
+        radial-gradient(circle at 78% 86%, color-mix(in srgb, var(--accent-c) 18%, transparent), transparent 30rem),
+        linear-gradient(135deg, var(--bg-a), var(--bg-b) 48%, var(--bg-c));
+    }
+
+    body::before {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      content: "";
+      opacity: 0.22;
+      background:
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 4px),
+        repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.34) 0 1px, transparent 1px 10px);
+      mix-blend-mode: screen;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 0.1em;
+      text-underline-offset: 0.18em;
+    }
+
+    a:focus-visible {
+      outline: 4px solid var(--accent-c);
+      outline-offset: 4px;
+    }
+
+    .page {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+      padding: 24px 0 56px;
+    }
+
+    .hero,
+    .section,
+    .rule {
+      border: 1px solid var(--line);
+      background: rgba(0, 0, 0, 0.34);
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      position: relative;
+      display: grid;
+      min-height: 78vh;
+      padding: clamp(22px, 4vw, 50px);
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero::before,
+    .hero::after {
+      position: absolute;
+      content: "";
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .hero::before {
+      top: -72px;
+      right: -44px;
+      width: min(46vw, 500px);
+      aspect-ratio: 1;
+      border: 40px solid var(--accent-b);
+      border-radius: 50%;
+      transform: rotate(11deg);
+      opacity: 0.78;
+    }
+
+    .hero::after {
+      left: clamp(20px, 5vw, 72px);
+      bottom: clamp(18px, 5vw, 80px);
+      width: min(62vw, 660px);
+      height: 88px;
+      border: 2px solid var(--paper);
+      background:
+        repeating-linear-gradient(90deg, var(--accent-a) 0 40px, var(--accent-b) 40px 80px, var(--accent-c) 80px 120px, var(--accent-d) 120px 160px),
+        var(--ink);
+      box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.5);
+      transform: rotate(-2deg);
+      opacity: 0.82;
+    }
+
+    .eyebrow {
+      width: max-content;
+      max-width: 100%;
+      margin: 0 0 20px;
+      padding: 8px 13px;
+      color: var(--ink);
+      font-family: var(--mono);
+      font-weight: 700;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+      background: var(--accent-c);
+      box-shadow: 7px 7px 0 var(--accent-a);
+      transform: rotate(-1deg);
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      max-width: 7.8ch;
+      margin-bottom: 24px;
+      font-size: clamp(5.4rem, 18vw, 15.2rem);
+      font-weight: 900;
+      line-height: 0.72;
+      letter-spacing: -0.13em;
+      text-transform: uppercase;
+      text-shadow:
+        0.035em 0.025em 0 var(--accent-a),
+        -0.028em 0.055em 0 var(--accent-b),
+        0.07em 0.08em 0 rgba(0, 0, 0, 0.82);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 390px);
+      gap: clamp(24px, 5vw, 64px);
+      align-items: end;
+      margin-top: auto;
+    }
+
+    .thesis {
+      max-width: 780px;
+      margin-bottom: 0;
+      font-family: var(--serif);
+      font-size: clamp(1.45rem, 3.4vw, 3.15rem);
+      line-height: 1.02;
+    }
+
+    .note {
+      padding: 18px;
+      color: var(--ink);
+      background: var(--paper);
+      box-shadow: 9px 9px 0 rgba(0, 0, 0, 0.6);
+      transform: rotate(1.5deg);
+    }
+
+    .note h2 {
+      margin-bottom: 10px;
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .note p {
+      margin-bottom: 0;
+      font-family: var(--mono);
+      font-size: 0.92rem;
+    }
+
+    .nav-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-strip a {
+      display: inline-block;
+      padding: 9px 13px;
+      border: 1px solid var(--line);
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      background: rgba(0, 0, 0, 0.32);
+    }
+
+    .nav-strip a:hover {
+      color: var(--ink);
+      background: var(--accent-c);
+    }
+
+    .section {
+      margin-top: 32px;
+      padding: clamp(22px, 4vw, 36px);
+    }
+
+    .section-header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: end;
+      justify-content: space-between;
+      margin-bottom: 22px;
+    }
+
+    .section h2 {
+      margin-bottom: 0;
+      font-size: clamp(2rem, 6vw, 5rem);
+      line-height: 0.86;
+      letter-spacing: -0.08em;
+      text-transform: uppercase;
+    }
+
+    .section-header p {
+      max-width: 440px;
+      margin: 0;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.9rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+    }
+
+    .signal,
+    .map a,
+    .prompt,
+    .artifact,
+    .anti li {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .signal {
+      min-height: 170px;
+      padding: 16px;
+    }
+
+    .signal b {
+      display: block;
+      margin-bottom: 16px;
+      color: var(--accent-c);
+      font-family: var(--mono);
+      font-size: 0.76rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .signal p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .recipes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .recipe {
+      position: relative;
+      display: flex;
+      min-height: 430px;
+      flex-direction: column;
+      padding: 20px;
+      overflow: hidden;
+      color: var(--ink);
+      text-decoration: none;
+      background: var(--card);
+      box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .recipe:nth-child(4n + 1) { --card: var(--accent-a); }
+    .recipe:nth-child(4n + 2) { --card: var(--accent-b); }
+    .recipe:nth-child(4n + 3) { --card: var(--accent-c); }
+    .recipe:nth-child(4n) { --card: var(--paper); }
+
+    .recipe::before {
+      position: absolute;
+      top: -44px;
+      right: -38px;
+      width: 150px;
+      height: 150px;
+      content: "";
+      border: 18px solid rgba(17, 17, 17, 0.68);
+      border-radius: 50%;
+      transform: rotate(10deg);
+    }
+
+    .recipe:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: 12px 12px 0 var(--paper);
+    }
+
+    .recipe small {
+      margin-bottom: 22px;
+      font-family: var(--mono);
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .recipe h3 {
+      margin-bottom: 14px;
+      font-size: clamp(1.45rem, 3vw, 2.35rem);
+      line-height: 0.88;
+      letter-spacing: -0.06em;
+      text-transform: uppercase;
+    }
+
+    .recipe p { position: relative; z-index: 1; }
+
+    .recipe dl {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 8px;
+      margin: 0 0 16px;
+      font-size: 0.9rem;
+    }
+
+    .recipe dt {
+      float: left;
+      margin-right: 0.4em;
+      font-family: var(--mono);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .recipe dd { margin: 0; }
+
+    .recipe .risk {
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid rgba(17, 17, 17, 0.26);
+      font-family: var(--mono);
+      font-size: 0.82rem;
+    }
+
+    .map {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .map a {
+      display: grid;
+      min-height: 120px;
+      padding: 16px;
+      text-decoration: none;
+    }
+
+    .map a:hover {
+      color: var(--ink);
+      background: var(--accent-c);
+    }
+
+    .map strong {
+      align-self: start;
+      font-size: 1.05rem;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .map span {
+      align-self: end;
+      opacity: 0.78;
+      font-size: 0.88rem;
+    }
+
+    .prompt {
+      margin: 0;
+      padding: 18px;
+      color: var(--accent-d);
+      border: 10px solid color-mix(in srgb, var(--paper) 70%, var(--accent-b));
+      font-family: var(--mono);
+      font-size: 0.92rem;
+      line-height: 1.45;
+      white-space: pre-wrap;
+      background:
+        repeating-linear-gradient(0deg, color-mix(in srgb, var(--accent-d) 14%, transparent) 0 1px, transparent 1px 5px),
+        var(--ink);
+      box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.58);
+    }
+
+    .artifact h3 {
+      margin-bottom: 12px;
+      font-size: 1rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .artifact ul,
+    .anti {
+      margin: 0;
+      padding-left: 1.1rem;
+    }
+
+    .artifact li + li,
+    .anti li + li {
+      margin-top: 8px;
+    }
+
+    .anti {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .anti li {
+      padding: 14px;
+      color: var(--muted);
+    }
+
+    .rule {
+      display: grid;
+      grid-template-columns: minmax(160px, 0.32fr) minmax(0, 1fr);
+      gap: 18px;
+      align-items: stretch;
+      margin-top: 32px;
+      overflow: hidden;
+    }
+
+    .rule b {
+      display: grid;
+      place-items: center;
+      min-height: 190px;
+      padding: 20px;
+      color: var(--ink);
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: 0.8;
+      letter-spacing: -0.12em;
+      background: var(--accent-c);
+    }
+
+    .rule p {
+      align-self: center;
+      max-width: 760px;
+      margin: 0;
+      padding: clamp(20px, 4vw, 38px);
+      font-family: var(--serif);
+      font-size: clamp(1.45rem, 4vw, 3rem);
+      line-height: 1.04;
+    }
+
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: space-between;
+      margin-top: 32px;
+      padding: 20px 0 0;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 760px) {
+      .hero-grid,
+      .rule {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        max-width: none;
+        font-size: clamp(4rem, 26vw, 8rem);
+      }
+
+      .recipe {
+        min-height: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero" aria-labelledby="title">
+      <p class="eyebrow">Flashback example index / corpus 1990</p>
+      <h1 id="title">1990</h1>
+      <div class="hero-grid">
+        <p class="thesis">1990: the desktop becomes culture.</p>
+        <aside class="note" aria-label="1990 operating note">
+          <h2>Networked surface</h2>
+          <p>Windows, Photoshop, the early Web, rave flyers, and boutique minimalism make systems feel usable.</p>
+        </aside>
+      </div>
+      <nav aria-label="Example sections">
+        <ul class="nav-strip">
+          <li><a href="#climate">Climate</a></li>
+          <li><a href="#recipes">Recipes</a></li>
+          <li><a href="#corpus-map">Corpus map</a></li>
+          <li><a href="#prompts">Prompt seeds</a></li>
+          <li><a href="../../corpus/1990.md">Full corpus</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="section" id="climate" aria-labelledby="climate-title">
+      <div class="section-header">
+        <h2 id="climate-title">Climate</h2>
+        <p>1990 is pulled between clean systems and dirty circulation.</p>
+      </div>
+      <div class="grid">
+        <article class="signal"><b>01</b><p>Desktop visual literacy: overlapping windows, icons, toolbars, palettes, files, drag-and-drop logic</p></article>
+        <article class="signal"><b>02</b><p>Software for image construction: the screen starts behaving like a compositing table</p></article>
+        <article class="signal"><b>03</b><p>Early network imagination: linked documents, browsers, servers, and distributed information</p></article>
+        <article class="signal"><b>04</b><p>Rave logistics graphics: phone numbers, maps, all-caps urgency, fluorescent paper, copied repetition</p></article>
+        <article class="signal"><b>05</b><p>Minimal luxury reset: fashion and interiors cool down into sharper, quieter authority</p></article>
+        <article class="signal"><b>06</b><p>Compact consumer futurism: electronics become calmer, denser, and more competent-looking</p></article>
+        <article class="signal"><b>07</b><p>Microsoft releases Windows 3.0</p></article>
+        <article class="signal"><b>08</b><p>Adobe ships Photoshop 1.0</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="recipes" aria-labelledby="recipes-title">
+      <div class="section-header">
+        <h2 id="recipes-title">Example recipes</h2>
+        <p>Generated from the current Flashback design recipes in the 1990 corpus.</p>
+      </div>
+      <div class="recipes">
+        <a class="recipe" href="../../corpus/1990.md#recipe-1-windows-30-productivity-suite">
+          <small>Recipe 01</small>
+          <h3>Windows 3.0 productivity suite</h3>
+          <p><strong>Use for:</strong> knowledge tools, file-heavy products, dashboards, office AI, admin systems.</p>
+          <dl>
+            <div><dt>Palette</dt><dd>beige, cloud white, slate blue, charcoal.</dd></div>
+            <div><dt>Type</dt><dd>utility sans, menu labels, dialog copy.</dd></div>
+            <div><dt>Layout</dt><dd>overlapping windows, tiled panes, visible controls, boxed modules.</dd></div>
+            <div><dt>Imagery</dt><dd>folders, disks, toolbars, document stacks, pointers.</dd></div>
+            <div><dt>Motion</dt><dd>open, minimize, drag, copy, confirm.</dd></div>
+          </dl>
+          <p class="risk"><strong>Risk:</strong> sliding into generic retro computing.<br><strong>Accuracy:</strong> late-beige office seriousness and pre-internet desktop density.</p>
+        </a>
+        <a class="recipe" href="../../corpus/1990.md#recipe-2-photoshop-image-lab">
+          <small>Recipe 02</small>
+          <h3>Photoshop image lab</h3>
+          <p><strong>Use for:</strong> creative tools, media editors, asset libraries, imaging products.</p>
+          <dl>
+            <div><dt>Palette</dt><dd>neutral grey, white, black, one electric accent.</dd></div>
+            <div><dt>Type</dt><dd>compact UI labels, inspector text, tool names.</dd></div>
+            <div><dt>Layout</dt><dd>canvas plus palettes, rulers, tool strips, crop boundaries.</dd></div>
+            <div><dt>Imagery</dt><dd>scans, selections, pixel edges, loupe views, composite fragments.</dd></div>
+            <div><dt>Motion</dt><dd>select, crop, nudge, adjust, preview.</dd></div>
+          </dl>
+          <p class="risk"><strong>Risk:</strong> looking like later polished Adobe suites.<br><strong>Accuracy:</strong> early software bluntness and visible experimentation.</p>
+        </a>
+        <a class="recipe" href="../../corpus/1990.md#recipe-3-early-web-information-space">
+          <small>Recipe 03</small>
+          <h3>Early web information space</h3>
+          <p><strong>Use for:</strong> archives, knowledge graphs, research tools, linked notes, documentation products.</p>
+          <dl>
+            <div><dt>Palette</dt><dd>white, black, hypertext blue, muted grey.</dd></div>
+            <div><dt>Type</dt><dd>plain serif or early sans, clear hierarchy, no decoration burden.</dd></div>
+            <div><dt>Layout</dt><dd>linked documents, index pages, nested references, lightweight navigation.</dd></div>
+            <div><dt>Imagery</dt><dd>terminals, linked diagrams, server rooms, document trees.</dd></div>
+            <div><dt>Motion</dt><dd>jump, load, follow link, branch, return.</dd></div>
+          </dl>
+          <p class="risk"><strong>Risk:</strong> importing late-90s browser chrome.<br><strong>Accuracy:</strong> research-lab plainness and information-first intent.</p>
+        </a>
+        <a class="recipe" href="../../corpus/1990.md#recipe-4-rave-logistics-flyer">
+          <small>Recipe 04</small>
+          <h3>Rave logistics flyer</h3>
+          <p><strong>Use for:</strong> event tools, nightlife brands, drop systems, geofenced launches, underground campaigns.</p>
+          <dl>
+            <div><dt>Palette</dt><dd>copier black, fluorescent yellow, acid green, emergency orange.</dd></div>
+            <div><dt>Type</dt><dd>all-caps sans, stretched text, repeated phone numbers, map labels.</dd></div>
+            <div><dt>Layout</dt><dd>stacked notices, directions, arrows, meeting points, overprinted symbols.</dd></div>
+            <div><dt>Imagery</dt><dd>smileys, hazard marks, maps, warehouse silhouettes, repeated stamps.</dd></div>
+            <div><dt>Motion</dt><dd>flash, pulse, duplicate, distort, scatter.</dd></div>
+          </dl>
+          <p class="risk"><strong>Risk:</strong> becoming generic acid-house nostalgia.<br><strong>Accuracy:</strong> route logic, urgency, and bad reproduction.</p>
+        </a>
+        <a class="recipe" href="../../corpus/1990.md#recipe-5-boutique-minimal-showroom">
+          <small>Recipe 05</small>
+          <h3>Boutique minimal showroom</h3>
+          <p><strong>Use for:</strong> fashion commerce, premium retail, cultural brands, portfolios, gallery tools.</p>
+          <dl>
+            <div><dt>Palette</dt><dd>white, black, stone, denim, muted metal.</dd></div>
+            <div><dt>Type</dt><dd>restrained sans or serif with generous spacing.</dd></div>
+            <div><dt>Layout</dt><dd>empty margins, sharp crops, object isolation, strong baseline discipline.</dd></div>
+            <div><dt>Imagery</dt><dd>garment rails, concrete floors, raw walls, cast shadows, careful staging.</dd></div>
+            <div><dt>Motion</dt><dd>slow reveal, slide, fade, pause.</dd></div>
+          </dl>
+          <p class="risk"><strong>Risk:</strong> feeling like generic luxury minimalism.<br><strong>Accuracy:</strong> anti-glamour attitude and 1990's cooler editorial severity.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="corpus-map" aria-labelledby="map-title">
+      <div class="section-header">
+        <h2 id="map-title">Corpus map</h2>
+        <p>Every card links to a live heading in the source corpus.</p>
+      </div>
+      <ul class="map">
+        <li><a href="../../corpus/1990.md#year-thesis"><strong>Year thesis</strong><span>the desktop becomes culture</span></a></li>
+        <li><a href="../../corpus/1990.md#how-1990-differs-from-1989"><strong>1990 to 1989</strong><span>Year-to-year change.</span></a></li>
+        <li><a href="../../corpus/1990.md#design-climate"><strong>Design climate</strong><span>1990 is pulled between clean systems and dirty circulation.</span></a></li>
+        <li><a href="../../corpus/1990.md#timeline-signals"><strong>Timeline signals</strong><span>Windows 3.0, Photoshop, the first Web tools, rave, and boutique minimalism.</span></a></li>
+        <li><a href="../../corpus/1990.md#typography"><strong>Typography</strong><span>1990 typography wants to be efficient, cool, and reproducible.</span></a></li>
+        <li><a href="../../corpus/1990.md#graphic-design"><strong>Graphic design</strong><span>1990 graphic design is about information under pressure.</span></a></li>
+        <li><a href="../../corpus/1990.md#product-and-interaction-design"><strong>Product design</strong><span>1990 product design favors the competent surface.</span></a></li>
+        <li><a href="../../corpus/1990.md#architecture-and-interiors"><strong>Architecture</strong><span>1990 interiors move toward restraint, staging, and modular atmosphere.</span></a></li>
+        <li><a href="../../corpus/1990.md#fashion-and-self-design"><strong>Fashion</strong><span>1990 fashion gets cooler, drier, and smarter.</span></a></li>
+        <li><a href="../../corpus/1990.md#music"><strong>Music</strong><span>1990 music design is infrastructural.</span></a></li>
+        <li><a href="../../corpus/1990.md#film-and-moving-image"><strong>Film</strong><span>1990 moving image design splits dream atmosphere and engineered spectacle.</span></a></li>
+        <li><a href="../../corpus/1990.md#color-material-and-surface"><strong>Surface</strong><span>1990 palettes move between office neutrals and acid signals.</span></a></li>
+        <li><a href="../../corpus/1990.md#anti-cliches"><strong>Anti-cliches</strong><span>Do not make 1990 look like later web nostalgia or generic grunge.</span></a></li>
+      </ul>
+    </section>
+
+    <section class="section" id="prompts" aria-labelledby="prompts-title">
+      <div class="section-header">
+        <h2 id="prompts-title">Prompt seeds</h2>
+        <p>Ready-to-run prompts pulled from the corpus.</p>
+      </div>
+      <div class="grid">
+        <pre class="prompt">Design this through a 1990 lens: Windows 3.0 has made the desktop mainstream,
+Photoshop has made image editing operational, and the early Web has made linked
+information imaginable. Give me directions that feel procedural rather than flashy.</pre>
+        <pre class="prompt">Give me three 1990-informed directions:
+1. Windows productivity suite
+2. Rave logistics flyer
+3. Boutique minimal showroom
+For each, explain the typography, interface logic, surface choices, and what would
+push it accidentally into the mid-90s.</pre>
+        <pre class="prompt">Critique this product as if it launched in 1990. Is it more desktop workspace,
+image lab, linked document system, rave signal, or fashion-cool showroom? What
+details make that reading credible?</pre>
+      </div>
+    </section>
+
+    <section class="section" id="artifacts" aria-labelledby="artifacts-title">
+      <div class="section-header">
+        <h2 id="artifacts-title">Reference artifacts</h2>
+        <p>Objects, graphics, and spaces that anchor the year.</p>
+      </div>
+      <div class="grid">
+        <article class="artifact">
+          <h3>Objects</h3>
+          <ul>
+            <li>Windows 3.0 desktop screens</li>
+            <li>Adobe Photoshop 1.0 tool palettes</li>
+            <li>CERN NeXT workstation imagery tied to the first Web tools</li>
+            <li>Super Famicom hardware and packaging</li>
+            <li>Portable cassette/CD players and compact hi-fi units</li>
+            <li>Fax machines, phones, floppies, copier trays</li>
+          </ul>
+        </article>
+        <article class="artifact">
+          <h3>Print and graphics</h3>
+          <ul>
+            <li>Early rave flyers and map handouts</li>
+            <li>Software manuals and box art</li>
+            <li>Twin Peaks title cards and promotional stills</li>
+            <li>Margiela lookbooks and runway documentation</li>
+            <li>Editorial layouts using cold whitespace and restrained sans serif systems</li>
+          </ul>
+        </article>
+        <article class="artifact">
+          <h3>Spaces</h3>
+          <ul>
+            <li>Beige office workstation rows</li>
+            <li>Boutique fashion interiors with raw walls and rails</li>
+            <li>Club entrance corridors and warehouse signage</li>
+            <li>Post-production suites and imaging rooms</li>
+            <li>Research-lab desks with networked workstations</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="anti-cliches" aria-labelledby="anti-title">
+      <div class="section-header">
+        <h2 id="anti-title">Anti-cliches</h2>
+        <p>Guardrails from the corpus to keep the year specific.</p>
+      </div>
+      <ul class="anti">
+        <li>Mid-90s web design with rounded browser buttons everywhere</li>
+        <li>Grunge distortion as the only typographic mode</li>
+        <li>Chrome-heavy cyberpunk interfaces</li>
+        <li>Dot-com exuberance that belongs later in the decade</li>
+        <li>Late-80s glamour styling left unchanged</li>
+        <li>Minimalism without office or boutique logic</li>
+        <li>Rave visuals without maps, phone lines, or circulation systems</li>
+      </ul>
+    </section>
+
+    <section class="rule" aria-label="1990 rule of thumb">
+      <b>90</b>
+      <p>1990 rule: the desktop becomes culture.</p>
+    </section>
+
+    <footer class="footer">
+      <span>Flashback / examples / 1990</span>
+      <a href="../../corpus/1990.md">Read the full 1990 corpus</a>
+    </footer>
+  </main>
+</body>
+</html>

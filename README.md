@@ -174,4 +174,38 @@ Flashback is at the concept seed stage. This README defines the product directio
 
 The agentic interface/tooling implementation plan is published as a gist: https://gist.github.com/toby/c12172e7c6dc2f2b1cf12f1b4ff63912
 
-The next step is to turn this into a working CLI agent.
+## CLI status (v0.1 deterministic)
+
+Flashback now includes a first deterministic TypeScript CLI implementation.
+
+Current capabilities:
+
+- Corpus commands: `corpus list`, `corpus show`, `corpus search`
+- Artifact commands: `context`, `research`, `brief`, `territories`, `system`, `critique`, `handoff`
+- Validation command: `validate <artifact.json>`
+- Stable machine-readable output with `--json`
+- Deterministic offline behavior with corpus-based citations
+
+Current limitations:
+
+- No model-backed synthesis yet
+- No live web research or citation fetching yet
+- No MCP server yet
+
+## Quickstart
+
+Install dependencies and run the CLI from this repository:
+
+```bash
+npm install
+npm run build
+node dist/index.js corpus list --json
+node dist/index.js territories "Design a portfolio site for an experimental type foundry" --json
+```
+
+Validate a generated artifact:
+
+```bash
+node dist/index.js territories "Design a portfolio site for an experimental type foundry" --json > artifact.json
+node dist/index.js validate artifact.json --json
+```
