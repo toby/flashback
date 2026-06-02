@@ -1,0 +1,1034 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1981 Example Index | Flashback</title>
+  <meta name="description" content="A styled 1981 example index for Flashback: MTV broadcast identity, Memphis object systems, IBM platform futures, and black architectural fashion.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --ink: #111111;
+      --night: #07070a;
+      --paper: #f4ead5;
+      --beige: #c9b894;
+      --cream: #fff3d1;
+      --crt: #4cff7b;
+      --blue: #1a3dff;
+      --pink: #ff3caf;
+      --acid: #b9ff2f;
+      --red: #ff3d22;
+      --yellow: #f9d62e;
+      --turquoise: #08b9bd;
+      --lavender: #aa8dff;
+      --charcoal: #232323;
+      --line: rgba(17, 17, 17, 0.22);
+      --light-line: rgba(244, 234, 213, 0.25);
+      --shadow: 12px 12px 0 rgba(7, 7, 10, 0.78);
+      --max: 1200px;
+      --sans: "Arial Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --mono: "Courier New", Courier, monospace;
+      --serif: Georgia, "Times New Roman", serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--cream);
+      font-family: var(--body);
+      background:
+        radial-gradient(circle at 13% 8%, rgba(255, 60, 175, 0.32), transparent 22rem),
+        radial-gradient(circle at 86% 12%, rgba(8, 185, 189, 0.34), transparent 24rem),
+        radial-gradient(circle at 78% 82%, rgba(185, 255, 47, 0.16), transparent 28rem),
+        linear-gradient(120deg, #060609 0%, #171118 42%, #0e1012 100%);
+      line-height: 1.5;
+    }
+
+    body::before {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      content: "";
+      background:
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 4px),
+        repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.34) 0 1px, transparent 1px 9px);
+      opacity: 0.24;
+      mix-blend-mode: screen;
+    }
+
+    body::after {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      content: "";
+      background:
+        linear-gradient(135deg, transparent 0 44%, rgba(255, 61, 34, 0.16) 44% 48%, transparent 48%),
+        linear-gradient(45deg, transparent 0 72%, rgba(249, 214, 46, 0.12) 72% 76%, transparent 76%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 0.1em;
+      text-underline-offset: 0.18em;
+    }
+
+    a:focus-visible {
+      outline: 4px solid var(--acid);
+      outline-offset: 4px;
+    }
+
+    .page {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+      padding: 24px 0 56px;
+    }
+
+    .hero {
+      position: relative;
+      display: grid;
+      min-height: 82vh;
+      padding: clamp(22px, 4vw, 48px);
+      overflow: hidden;
+      isolation: isolate;
+      border: 2px solid var(--cream);
+      background:
+        linear-gradient(90deg, rgba(17, 17, 17, 0.88), rgba(17, 17, 17, 0.58)),
+        repeating-linear-gradient(90deg, transparent 0 22px, rgba(255, 255, 255, 0.05) 22px 23px);
+      box-shadow: var(--shadow);
+    }
+
+    .hero::before,
+    .hero::after {
+      position: absolute;
+      content: "";
+      pointer-events: none;
+    }
+
+    .hero::before {
+      top: -58px;
+      right: -34px;
+      width: min(45vw, 470px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 42px solid var(--turquoise);
+      background:
+        linear-gradient(45deg, transparent 0 45%, var(--yellow) 45% 55%, transparent 55%),
+        linear-gradient(-45deg, transparent 0 46%, var(--red) 46% 54%, transparent 54%);
+      transform: rotate(9deg);
+      z-index: -1;
+      opacity: 0.88;
+    }
+
+    .hero::after {
+      left: clamp(16px, 5vw, 72px);
+      bottom: clamp(14px, 5vw, 68px);
+      width: min(56vw, 620px);
+      height: 82px;
+      border: 2px solid var(--cream);
+      background:
+        repeating-linear-gradient(90deg, var(--pink) 0 42px, var(--blue) 42px 84px, var(--acid) 84px 126px, var(--yellow) 126px 168px),
+        var(--night);
+      box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.6);
+      transform: rotate(-2deg);
+      z-index: -1;
+    }
+
+    .eyebrow {
+      width: max-content;
+      max-width: 100%;
+      margin: 0 0 22px;
+      padding: 8px 13px;
+      color: var(--ink);
+      font-family: var(--mono);
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: var(--acid);
+      box-shadow: 7px 7px 0 var(--pink);
+      transform: rotate(-1deg);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 7.8ch;
+      margin-bottom: 24px;
+      color: var(--cream);
+      font-family: var(--sans);
+      font-size: clamp(5.4rem, 18vw, 15.2rem);
+      font-weight: 900;
+      line-height: 0.72;
+      letter-spacing: -0.13em;
+      text-transform: uppercase;
+      text-shadow:
+        0.035em 0.025em 0 var(--pink),
+        -0.028em 0.055em 0 var(--blue),
+        0.07em 0.08em 0 rgba(0, 0, 0, 0.82);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 390px);
+      gap: clamp(24px, 5vw, 64px);
+      align-items: end;
+      margin-top: auto;
+    }
+
+    .thesis {
+      max-width: 760px;
+      margin-bottom: 0;
+      font-family: var(--serif);
+      font-size: clamp(1.45rem, 3.4vw, 3.15rem);
+      line-height: 1.02;
+    }
+
+    .terminal {
+      color: var(--crt);
+      font-family: var(--mono);
+      background: #061106;
+      border: 10px solid var(--beige);
+      box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.7);
+    }
+
+    .terminal h2 {
+      margin: 0;
+      padding: 10px 14px;
+      color: var(--ink);
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      background: var(--beige);
+    }
+
+    .terminal p {
+      margin: 0;
+      padding: 16px;
+      font-size: 0.92rem;
+      line-height: 1.48;
+      text-shadow: 0 0 8px rgba(76, 255, 123, 0.45);
+    }
+
+    .nav-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 32px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-strip a {
+      display: block;
+      padding: 10px 13px;
+      border: 1px solid var(--light-line);
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .nav-strip a:hover {
+      color: var(--ink);
+      background: var(--yellow);
+    }
+
+    .section {
+      margin-top: 32px;
+      padding: clamp(20px, 4vw, 34px);
+      border: 1px solid var(--light-line);
+      background: rgba(7, 7, 10, 0.78);
+      box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.38);
+    }
+
+    .section-header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    .section h2 {
+      margin-bottom: 0;
+      font-family: var(--sans);
+      font-size: clamp(1.6rem, 4.2vw, 3.7rem);
+      line-height: 0.88;
+      letter-spacing: -0.06em;
+      text-transform: uppercase;
+    }
+
+    .stamp {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 7px 11px;
+      color: var(--acid);
+      border: 1px solid currentColor;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      transform: rotate(1.1deg);
+    }
+
+    .tension {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .pole {
+      position: relative;
+      min-height: 300px;
+      padding: 22px;
+      overflow: hidden;
+      color: var(--ink);
+      background: var(--paper);
+    }
+
+    .pole:nth-child(2) {
+      color: var(--cream);
+      background:
+        radial-gradient(circle at 80% 18%, var(--pink), transparent 10rem),
+        radial-gradient(circle at 18% 86%, var(--blue), transparent 12rem),
+        var(--night);
+    }
+
+    .pole::after {
+      position: absolute;
+      right: 18px;
+      bottom: 18px;
+      width: 104px;
+      height: 104px;
+      content: "";
+      border: 18px solid currentColor;
+      transform: rotate(13deg);
+      opacity: 0.32;
+    }
+
+    .pole small {
+      display: block;
+      margin-bottom: 28px;
+      font-family: var(--mono);
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .pole h3 {
+      margin-bottom: 14px;
+      font-family: var(--sans);
+      font-size: clamp(2rem, 4.8vw, 4.5rem);
+      line-height: 0.82;
+      letter-spacing: -0.08em;
+      text-transform: uppercase;
+    }
+
+    .pole p {
+      max-width: 520px;
+      margin-bottom: 0;
+      font-size: 1.02rem;
+    }
+
+    .signals {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .signal {
+      min-height: 210px;
+      padding: 16px;
+      border: 1px solid var(--light-line);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .signal:nth-child(odd) {
+      transform: translateY(18px);
+    }
+
+    .signal b {
+      display: block;
+      margin-bottom: 22px;
+      color: var(--tone);
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .signal h3 {
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .signal p {
+      margin: 0;
+      color: rgba(255, 243, 209, 0.78);
+      font-size: 0.9rem;
+    }
+
+    .signal:nth-child(1) {
+      --tone: var(--turquoise);
+    }
+
+    .signal:nth-child(2) {
+      --tone: var(--pink);
+    }
+
+    .signal:nth-child(3) {
+      --tone: var(--beige);
+    }
+
+    .signal:nth-child(4) {
+      --tone: var(--lavender);
+    }
+
+    .signal:nth-child(5) {
+      --tone: var(--yellow);
+    }
+
+    .signal:nth-child(6) {
+      --tone: var(--crt);
+    }
+
+    .recipes {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .recipe {
+      position: relative;
+      display: flex;
+      min-height: 390px;
+      flex-direction: column;
+      padding: 20px;
+      overflow: hidden;
+      color: var(--ink);
+      text-decoration: none;
+      background: var(--card);
+      box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.48);
+    }
+
+    .recipe::before {
+      position: absolute;
+      top: -38px;
+      right: -36px;
+      width: 148px;
+      height: 148px;
+      content: "";
+      background:
+        linear-gradient(45deg, transparent 0 42%, var(--ink) 42% 48%, transparent 48%),
+        repeating-linear-gradient(90deg, transparent 0 12px, rgba(17, 17, 17, 0.18) 12px 22px);
+      border: 18px solid rgba(17, 17, 17, 0.78);
+      border-radius: var(--radius, 0);
+      transform: rotate(var(--turn, 8deg));
+    }
+
+    .recipe:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: 12px 12px 0 var(--accent);
+    }
+
+    .recipe small {
+      margin-bottom: 24px;
+      font-family: var(--mono);
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .recipe h3 {
+      margin-bottom: 14px;
+      font-family: var(--sans);
+      font-size: clamp(1.45rem, 3vw, 2.35rem);
+      line-height: 0.88;
+      letter-spacing: -0.06em;
+      text-transform: uppercase;
+    }
+
+    .recipe p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .recipe .avoid {
+      position: relative;
+      z-index: 1;
+      margin-top: auto;
+      padding-top: 18px;
+      border-top: 1px solid rgba(17, 17, 17, 0.24);
+      font-family: var(--mono);
+      font-size: 0.82rem;
+    }
+
+    .recipe:nth-child(1) {
+      --card: var(--pink);
+      --accent: var(--acid);
+      --radius: 50%;
+      --turn: -11deg;
+    }
+
+    .recipe:nth-child(2) {
+      --card: var(--turquoise);
+      --accent: var(--yellow);
+      --turn: 12deg;
+    }
+
+    .recipe:nth-child(3) {
+      --card: var(--beige);
+      --accent: var(--crt);
+      --turn: 0deg;
+    }
+
+    .recipe:nth-child(4) {
+      --card: var(--charcoal);
+      --accent: var(--lavender);
+      color: var(--cream);
+    }
+
+    .recipe:nth-child(4)::before {
+      border-color: rgba(255, 243, 209, 0.56);
+      background: repeating-linear-gradient(45deg, transparent 0 18px, rgba(255, 243, 209, 0.12) 18px 22px);
+    }
+
+    .recipe:nth-child(4) .avoid {
+      border-color: rgba(255, 243, 209, 0.24);
+    }
+
+    .map {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .map a {
+      display: grid;
+      min-height: 126px;
+      padding: 16px;
+      border: 1px solid var(--light-line);
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .map a:hover {
+      color: var(--ink);
+      background: var(--acid);
+    }
+
+    .map strong {
+      align-self: start;
+      font-size: 1.05rem;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .map span {
+      align-self: end;
+      color: inherit;
+      opacity: 0.78;
+      font-size: 0.88rem;
+    }
+
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .palette {
+      min-height: 190px;
+      padding: 16px;
+      color: var(--ink);
+      background: var(--paper);
+    }
+
+    .palette h3 {
+      margin-bottom: 14px;
+      font-size: 0.9rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .chips {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 7px;
+      margin-top: 18px;
+    }
+
+    .chip {
+      aspect-ratio: 1;
+      border: 1px solid rgba(17, 17, 17, 0.38);
+      background: var(--chip);
+    }
+
+    .prompt-deck {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .prompt {
+      margin: 0;
+      padding: 18px;
+      color: var(--crt);
+      border: 10px solid var(--beige);
+      font-family: var(--mono);
+      font-size: 0.92rem;
+      line-height: 1.45;
+      white-space: pre-wrap;
+      background:
+        repeating-linear-gradient(0deg, rgba(76, 255, 123, 0.08) 0 1px, transparent 1px 5px),
+        #061106;
+      box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.58);
+    }
+
+    .artifact-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr 1fr;
+      gap: 16px;
+    }
+
+    .artifact {
+      padding: 20px;
+      color: var(--ink);
+      background: var(--cream);
+    }
+
+    .artifact:nth-child(2) {
+      background: var(--yellow);
+    }
+
+    .artifact:nth-child(3) {
+      color: var(--cream);
+      background: var(--blue);
+    }
+
+    .artifact h3 {
+      margin-bottom: 12px;
+      font-size: 1rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .artifact ul {
+      margin: 0;
+      padding-left: 1.1rem;
+    }
+
+    .artifact li + li {
+      margin-top: 8px;
+    }
+
+    .rule {
+      display: grid;
+      grid-template-columns: minmax(180px, 0.38fr) minmax(0, 1fr);
+      gap: 0;
+      align-items: stretch;
+      overflow: hidden;
+      padding: 0;
+      color: var(--ink);
+      background: var(--paper);
+    }
+
+    .rule b {
+      display: grid;
+      place-items: center;
+      min-height: 210px;
+      padding: 20px;
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: clamp(3.2rem, 8vw, 7rem);
+      line-height: 0.8;
+      letter-spacing: -0.12em;
+      background:
+        linear-gradient(135deg, var(--pink) 0 28%, var(--yellow) 28% 48%, var(--turquoise) 48% 70%, var(--acid) 70%);
+    }
+
+    .rule p {
+      align-self: center;
+      max-width: 760px;
+      margin: 0;
+      padding: clamp(20px, 4vw, 38px);
+      font-family: var(--serif);
+      font-size: clamp(1.55rem, 4vw, 3.2rem);
+      line-height: 1.02;
+    }
+
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: space-between;
+      margin-top: 32px;
+      padding-top: 20px;
+      color: rgba(255, 243, 209, 0.72);
+      border-top: 1px solid var(--light-line);
+      font-family: var(--mono);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 1020px) {
+      .signals,
+      .recipes,
+      .map,
+      .palette-grid,
+      .prompt-deck,
+      .artifact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .signal:nth-child(odd) {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        width: min(100% - 20px, var(--max));
+        padding-top: 10px;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-grid,
+      .tension,
+      .signals,
+      .recipes,
+      .map,
+      .palette-grid,
+      .prompt-deck,
+      .artifact-grid,
+      .rule {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: clamp(4.5rem, 28vw, 8rem);
+      }
+
+      .hero::after {
+        width: 76vw;
+        height: 52px;
+      }
+
+      .recipe {
+        min-height: 300px;
+      }
+
+      .rule b {
+        min-height: 120px;
+      }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .nav-strip a,
+      .recipe,
+      .map a {
+        transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, color 160ms ease;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero" aria-labelledby="title">
+      <p class="eyebrow">Flashback example index / corpus 1981</p>
+      <h1 id="title">1981</h1>
+      <div class="hero-grid">
+        <p class="thesis">The broadcast interface switches on: Memphis objects, MTV identity, beige platforms, graphical metaphors, and fashion silhouettes become repeatable systems.</p>
+        <aside class="terminal" aria-label="1981 operating note">
+          <h2>System note</h2>
+          <p>STYLE BECOMES INFRASTRUCTURE. Build for channels, platforms, mutable marks, object-symbols, screen metaphors, and bodies that broadcast identity.</p>
+        </aside>
+      </div>
+    </section>
+
+    <nav aria-label="Page sections">
+      <ul class="nav-strip">
+        <li><a href="#tension">Tension</a></li>
+        <li><a href="#signals">Signals</a></li>
+        <li><a href="#recipes">Recipes</a></li>
+        <li><a href="#corpus-map">Corpus map</a></li>
+        <li><a href="#palettes">Palettes</a></li>
+        <li><a href="#prompts">Prompt seeds</a></li>
+        <li><a href="#artifacts">Artifacts</a></li>
+        <li><a href="../../corpus/1981.md">Full corpus</a></li>
+      </ul>
+    </nav>
+
+    <section class="section" id="tension" aria-labelledby="tension-title">
+      <div class="section-header">
+        <h2 id="tension-title">Dominant tension</h2>
+        <span class="stamp">Beige systems / broadcast mutation</span>
+      </div>
+      <div class="tension">
+        <article class="pole">
+          <small>Desk future</small>
+          <h3>Beige systems</h3>
+          <p>IBM PC, Xerox Star, business software, setup diagrams, office metaphors, expansion slots, forms, labels, compatibility, and trust through modular standardization.</p>
+        </article>
+        <article class="pole">
+          <small>Channel future</small>
+          <h3>Broadcast mutation</h3>
+          <p>MTV, Memphis, New Romantic video, fashion editorial, mutable logos, pattern, pose, surface, and identities that keep changing costume without losing recognition.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="signals" aria-labelledby="signals-title">
+      <div class="section-header">
+        <h2 id="signals-title">1981 signals</h2>
+        <span class="stamp">Ignition year</span>
+      </div>
+      <div class="signals">
+        <article class="signal">
+          <b>01</b>
+          <h3>Memphis debuts</h3>
+          <p>Postmodern object language becomes color, laminate, geometry, symbolic furniture, and anti-good-taste optimism.</p>
+        </article>
+        <article class="signal">
+          <b>02</b>
+          <h3>MTV launches</h3>
+          <p>Music becomes a continuous visual channel. Pop identity now needs sleeves, videos, clothes, logos, and motion.</p>
+        </article>
+        <article class="signal">
+          <b>03</b>
+          <h3>IBM PC arrives</h3>
+          <p>The personal computer becomes a mainstream business object: beige, modular, expandable, compatible, and platform-like.</p>
+        </article>
+        <article class="signal">
+          <b>04</b>
+          <h3>Xerox Star ships</h3>
+          <p>Icons, folders, documents, mouse interaction, WYSIWYG, and networked office metaphors enter commercial interface history.</p>
+        </article>
+        <article class="signal">
+          <b>05</b>
+          <h3>Fashion broadcasts</h3>
+          <p>Grace Jones, New Romantic video, Diana's wedding dress, and Japanese avant-garde fashion turn the body into public signal design.</p>
+        </article>
+        <article class="signal">
+          <b>06</b>
+          <h3>Film builds worlds</h3>
+          <p><em>Raiders</em>, <em>Escape from New York</em>, <em>Thief</em>, and <em>Diva</em> give 1981 tactile adventure, urban ruin, neon precision, and pop modernity.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="recipes" aria-labelledby="recipes-title">
+      <div class="section-header">
+        <h2 id="recipes-title">Example recipes</h2>
+        <span class="stamp">Four design directions</span>
+      </div>
+      <div class="recipes">
+        <a class="recipe" href="../../corpus/1981.md#recipe-1-mutable-broadcast-identity">
+          <small>Recipe 1</small>
+          <h3>Mutable broadcast identity</h3>
+          <p>For media brands, AI assistants, creative tools, music products, and launch campaigns. Keep the silhouette stable; let every surface mutate.</p>
+          <span class="avoid">Avoid: generic retro TV without identity structure.</span>
+        </a>
+        <a class="recipe" href="../../corpus/1981.md#recipe-2-memphis-object-system">
+          <small>Recipe 2</small>
+          <h3>Memphis object-system</h3>
+          <p>For playful hardware, education tools, furniture, toy-like interfaces, and optimistic brand systems built from object-symbols.</p>
+          <span class="avoid">Avoid: random squiggles without object logic.</span>
+        </a>
+        <a class="recipe" href="../../corpus/1981.md#recipe-3-beige-platform-future">
+          <small>Recipe 3</small>
+          <h3>Beige platform future</h3>
+          <p>For developer tools, databases, enterprise AI, documentation systems, and productivity products that need trust and extensibility.</p>
+          <span class="avoid">Avoid: boring or ironic-only office nostalgia.</span>
+        </a>
+        <a class="recipe" href="../../corpus/1981.md#recipe-4-black-architectural-fashion">
+          <small>Recipe 4</small>
+          <h3>Black architectural fashion</h3>
+          <p>For fashion brands, privacy tools, serious AI companions, writing environments, galleries, and products that need refusal.</p>
+          <span class="avoid">Avoid: generic luxury minimalism.</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="corpus-map" aria-labelledby="map-title">
+      <div class="section-header">
+        <h2 id="map-title">Corpus map</h2>
+        <span class="stamp">Fast entry points</span>
+      </div>
+      <ul class="map">
+        <li><a href="../../corpus/1981.md#year-thesis"><strong>Year thesis</strong><span>Style becomes infrastructure.</span></a></li>
+        <li><a href="../../corpus/1981.md#how-1981-differs-from-1980"><strong>1980 to 1981</strong><span>From synthesis to ignition.</span></a></li>
+        <li><a href="../../corpus/1981.md#design-climate"><strong>Design climate</strong><span>Beige systems coexist with broadcast mutation.</span></a></li>
+        <li><a href="../../corpus/1981.md#timeline-signals"><strong>Timeline signals</strong><span>Memphis, MTV, IBM, Xerox Star, Brody, Kawakubo, Yamamoto.</span></a></li>
+        <li><a href="../../corpus/1981.md#typography"><strong>Typography</strong><span>Type becomes identity in motion.</span></a></li>
+        <li><a href="../../corpus/1981.md#graphic-design"><strong>Graphic design</strong><span>Identity that can travel through media.</span></a></li>
+        <li><a href="../../corpus/1981.md#product-and-interaction-design"><strong>Product and interaction</strong><span>Expressive objects, platform objects, and interface metaphors.</span></a></li>
+        <li><a href="../../corpus/1981.md#architecture-and-interiors"><strong>Architecture</strong><span>Memphis room, PC office, video control room, neon workshop.</span></a></li>
+        <li><a href="../../corpus/1981.md#fashion-and-self-design"><strong>Fashion</strong><span>Broadcast silhouette, glamour, refusal, persona.</span></a></li>
+        <li><a href="../../corpus/1981.md#music"><strong>Music</strong><span>Synthpop, New Romantic media, Kraftwerk computing, MTV image.</span></a></li>
+        <li><a href="../../corpus/1981.md#film-and-moving-image"><strong>Film</strong><span>Tactile adventure, urban decay, neon procedural cool, cinema du look.</span></a></li>
+        <li><a href="../../corpus/1981.md#anti-cliches"><strong>Anti-cliches</strong><span>No late-80s mall, vaporwave, Mac nostalgia, or smooth digital polish.</span></a></li>
+      </ul>
+    </section>
+
+    <section class="section" id="palettes" aria-labelledby="palettes-title">
+      <div class="section-header">
+        <h2 id="palettes-title">Palette channels</h2>
+        <span class="stamp">Surface logic</span>
+      </div>
+      <div class="palette-grid">
+        <article class="palette">
+          <h3>Memphis ignition</h3>
+          <p>Pattern and color as manifesto.</p>
+          <div class="chips" aria-label="Memphis ignition colors">
+            <span class="chip" style="--chip: #08b9bd"></span>
+            <span class="chip" style="--chip: #ff3d22"></span>
+            <span class="chip" style="--chip: #f9d62e"></span>
+            <span class="chip" style="--chip: #111111"></span>
+            <span class="chip" style="--chip: #ffffff"></span>
+            <span class="chip" style="--chip: #aa8dff"></span>
+          </div>
+        </article>
+        <article class="palette">
+          <h3>MTV broadcast</h3>
+          <p>Logo as container for motion and texture.</p>
+          <div class="chips" aria-label="MTV broadcast colors">
+            <span class="chip" style="--chip: #111111"></span>
+            <span class="chip" style="--chip: #ffffff"></span>
+            <span class="chip" style="--chip: #ff3caf"></span>
+            <span class="chip" style="--chip: #1a3dff"></span>
+            <span class="chip" style="--chip: #b9ff2f"></span>
+            <span class="chip" style="--chip: #8b8f98"></span>
+          </div>
+        </article>
+        <article class="palette">
+          <h3>IBM office</h3>
+          <p>Standardization as trust.</p>
+          <div class="chips" aria-label="IBM office colors">
+            <span class="chip" style="--chip: #c9b894"></span>
+            <span class="chip" style="--chip: #d5c8aa"></span>
+            <span class="chip" style="--chip: #fff3d1"></span>
+            <span class="chip" style="--chip: #4cff7b"></span>
+            <span class="chip" style="--chip: #ffffff"></span>
+            <span class="chip" style="--chip: #111111"></span>
+          </div>
+        </article>
+        <article class="palette">
+          <h3>Grace Jones / Goude</h3>
+          <p>Pose as logo; persona as system.</p>
+          <div class="chips" aria-label="Grace Jones and Jean-Paul Goude colors">
+            <span class="chip" style="--chip: #060912"></span>
+            <span class="chip" style="--chip: #5a321f"></span>
+            <span class="chip" style="--chip: #c39a34"></span>
+            <span class="chip" style="--chip: #7a7f83"></span>
+            <span class="chip" style="--chip: #f6cf80"></span>
+            <span class="chip" style="--chip: #111111"></span>
+          </div>
+        </article>
+        <article class="palette">
+          <h3>Japanese avant-garde</h3>
+          <p>Black as structure, not absence.</p>
+          <div class="chips" aria-label="Japanese avant-garde colors">
+            <span class="chip" style="--chip: #000000"></span>
+            <span class="chip" style="--chip: #232323"></span>
+            <span class="chip" style="--chip: #080b11"></span>
+            <span class="chip" style="--chip: #f4ead5"></span>
+            <span class="chip" style="--chip: #4a4741"></span>
+            <span class="chip" style="--chip: #8a7c69"></span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="prompts" aria-labelledby="prompts-title">
+      <div class="section-header">
+        <h2 id="prompts-title">Prompt seeds</h2>
+        <span class="stamp">Copy into Flashback</span>
+      </div>
+      <div class="prompt-deck">
+        <pre class="prompt">Design this through a 1981 lens: Memphis has just arrived, MTV has just gone on air, and the personal computer is becoming a business object. Give me a system that can move between object, screen, logo, and editorial layout.</pre>
+        <pre class="prompt">Give me three 1981-informed directions:
+1. Mutable broadcast identity
+2. Beige platform future
+3. Black architectural fashion
+For each, explain the historical lineage, typography, color, motion, interaction, and what to avoid.</pre>
+        <pre class="prompt">Critique this product as if it launched in 1981. Is it more Memphis object, MTV identity, IBM platform, Xerox interface, or New Romantic persona? What would make that lineage stronger?</pre>
+      </div>
+    </section>
+
+    <section class="section" id="artifacts" aria-labelledby="artifacts-title">
+      <div class="section-header">
+        <h2 id="artifacts-title">Reference artifacts</h2>
+        <span class="stamp">Anchor the year</span>
+      </div>
+      <div class="artifact-grid">
+        <article class="artifact">
+          <h3>Objects</h3>
+          <ul>
+            <li>Memphis first collection objects</li>
+            <li>IBM 5150 Personal Computer</li>
+            <li>Xerox Star 8010 Information System</li>
+            <li>Sony WM-2 Walkman</li>
+            <li>CRTs, keyboards, floppy disks, dot-matrix printers</li>
+          </ul>
+        </article>
+        <article class="artifact">
+          <h3>Print and graphics</h3>
+          <ul>
+            <li>MTV logo and early bumpers</li>
+            <li><em>The Face</em> under Neville Brody</li>
+            <li>Grace Jones, <em>Nightclubbing</em></li>
+            <li>Kraftwerk, <em>Computer World</em></li>
+            <li>The Human League, <em>Dare</em></li>
+          </ul>
+        </article>
+        <article class="artifact">
+          <h3>Spaces</h3>
+          <ul>
+            <li>Arc '74 Memphis debut</li>
+            <li>MTV control rooms and cable broadcast environments</li>
+            <li>IBM office desks and Xerox-style graphical offices</li>
+            <li>New Romantic clubs</li>
+            <li>Neon streets in <em>Thief</em> and urban ruins in <em>Escape from New York</em></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section rule" aria-label="1981 rule of thumb">
+      <b>1981</b>
+      <p>The future should feel like analog culture discovering it can become a channel, a platform, or a mutable surface.</p>
+    </section>
+
+    <footer class="footer">
+      <span>Flashback / examples / 1981</span>
+      <a href="../../corpus/1981.md">Read the full 1981 corpus</a>
+    </footer>
+  </main>
+</body>
+</html>
