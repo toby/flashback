@@ -2,34 +2,24 @@
 
 > A time machine for taste — historically literate agentic design.
 
-Flashback is a design partner that moves fluently between Bauhaus rigor, Swiss
-grid systems, Memphis irreverence, postmodern critique, cybernetic interfaces,
-and whatever the frontier is doing next. It grounds design work in a specific
-year of history — the real movements, objects, typefaces, tensions, and cultural
-weather of that moment — instead of generic AI polish.
+Most design tools help you make the thing you already imagined. Flashback helps
+you discover what it *should become*.
+
+Name a year and point it at a product, brand, interface, or raw hunch. Flashback
+moves fluently across design history — Bauhaus rigor, Swiss grids, Memphis
+irreverence, cybernetic interfaces, and whatever the frontier is doing next — and
+grounds the work in the real movements, objects, typefaces, and cultural weather
+of the moment you chose, instead of generic AI polish. Because history is
+**material, not decoration**: a year isn't a filter or a costume, it's a set of
+structural decisions — why a grid broke, why a palette narrowed, why an interface
+borrowed a metaphor — that make new work specific, intentional, and alive.
 
 It ships today as a **Copilot skill**: `/flashback`.
 
-## The idea
+## What's Flashback?
 
-Most design tools help you make the thing you already imagined. Flashback helps
-you discover what the thing *should become*.
-
-Point it at a product, brand, interface, campaign, or raw hunch, and name a year
-or era. Flashback excavates that year's design research, reads what made it feel
-the way it felt, and turns it into usable direction — distinct creative
-territories, a brief, a design system, a critique, or an implementation-ready
-handoff.
-
-The core belief: **history is material, not decoration.** A year is not a filter
-or a costume. It's a set of structural decisions — why a grid broke, why a
-palette narrowed, why an interface borrowed a metaphor — that can make new work
-specific, intentional, and alive.
-
-## What Flashback is
-
-Flashback is a Copilot skill backed by a year-by-year corpus of design research
-published on GitHub Pages.
+A Copilot skill, backed by a year-by-year corpus of design research published on
+GitHub Pages.
 
 - **The skill** (`.github/skills/flashback/SKILL.md`) is invoked as `/flashback`,
   or automatically whenever a request ties a design to a year or era.
@@ -44,21 +34,6 @@ actual record of, say, 1981 and builds from there.
 
 The corpus currently covers **1980–1985** and is expanding toward full coverage
 from 1900 to the present.
-
-## How it can help you
-
-- **Ground a design in a specific era.** "Make this landing page feel like 1983"
-  becomes concrete type, color, layout, and motion choices rooted in what 1983
-  actually was.
-- **Get distinct directions, not one safe average.** Ask for territories and
-  Flashback proposes two or three genuinely different routes with tradeoffs, then
-  recommends one.
-- **Diagnose an interface.** Hand it a screen and ask what era it unconsciously
-  belongs to, what it's trying to be, and where the hierarchy fails.
-- **Build a system rooted in a movement.** Turn a year's visual language into
-  tokens, components, copy tone, and motion notes.
-- **Blend or contrast years.** Name more than one year to fuse them into a
-  coherent direction — or set them against each other as competing territories.
 
 ## Using the skill
 
@@ -139,29 +114,6 @@ Flashback is opinionated.
 - **Accessibility is not optional.** Contrast, motion, semantics, and readability
   shape the work from the start.
 - **Critique before handoff.** Weaknesses get exposed before confident specs.
-
-## A good Flashback response
-
-A strong response feels like this:
-
-```text
-Here are three directions:
-
-1. Civic Archive Modernism
-   Rooted in Swiss public-information systems and contemporary civic tech.
-   Best for trust, clarity, and institutional durability.
-
-2. Haunted Hypercard
-   Rooted in early personal computing, interactive fiction, and memory systems.
-   Best for intimacy, exploration, and emotional distinctiveness.
-
-3. Liquid Catalog
-   Rooted in spatial interfaces, generative UI, and collection systems.
-   Best for adaptive browsing and a more future-facing identity.
-
-Recommendation: Haunted Hypercard, because the product is about memory,
-not just storage. It gives the interface a reason to feel alive.
-```
 
 ## Browse the research
 
