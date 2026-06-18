@@ -3,6 +3,206 @@
   "source": "corpus/*.md",
   "examples": [
     {
+      "year": 1925,
+      "title": "1925: the year design gets a name",
+      "subtitle": "Paris stages the exposition that will later be called Art Deco, the Bauhaus reopens in Dessau, and luxury ornament and machine geometry argue in public for the soul of the modern object.",
+      "status": "example",
+      "decadePosition": "jazz age",
+      "sourcePath": "corpus/1925.md",
+      "examplePath": "examples/1925/index.html",
+      "feeling": "luxury and the machine arguing over the same future",
+      "primaryLens": [
+        "the Paris Exposition turns decorative modernity into an international style",
+        "the Bauhaus moves to Dessau and rebuilds modernism as a working method",
+        "constructivism and De Stijl push geometry, machine logic, and red-black abstraction",
+        "jazz, cinema, and the flapper rewrite the body, the night, and the moving image",
+        "the machine becomes both a luxury motif and a moral argument about how to live"
+      ],
+      "artDirection": {
+        "layout": "deco",
+        "texture": "blueprint",
+        "ornament": "diagonal-bar",
+        "fonts": {
+          "display": "heavy-condensed",
+          "body": "geometric-deco",
+          "mono": "typewriter"
+        },
+        "palette": {
+          "ink": "#14110a",
+          "paper": "#f0e6cd",
+          "muted": "#c1ad81",
+          "bg": [
+            "#0f0c07",
+            "#1d1710",
+            "#0a0805"
+          ],
+          "accents": [
+            "#1c1c1c",
+            "#2f7d6b",
+            "#9c3b2f",
+            "#c79a3c"
+          ]
+        }
+      },
+      "recipes": [
+        {
+          "number": 1,
+          "name": "Deco luxury",
+          "anchor": "recipe-1-deco-luxury",
+          "useFor": "premium brands, hospitality, beauty, jewelry, theaters, title sequences.",
+          "palette": "black, gold, jade, cream, deep lacquer red.",
+          "type": "tall condensed capitals, stylized serifs, symmetrical lockups.",
+          "layout": "vertical symmetry, stepped frames, central emblems, radiating lines.",
+          "imagery": "sunbursts, fountains, gazelles, stylized flora, geometric inlay.",
+          "motion": "slow reveal, mirrored symmetry, gilded shimmer.",
+          "risk": "looking like a Gatsby party-supply kit.",
+          "addAccuracyWith": "real material logic - lacquer, veneer, metal inlay - not just gold gradients."
+        },
+        {
+          "number": 2,
+          "name": "Bauhaus method",
+          "anchor": "recipe-2-bauhaus-method",
+          "useFor": "tools, education, systems, manufacturing, honest product brands.",
+          "palette": "red, blue, yellow, black, and white.",
+          "type": "geometric sans, lowercase, asymmetric, grid-aligned.",
+          "layout": "modular grid, generous space, structure made visible.",
+          "imagery": "circle, square, triangle, photograph, diagram.",
+          "motion": "snap to grid, primary-color transitions, mechanical rhythm.",
+          "risk": "generic \"minimalist\" wallpaper with no system underneath.",
+          "addAccuracyWith": "a real grid and a real reason for every element."
+        },
+        {
+          "number": 3,
+          "name": "Constructivist signal",
+          "anchor": "recipe-3-constructivist-signal",
+          "useFor": "campaigns, manifestos, music, activism, bold editorial.",
+          "palette": "red, black, off-white.",
+          "type": "heavy condensed sans, diagonal, oversized.",
+          "layout": "diagonal axes, photomontage, thick bars and rules.",
+          "imagery": "workers, machines, cut photography, arrows, megaphones.",
+          "motion": "hard cuts, sliding bars, diagonal entrances.",
+          "risk": "cosplaying revolution as decoration.",
+          "addAccuracyWith": "montage logic and a message worth shouting."
+        },
+        {
+          "number": 4,
+          "name": "Jazz-age night",
+          "anchor": "recipe-4-jazz-age-night",
+          "useFor": "nightlife, music, events, film, performance brands.",
+          "palette": "black, electric gold, spotlight white, deep red.",
+          "type": "theatrical display capitals, hand-drawn flourishes.",
+          "layout": "poster-first, figure in motion, big name, big night.",
+          "imagery": "dancers, silhouettes, spotlights, instruments, city electricity.",
+          "motion": "spotlight sweeps, curtain reveals, syncopated timing.",
+          "risk": "flat \"speakeasy\" cliche with no rhythm.",
+          "addAccuracyWith": "real performance energy and poster simplification."
+        }
+      ],
+      "promptSeeds": [
+        "Design this through a 1925 lens: the Paris Exposition has just turned decorative\nmodernity into an international style while the Bauhaus reopens in Dessau as a\nmachine-age method. Give me directions that keep luxury Deco and machine\nmodernism distinct instead of blending them into generic vintage.",
+        "Give me three 1925-informed directions:\n1. Deco luxury\n2. Bauhaus method\n3. Constructivist signal\nFor each, explain the historical lineage, typography, color, material, and what\nto avoid.",
+        "Critique this layout as if it appeared in 1925. Is it Deco ornament, Bauhaus\nsystem, or constructivist montage? What evidence of material, grid, or diagonal\nsupports that lineage?"
+      ],
+      "referenceArtifacts": {
+        "objects": [
+          "Marcel Breuer's Wassily (B3) tubular-steel chair",
+          "Lalique glass and Ruhlmann cabinetry from the Exposition",
+          "Jean Puiforcat silver",
+          "The Leica 35mm camera",
+          "Sonia Delaunay's simultaneous textiles"
+        ],
+        "printAndGraphics": [
+          "Cassandre's monumental advertising posters",
+          "Paul Colin's La Revue Negre poster",
+          "The New Yorker masthead and Rea Irvin lettering",
+          "Constructivist and Bauhaus typographic experiments",
+          "Exposition catalogues and Deco pattern work"
+        ],
+        "spaces": [
+          "The Paris Exposition pavilions along the Seine",
+          "Le Corbusier's Pavillon de l'Esprit Nouveau",
+          "Melnikov's Soviet Pavilion",
+          "The new Bauhaus building and masters' houses in Dessau",
+          "Parisian jazz cabarets and revue theaters"
+        ]
+      },
+      "antiCliches": [
+        "A modern \"Gatsby\" template with plastic gold gradients",
+        "Generic gold-on-black Deco with no material or structure",
+        "Bauhaus reduced to three primary squares and nothing else",
+        "Steampunk gears pretending to be machine-age modernism",
+        "A jazz cliche with no understanding of poster or performance design",
+        "Smooth digital symmetry with none of the era's handcraft or grain"
+      ],
+      "sectionMap": [
+        {
+          "label": "Year thesis",
+          "anchor": "year-thesis",
+          "description": "luxury and the machine arguing over the same future"
+        },
+        {
+          "label": "1925 to 1924",
+          "anchor": "how-1925-differs-from-1924",
+          "description": "Year-to-year change."
+        },
+        {
+          "label": "Design climate",
+          "anchor": "design-climate",
+          "description": "1925 is pulled between decorative luxury and machine purism."
+        },
+        {
+          "label": "Timeline signals",
+          "anchor": "timeline-signals",
+          "description": "The Paris Exposition des Arts Décoratifs opens, Le Corbusier shows the Pavillon de l'Esprit..."
+        },
+        {
+          "label": "Typography",
+          "anchor": "typography",
+          "description": "1925 typography is split between ornamental display and constructed geometry."
+        },
+        {
+          "label": "Graphic design",
+          "anchor": "graphic-design",
+          "description": "1925 graphic design is where luxury and modernism are most visible side by side."
+        },
+        {
+          "label": "Product design",
+          "anchor": "product-and-industrial-design",
+          "description": "1925 objects swing between the jewel and the tool."
+        },
+        {
+          "label": "Architecture",
+          "anchor": "architecture-and-interiors",
+          "description": "Architecture in 1925 is staged as a set of competing rooms."
+        },
+        {
+          "label": "Fashion",
+          "anchor": "fashion-and-self-design",
+          "description": "The body is redrawn in 1925."
+        },
+        {
+          "label": "Music",
+          "anchor": "music",
+          "description": "1925 is jazz arriving as both sound and spectacle."
+        },
+        {
+          "label": "Film",
+          "anchor": "film-and-moving-image",
+          "description": "Cinema in 1925 becomes a laboratory for editing and design."
+        },
+        {
+          "label": "Surface",
+          "anchor": "color-material-and-surface",
+          "description": "1925's two futures even disagree about surface."
+        },
+        {
+          "label": "Anti-cliches",
+          "anchor": "anti-cliches",
+          "description": "Do not make 1925 look like:"
+        }
+      ]
+    },
+    {
       "year": 1980,
       "title": "1980: the hinge year",
       "subtitle": "Late analog culture starts mutating into postmodern surface, portable media, style magazines, and video-era self-fashioning.",
