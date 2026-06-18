@@ -1698,8 +1698,68 @@ function generateSkillPageHtml(skill, entries) {
   const sorted = [...entries].sort((a, b) => a.year - b.year);
   const name = skill.frontmatter.name || 'flashback';
   const description = skill.frontmatter.description || 'Ground a design task in a chosen year of design history.';
-  const yearList = sorted.map((entry) => entry.year).join(', ');
+  const years = sorted.map((entry) => entry.year);
+  const minYear = years.length ? Math.min(...years) : 1900;
+  const maxYear = years.length ? Math.max(...years) : 2026;
+  const span = minYear === maxYear ? String(minYear) : `${minYear}\u2013${maxYear}`;
+  const totalRecipes = sorted.reduce((sum, entry) => sum + entry.recipes.length, 0);
   const firstYear = sorted.length > 0 ? sorted[0].year : 1980;
+  const decadeStarts = [...new Set(sorted.map((entry) => Math.floor(entry.year / 10) * 10))].sort((a, b) => a - b);
+  const accents = ['var(--accent)', 'var(--accent-2)', 'var(--accent-3)'];
+
+  const steps = [
+    ['Discover', 'Fetch <code>examples/manifest.json</code> to see every year on file and what each one holds.'],
+    ['Read', 'Pull the full <code>corpus/YYYY.md</code>: thesis, climate, recipes, anti-clich&eacute;s, prompts, references.'],
+    ['Design', 'Lead with the year&rsquo;s thesis, choose a fitting recipe, respect the anti-clich&eacute;s, then ship.'],
+  ];
+  const stepCards = steps
+    .map(([title, body], i) => `        <article class="card step" style="--c: ${accents[i % accents.length]};">
+          <span class="step-num">0${i + 1}</span>
+          <h3 class="card-title">${title}</h3>
+          <p class="card-body">${body}</p>
+        </article>`)
+    .join('\n');
+
+  const agents = [
+    ['Copilot CLI', '~/.copilot/skills/'],
+    ['Claude Code', '~/.claude/skills/'],
+    ['Codex', '~/.agents/skills/'],
+    ['OpenCode', '~/.config/opencode/skills/'],
+  ];
+  const agentCards = agents
+    .map(([label, dir], i) => `        <article class="card agent" style="--c: ${accents[i % accents.length]};">
+          <h3 class="agent-name">${label}</h3>
+          <code class="agent-path">${dir}</code>
+        </article>`)
+    .join('\n');
+
+  const modes = [
+    ['territories', 'Two or three distinct directions, with tradeoffs'],
+    ['brief', 'Audience, constraints, principles, success criteria'],
+    ['system', 'Type, color, layout, spacing, components, motion, voice'],
+    ['critique', 'What works, what fails, and what to change'],
+    ['handoff', 'Specs, tokens, components, acceptance criteria'],
+    ['research', 'Lineage, a contemporary scan, references, anti-references'],
+  ];
+  const modeItems = modes
+    .map(([mode, desc]) => `        <div class="mode">
+          <code class="mode-name">${mode}</code>
+          <span class="mode-desc">${desc}</span>
+        </div>`)
+    .join('\n');
+
+  const prompts = [
+    'Design a landing page with a 1981 feeling.',
+    'Three directions for a finance app, grounded in 1984 \u2014 then critique them.',
+    'What era does this interface accidentally belong to, and how do I make it more memorable?',
+  ];
+  const promptBlocks = prompts
+    .map((prompt) => `        <pre class="prompt">${escapeHtml(prompt)}</pre>`)
+    .join('\n');
+
+  const decadeChips = decadeStarts
+    .map((start) => `        <a href="../#${start}s">${start}s</a>`)
+    .join('\n');
 
   return `<!doctype html>
 <html lang="en">
@@ -1711,40 +1771,167 @@ function generateSkillPageHtml(skill, entries) {
   <!-- ${GENERATED_COMMENT} -->
   <style>
 ${siteBaseStyles()}
-    .skill-head { margin-bottom: 28px; }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      gap: clamp(28px, 5vw, 60px);
+      align-items: center;
+      margin: 0 0 clamp(52px, 9vw, 96px);
+    }
+    .hero-copy { min-width: 0; }
     .kicker {
       font-family: var(--mono);
       text-transform: uppercase;
       letter-spacing: 0.3em;
       font-size: 0.72rem;
       color: var(--muted);
-      margin: 0 0 12px;
+      margin: 0 0 14px;
     }
     .skill-title {
       margin: 0;
-      font-size: clamp(2.2rem, 7vw, 3.4rem);
-      letter-spacing: -0.02em;
+      font-size: clamp(2.6rem, 8vw, 4.6rem);
+      letter-spacing: -0.03em;
       font-weight: 800;
+      line-height: 0.94;
     }
-    .skill-desc { max-width: 62ch; margin: 16px 0 0; font-size: 1.08rem; color: color-mix(in srgb, var(--paper) 90%, transparent); }
-    .skill-back { margin: 14px 0 0; font-family: var(--mono); font-size: 0.82rem; }
-    .panel {
+    .lede {
+      max-width: 54ch;
+      margin: 22px 0 0;
+      font-size: clamp(1.05rem, 2.1vw, 1.32rem);
+      color: color-mix(in srgb, var(--paper) 90%, transparent);
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 0; }
+    .btn {
+      font-family: var(--mono);
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      padding: 11px 17px;
       border: 1px solid var(--line);
-      border-left: 3px solid var(--accent);
+      color: var(--paper);
+      transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease, background 0.16s ease;
+    }
+    .btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.5); border-color: color-mix(in srgb, var(--paper) 42%, var(--line)); }
+    .btn-primary { background: var(--accent-3); color: #06070a; border-color: var(--accent-3); font-weight: 700; }
+    .stats { display: flex; flex-wrap: wrap; gap: 16px 38px; margin: 32px 0 0; padding: 0; }
+    .stats div { display: flex; flex-direction: column; gap: 3px; }
+    .stats dt { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.64rem; color: var(--muted); }
+    .stats dd { margin: 0; font-size: 1.5rem; font-weight: 800; letter-spacing: -0.01em; }
+
+    .terminal {
+      font-family: var(--mono);
+      background: rgba(0, 0, 0, 0.55);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+    .terminal-bar { display: flex; gap: 7px; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+    .terminal-bar i { width: 11px; height: 11px; border-radius: 50%; background: var(--muted); }
+    .terminal-bar i:nth-child(1) { background: var(--accent); }
+    .terminal-bar i:nth-child(2) { background: var(--accent-3); }
+    .terminal-bar i:nth-child(3) { background: var(--accent-2); }
+    .terminal-body {
+      margin: 0;
+      padding: 18px 20px;
+      font-size: 0.82rem;
+      line-height: 1.65;
+      white-space: pre;
+      overflow-x: auto;
+      color: color-mix(in srgb, var(--paper) 86%, transparent);
+    }
+    .terminal-body .p { color: var(--accent-2); }
+    .terminal-body .r { color: var(--accent-3); }
+
+    .section { margin: 0 0 clamp(46px, 7vw, 80px); }
+    .section-head { margin: 0 0 22px; }
+    .eyebrow { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.22em; font-size: 0.72rem; color: var(--muted); margin: 0; }
+    .sub { margin: 9px 0 0; font-family: var(--serif); font-style: italic; font-size: clamp(1.2rem, 2.6vw, 1.65rem); line-height: 1.25; color: color-mix(in srgb, var(--paper) 88%, transparent); }
+    .sub code { font-style: normal; background: none; border: 0; padding: 0; color: var(--accent-3); }
+
+    .grid { display: grid; gap: 16px; }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+    .card {
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--c, var(--accent));
       background: rgba(0, 0, 0, 0.4);
       box-shadow: var(--shadow);
-      padding: 22px 24px;
-      margin: 18px 0;
+      padding: 20px 22px 22px;
+      transition: transform 0.16s ease, box-shadow 0.16s ease;
     }
-    .panel h2 {
-      margin: 0 0 12px;
-      font-size: 1.2rem;
+    .card:hover { transform: translate(-3px, -3px); box-shadow: 18px 18px 0 rgba(0, 0, 0, 0.55); }
+    .card-title { margin: 12px 0 8px; font-size: 1.22rem; font-weight: 800; letter-spacing: -0.01em; }
+    .card-body { margin: 0; color: color-mix(in srgb, var(--paper) 82%, transparent); font-size: 0.95rem; }
+    .step-num { font-family: var(--mono); font-size: 0.82rem; letter-spacing: 0.12em; color: var(--c, var(--accent)); }
+    .agent { display: flex; flex-direction: column; gap: 12px; }
+    .agent-name { margin: 0; font-size: 1.12rem; font-weight: 800; }
+    .agent-path { align-self: flex-start; font-family: var(--mono); font-size: 0.8rem; color: color-mix(in srgb, var(--paper) 88%, transparent); background: rgba(0, 0, 0, 0.4); border: 1px solid var(--line); padding: 7px 9px; overflow-wrap: anywhere; }
+
+    .cmd {
+      margin: 18px 0 0;
+      padding: 18px 20px;
       font-family: var(--mono);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+      font-size: 0.86rem;
+      line-height: 1.7;
+      white-space: pre;
+      overflow-x: auto;
+      color: color-mix(in srgb, var(--paper) 92%, transparent);
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--accent-2);
     }
-    .panel ol, .panel ul { margin: 0; padding-left: 1.2rem; }
-    .panel li { margin: 6px 0; }
+    .cmd .cmt { color: var(--muted); }
+    .fineprint { margin: 14px 0 0; color: var(--muted); font-size: 0.92rem; }
+    .fineprint a { color: var(--accent-2); }
+    .fineprint code { font-size: 0.86em; }
+
+    .prompts { display: grid; gap: 12px; margin: 0 0 22px; }
+    .prompt {
+      margin: 0;
+      padding: 15px 18px;
+      font-family: var(--mono);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      color: color-mix(in srgb, var(--paper) 92%, transparent);
+      background: rgba(0, 0, 0, 0.42);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--accent);
+    }
+    .mode { border: 1px solid var(--line); background: rgba(0, 0, 0, 0.3); padding: 15px 16px; display: flex; flex-direction: column; gap: 8px; }
+    .mode-name { align-self: flex-start; font-family: var(--mono); font-size: 0.78rem; color: #06070a; background: var(--accent-3); border: 0; padding: 3px 9px; }
+    .mode-desc { color: color-mix(in srgb, var(--paper) 82%, transparent); font-size: 0.92rem; }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 8px 10px; }
+    .chips a {
+      font-family: var(--mono);
+      font-size: 0.74rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 9px 14px;
+      color: color-mix(in srgb, var(--paper) 82%, transparent);
+      border: 1px solid var(--line);
+      transition: color 0.16s ease, background 0.16s ease, border-color 0.16s ease;
+    }
+    .chips a:hover { color: #06070a; background: var(--accent-3); border-color: var(--accent-3); }
+
+    .sources { list-style: none; margin: 0; padding: 0; }
+    .sources li { display: flex; flex-wrap: wrap; gap: 4px 18px; align-items: baseline; padding: 15px 0; border-top: 1px solid var(--line); }
+    .sources li:last-child { border-bottom: 1px solid var(--line); }
+    .sources li a { font-family: var(--mono); font-size: 0.92rem; color: var(--accent-2); min-width: 17ch; }
+    .sources li span { color: var(--muted); font-size: 0.92rem; flex: 1; min-width: 16ch; }
+
+    .source { border: 1px solid var(--line); background: rgba(0, 0, 0, 0.32); }
+    .source > summary { list-style: none; cursor: pointer; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; padding: 18px 22px; }
+    .source > summary::-webkit-details-marker { display: none; }
+    .source > summary::after { content: "+"; margin-left: auto; font-family: var(--mono); color: var(--muted); }
+    .source[open] > summary::after { content: "\\2212"; }
+    .source-hint { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
+    .source-hint a { color: var(--accent-2); }
+    .skill-source { margin: 0; padding: 4px 22px 22px; max-height: 460px; overflow: auto; white-space: pre-wrap; font-family: var(--mono); font-size: 0.82rem; line-height: 1.55; color: color-mix(in srgb, var(--paper) 90%, transparent); }
+
     code {
       font-family: var(--mono);
       font-size: 0.9em;
@@ -1753,61 +1940,118 @@ ${siteBaseStyles()}
       border: 1px solid var(--line);
       overflow-wrap: anywhere;
     }
-    pre {
-      margin: 12px 0 0;
-      padding: 16px;
-      overflow-x: auto;
-      font-family: var(--mono);
-      font-size: 0.84rem;
-      line-height: 1.5;
-      color: color-mix(in srgb, var(--paper) 92%, transparent);
-      background: rgba(0, 0, 0, 0.5);
-      border: 1px solid var(--line);
+
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; }
     }
-    .skill-source { max-height: 460px; overflow: auto; white-space: pre-wrap; }
+    @media (prefers-reduced-motion: reduce) {
+      .card, .btn { transition: none; }
+      .card:hover, .btn:hover { transform: none; }
+    }
   </style>
 </head>
 <body>
   <main class="page">
-    <header class="skill-head">
-      <p class="kicker">Flashback &middot; agent skill</p>
-      <h1 class="skill-title">/${escapeHtml(name)}</h1>
-      <p class="skill-desc">${escapeHtml(description)}</p>
-      <p class="skill-back"><a href="SKILL.md">Raw SKILL.md &#8599;</a> &middot; <a href="../">Back to the index</a></p>
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="kicker">Flashback &middot; agent skill</p>
+        <h1 class="skill-title">/${escapeHtml(name)}</h1>
+        <p class="lede">A century of design taste, on call for your coding agent. Name a year and Flashback pulls the real research &mdash; climate, type, color, recipes &mdash; and designs from it, instead of settling for generic AI polish.</p>
+        <p class="actions">
+          <a class="btn btn-primary" href="#install">Install</a>
+          <a class="btn" href="SKILL.md">Raw SKILL.md &#8599;</a>
+          <a class="btn" href="../">&#8592; Index</a>
+        </p>
+        <dl class="stats">
+          <div><dt>Years</dt><dd>${sorted.length}</dd></div>
+          <div><dt>Span</dt><dd>${escapeHtml(span)}</dd></div>
+          <div><dt>Recipes</dt><dd>${totalRecipes}</dd></div>
+          <div><dt>Output modes</dt><dd>6</dd></div>
+        </dl>
+      </div>
+      <div class="terminal" aria-hidden="true">
+        <div class="terminal-bar"><i></i><i></i><i></i></div>
+        <pre class="terminal-body"><span class="p">&rsaquo; /flashback  design a memory app, 1980s</span>
+
+Three directions &mdash;
+
+  1  Post-punk archive
+     black &middot; bone &middot; concrete, strict grid
+  2  Haunted Hypercard
+     early-PC intimacy, soft monochrome
+  3  Liquid catalog
+     spatial, generative, future-facing
+
+<span class="r">&rarr; Haunted Hypercard.</span> The product is
+  about memory, not storage. Give it a
+  reason to feel alive.</pre>
+      </div>
     </header>
 
-    <section class="panel">
-      <h2>What it does</h2>
-      <p>Given a design task and one or more years, Flashback fetches that year's design research from this site &mdash; the year thesis, design climate, recipes, anti-cliches, prompt seeds, and reference artifacts &mdash; and uses it to ground territories, briefs, design systems, critiques, or handoffs.</p>
+    <section class="section">
+      <header class="section-head">
+        <p class="eyebrow">How it works</p>
+        <p class="sub">Three moves, every time.</p>
+      </header>
+      <div class="grid grid-3">
+${stepCards}
+      </div>
     </section>
 
-    <section class="panel">
-      <h2>Install (project skill)</h2>
-      <ol>
-        <li>Copy the <code>flashback</code> directory into <code>.github/skills/</code> in your repository. In the source repo it already lives at <code>.github/skills/flashback/</code>.</li>
-        <li>In Copilot CLI run <code>/skills reload</code>, then <code>/skills info flashback</code> to confirm it loaded.</li>
-      </ol>
-      <p>Or read the file directly: <code>${SITE_URL}/skill/SKILL.md</code></p>
+    <section class="section" id="install">
+      <header class="section-head">
+        <p class="eyebrow">Install</p>
+        <p class="sub">One <code>SKILL.md</code>. Drop it where your agent keeps its skills.</p>
+      </header>
+      <div class="grid grid-4">
+${agentCards}
+      </div>
+      <pre class="cmd">DIR=~/.copilot/skills/flashback        <span class="cmt"># &larr; your agent&rsquo;s path</span>
+mkdir -p "$DIR"
+curl -fsSL ${SITE_URL}/skill/SKILL.md -o "$DIR/SKILL.md"</pre>
+      <p class="fineprint">All four read the same <a href="https://agentskills.io">Agent Skills</a> format &mdash; Codex and OpenCode also share <code>~/.agents/skills/</code>. Reload skills and you&rsquo;re set.</p>
     </section>
 
-    <section class="panel">
-      <h2>Use it</h2>
-      <pre>Use the /flashback skill to design a landing page with a 1981 feeling.</pre>
-      <p>Years available right now: ${escapeHtml(yearList)}.</p>
+    <section class="section">
+      <header class="section-head">
+        <p class="eyebrow">Use it</p>
+        <p class="sub">Brief it like a creative director, then choose what comes out.</p>
+      </header>
+      <div class="prompts">
+${promptBlocks}
+      </div>
+      <div class="grid grid-3">
+${modeItems}
+      </div>
     </section>
 
-    <section class="panel">
-      <h2>Data sources</h2>
-      <ul>
-        <li><a href="../examples/manifest.json">examples/manifest.json</a> &mdash; every indexed year, with recipes, prompt seeds, and references</li>
-        <li><a href="../corpus/${escapeAttribute(firstYear)}.md">corpus/YYYY.md</a> &mdash; the full research markdown for a year</li>
-        <li><a href="../">Example index</a> &mdash; human-browsable per-year pages</li>
+    <section class="section">
+      <header class="section-head">
+        <p class="eyebrow">Coverage</p>
+        <p class="sub">${sorted.length} years, ${escapeHtml(span)} &mdash; jump in by decade.</p>
+      </header>
+      <nav class="chips" aria-label="Browse by decade">
+${decadeChips}
+      </nav>
+    </section>
+
+    <section class="section">
+      <header class="section-head">
+        <p class="eyebrow">Under the hood</p>
+        <p class="sub">Everything the skill fetches is a plain URL.</p>
+      </header>
+      <ul class="sources">
+        <li><a href="../examples/manifest.json">examples/manifest.json</a><span>Every year with recipes, prompt seeds, and references &mdash; the fast index the agent reads first.</span></li>
+        <li><a href="../corpus/${escapeAttribute(firstYear)}.md">corpus/YYYY.md</a><span>The full research markdown for a year, served raw.</span></li>
+        <li><a href="../">The index</a><span>Human-browsable per-year pages, grouped by decade.</span></li>
       </ul>
     </section>
 
-    <section class="panel">
-      <h2>SKILL.md</h2>
-      <pre class="skill-source">${escapeHtml(skill.source)}</pre>
+    <section class="section">
+      <details class="source">
+        <summary><span class="eyebrow">SKILL.md</span><span class="source-hint">the exact instructions your agent loads &middot; <a href="SKILL.md">raw &#8599;</a></span></summary>
+        <pre class="skill-source">${escapeHtml(skill.source)}</pre>
+      </details>
     </section>
 
     <footer class="footer">
