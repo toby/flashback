@@ -1775,7 +1775,7 @@ ${siteBaseStyles()}
       display: grid;
       grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
       gap: clamp(28px, 5vw, 60px);
-      align-items: center;
+      align-items: start;
       margin: 0 0 clamp(52px, 9vw, 96px);
     }
     .hero-copy { min-width: 0; }
@@ -1800,20 +1800,42 @@ ${siteBaseStyles()}
       font-size: clamp(1.05rem, 2.1vw, 1.32rem);
       color: color-mix(in srgb, var(--paper) 90%, transparent);
     }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 0; }
-    .btn {
+    .hero-links { margin: 26px 0 0; display: flex; flex-wrap: wrap; gap: 18px; font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.03em; }
+    .hero-links a { color: var(--accent-2); text-decoration: none; }
+    .hero-links a:hover { text-decoration: underline; }
+
+    .installer {
+      display: flex;
+      flex-direction: column;
+      background: rgba(0, 0, 0, 0.62);
+      border: 1px solid color-mix(in srgb, var(--accent-3) 45%, var(--line));
+      border-top: 3px solid var(--accent-3);
+      box-shadow: var(--shadow);
+    }
+    .installer-bar { display: flex; align-items: center; gap: 7px; padding: 12px 16px; border-bottom: 1px solid var(--line); }
+    .installer-bar i { width: 11px; height: 11px; border-radius: 50%; background: var(--muted); }
+    .installer-bar i:nth-child(1) { background: var(--accent); }
+    .installer-bar i:nth-child(2) { background: var(--accent-3); }
+    .installer-bar i:nth-child(3) { background: var(--accent-2); }
+    .installer-tag { margin-left: auto; font-family: var(--mono); font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--muted); }
+    .installer-body { margin: 0; padding: 20px 20px 6px; font-family: var(--mono); font-size: 0.92rem; line-height: 1.7; white-space: pre; overflow-x: auto; color: var(--paper); }
+    .installer-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 14px; padding: 14px 20px 18px; }
+    .copy {
       font-family: var(--mono);
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      text-decoration: none;
-      padding: 11px 17px;
-      border: 1px solid var(--line);
-      color: var(--paper);
-      transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease, background 0.16s ease;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 10px 16px;
+      color: #06070a;
+      background: var(--accent-3);
+      border: 1px solid var(--accent-3);
+      transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease, border-color 0.16s ease;
     }
-    .btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.5); border-color: color-mix(in srgb, var(--paper) 42%, var(--line)); }
-    .btn-primary { background: var(--accent-3); color: #06070a; border-color: var(--accent-3); font-weight: 700; }
+    .copy:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.5); }
+    .copy.is-copied { background: var(--accent-2); border-color: var(--accent-2); }
+    .installer-note { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
     .stats { display: flex; flex-wrap: wrap; gap: 16px 38px; margin: 32px 0 0; padding: 0; }
     .stats div { display: flex; flex-direction: column; gap: 3px; }
     .stats dt { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.64rem; color: var(--muted); }
@@ -1886,7 +1908,8 @@ ${siteBaseStyles()}
     .fineprint a { color: var(--accent-2); }
     .fineprint code { font-size: 0.86em; }
 
-    .prompts { display: grid; gap: 12px; margin: 0 0 22px; }
+    .use-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: start; margin: 0 0 18px; }
+    .prompts { display: grid; gap: 12px; margin: 0; align-content: start; }
     .prompt {
       margin: 0;
       padding: 15px 18px;
@@ -1943,10 +1966,11 @@ ${siteBaseStyles()}
 
     @media (max-width: 860px) {
       .hero { grid-template-columns: 1fr; }
+      .use-grid { grid-template-columns: 1fr; }
     }
     @media (prefers-reduced-motion: reduce) {
-      .card, .btn { transition: none; }
-      .card:hover, .btn:hover { transform: none; }
+      .card, .copy { transition: none; }
+      .card:hover, .copy:hover { transform: none; }
     }
   </style>
 </head>
@@ -1957,21 +1981,60 @@ ${siteBaseStyles()}
         <p class="kicker">Flashback &middot; agent skill</p>
         <h1 class="skill-title">/${escapeHtml(name)}</h1>
         <p class="lede">A century of design taste, on call for your coding agent. Name a year and Flashback pulls the real research &mdash; climate, type, color, recipes &mdash; and designs from it, instead of settling for generic AI polish.</p>
-        <p class="actions">
-          <a class="btn btn-primary" href="#install">Install</a>
-          <a class="btn" href="SKILL.md">Raw SKILL.md &#8599;</a>
-          <a class="btn" href="../">&#8592; Index</a>
-        </p>
         <dl class="stats">
           <div><dt>Years</dt><dd>${sorted.length}</dd></div>
           <div><dt>Span</dt><dd>${escapeHtml(span)}</dd></div>
           <div><dt>Recipes</dt><dd>${totalRecipes}</dd></div>
           <div><dt>Output modes</dt><dd>6</dd></div>
         </dl>
+        <p class="hero-links"><a href="SKILL.md">Raw SKILL.md &#8599;</a> <a href="../">Browse the archive &#8594;</a></p>
       </div>
-      <div class="terminal" aria-hidden="true">
-        <div class="terminal-bar"><i></i><i></i><i></i></div>
-        <pre class="terminal-body"><span class="p">&rsaquo; /flashback  design a memory app, 1980s</span>
+      <aside class="installer" aria-label="Install Flashback">
+        <div class="installer-bar"><i></i><i></i><i></i><span class="installer-tag">install</span></div>
+        <pre id="install-cmd" class="installer-body">DIR=~/.copilot/skills/flashback
+mkdir -p "$DIR"
+curl -fsSL ${SITE_URL}/skill/SKILL.md \\
+  -o "$DIR/SKILL.md"</pre>
+        <div class="installer-foot">
+          <button class="copy" type="button" data-copy="install-cmd">Copy command</button>
+          <span class="installer-note">then reload &mdash; you&rsquo;ve got /${escapeHtml(name)}</span>
+        </div>
+      </aside>
+    </header>
+
+    <section class="section" id="install">
+      <header class="section-head">
+        <p class="eyebrow">Install &middot; pick your agent</p>
+        <p class="sub">Same <code>SKILL.md</code> &mdash; just swap the directory in the command above.</p>
+      </header>
+      <div class="grid grid-4">
+${agentCards}
+      </div>
+      <p class="fineprint">All four read the same <a href="https://agentskills.io">Agent Skills</a> format &mdash; Codex and OpenCode also share <code>~/.agents/skills/</code>. Reload skills (e.g. <code>/skills reload</code> in Copilot CLI) and you&rsquo;ve got /${escapeHtml(name)}.</p>
+    </section>
+
+    <section class="section">
+      <header class="section-head">
+        <p class="eyebrow">How it works</p>
+        <p class="sub">Three moves, every time.</p>
+      </header>
+      <div class="grid grid-3">
+${stepCards}
+      </div>
+    </section>
+
+    <section class="section">
+      <header class="section-head">
+        <p class="eyebrow">Use it</p>
+        <p class="sub">Brief it like a creative director, then choose what comes out.</p>
+      </header>
+      <div class="use-grid">
+        <div class="prompts">
+${promptBlocks}
+        </div>
+        <div class="terminal" aria-hidden="true">
+          <div class="terminal-bar"><i></i><i></i><i></i></div>
+          <pre class="terminal-body"><span class="p">&rsaquo; /flashback  design a memory app, 1980s</span>
 
 Three directions &mdash;
 
@@ -1985,40 +2048,7 @@ Three directions &mdash;
 <span class="r">&rarr; Haunted Hypercard.</span> The product is
   about memory, not storage. Give it a
   reason to feel alive.</pre>
-      </div>
-    </header>
-
-    <section class="section">
-      <header class="section-head">
-        <p class="eyebrow">How it works</p>
-        <p class="sub">Three moves, every time.</p>
-      </header>
-      <div class="grid grid-3">
-${stepCards}
-      </div>
-    </section>
-
-    <section class="section" id="install">
-      <header class="section-head">
-        <p class="eyebrow">Install</p>
-        <p class="sub">One <code>SKILL.md</code>. Drop it where your agent keeps its skills.</p>
-      </header>
-      <div class="grid grid-4">
-${agentCards}
-      </div>
-      <pre class="cmd">DIR=~/.copilot/skills/flashback        <span class="cmt"># &larr; your agent&rsquo;s path</span>
-mkdir -p "$DIR"
-curl -fsSL ${SITE_URL}/skill/SKILL.md -o "$DIR/SKILL.md"</pre>
-      <p class="fineprint">All four read the same <a href="https://agentskills.io">Agent Skills</a> format &mdash; Codex and OpenCode also share <code>~/.agents/skills/</code>. Reload skills and you&rsquo;re set.</p>
-    </section>
-
-    <section class="section">
-      <header class="section-head">
-        <p class="eyebrow">Use it</p>
-        <p class="sub">Brief it like a creative director, then choose what comes out.</p>
-      </header>
-      <div class="prompts">
-${promptBlocks}
+        </div>
       </div>
       <div class="grid grid-3">
 ${modeItems}
@@ -2053,6 +2083,24 @@ ${decadeChips}
         <pre class="skill-source">${escapeHtml(skill.source)}</pre>
       </details>
     </section>
+
+    <script>
+      document.querySelectorAll('[data-copy]').forEach(function (button) {
+        button.addEventListener('click', function () {
+          var target = document.getElementById(button.getAttribute('data-copy'));
+          if (!target || !navigator.clipboard) return;
+          navigator.clipboard.writeText(target.innerText.trim()).then(function () {
+            if (!button.getAttribute('data-label')) button.setAttribute('data-label', button.textContent);
+            button.textContent = 'Copied';
+            button.classList.add('is-copied');
+            setTimeout(function () {
+              button.textContent = button.getAttribute('data-label');
+              button.classList.remove('is-copied');
+            }, 1500);
+          });
+        });
+      });
+    </script>
 
     <footer class="footer">
       <span>Flashback &middot; a time machine for taste</span>
