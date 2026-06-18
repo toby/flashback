@@ -219,6 +219,46 @@
       background: var(--accent-c);
     }
 
+    .backlink {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55em;
+      width: max-content;
+      max-width: 100%;
+      margin: 0 0 22px;
+      padding: 8px 15px 8px 12px;
+      color: var(--paper);
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: rgba(0, 0, 0, 0.32);
+      transition: color 0.18s ease, background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+    }
+
+    .backlink:hover,
+    .backlink:focus-visible {
+      color: var(--ink);
+      background: var(--accent-c);
+      border-color: var(--accent-c);
+      box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.42);
+      transform: translate(-2px, -2px);
+    }
+
+    .backlink-arrow {
+      font-size: 1.1em;
+      line-height: 1;
+      transition: transform 0.18s ease;
+    }
+
+    .backlink:hover .backlink-arrow,
+    .backlink:focus-visible .backlink-arrow {
+      transform: translateX(-3px);
+    }
+
     .section {
       margin-top: 32px;
       padding: clamp(22px, 4vw, 36px);
@@ -583,6 +623,10 @@
 </head>
 <body class="layout-nouveau">
   <main class="page">
+    <a class="backlink" href="../../index.html" aria-label="Back to the Flashback index">
+      <span class="backlink-arrow" aria-hidden="true">&larr;</span>
+      <span>Flashback index</span>
+    </a>
     <section class="hero" aria-labelledby="title">
       <p class="eyebrow">Flashback example index / corpus 1907</p>
       <h1 id="title">1907</h1>
