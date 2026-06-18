@@ -1532,6 +1532,7 @@ ${siteBaseStyles()}
         <div><dt>Span</dt><dd>${escapeHtml(span)}</dd></div>
         <div><dt>Recipes</dt><dd>${totalRecipes}</dd></div>
         <div><dt>Skill</dt><dd><a href="skill/index.html">/flashback</a></dd></div>
+        <div><dt>Source</dt><dd><a href="https://github.com/toby/flashback">GitHub</a></dd></div>
       </dl>
     </header>
 
