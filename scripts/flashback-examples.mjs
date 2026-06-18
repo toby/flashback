@@ -51,6 +51,30 @@ const FONT_LIBRARY = {
   'terminal': { family: 'Space+Mono:wght@400;700', stack: '"Space Mono", "Courier New", Courier, monospace' },
   'crt-mono': { family: 'VT323', stack: '"VT323", "Courier New", monospace' },
   'pixel': { family: 'Silkscreen:wght@400;700', stack: '"Silkscreen", "Courier New", monospace' },
+  'nouveau-display': { family: 'Berkshire+Swash', stack: '"Berkshire Swash", "Brush Script MT", cursive' },
+  'victorian-fat': { family: 'Abril+Fatface', stack: '"Abril Fatface", Ultra, Georgia, serif' },
+  'vintage-western': { family: 'Rye', stack: '"Rye", Rockwell, Georgia, serif' },
+  'classical-caps': { family: 'Cinzel:wght@400;600;700', stack: '"Cinzel", "Trajan Pro", Georgia, serif' },
+  'book-serif': { family: 'EB+Garamond:wght@400;500;600', stack: '"EB Garamond", Garamond, Georgia, serif' },
+  'roman-serif': { family: 'Marcellus', stack: '"Marcellus", Georgia, "Times New Roman", serif' },
+  'deco-geometric': { family: 'Poiret+One', stack: '"Poiret One", "Century Gothic", Futura, sans-serif' },
+  'deco-lines': { family: 'Monoton', stack: '"Monoton", "Courier New", monospace' },
+  'blackletter': { family: 'Pirata+One', stack: '"Pirata One", "UnifrakturCook", "Times New Roman", serif' },
+  'constructivist-condensed': { family: 'Oswald:wght@400;500;700', stack: '"Oswald", Impact, "Helvetica Neue", sans-serif' },
+  'poster-condensed': { family: 'Bebas+Neue', stack: '"Bebas Neue", Oswald, Impact, sans-serif' },
+  'heavy-condensed': { family: 'Anton', stack: '"Anton", Impact, "Arial Black", sans-serif' },
+  'stencil': { family: 'Black+Ops+One', stack: '"Black Ops One", Stencil, Impact, sans-serif' },
+  'midcentury-script': { family: 'Pacifico', stack: '"Pacifico", "Brush Script MT", cursive' },
+  'didone-display': { family: 'Rozha+One', stack: '"Rozha One", Didot, Georgia, serif' },
+  'fashion-serif': { family: 'DM+Serif+Display', stack: '"DM Serif Display", Didot, Georgia, serif' },
+  'distressed': { family: 'Lacquer', stack: '"Lacquer", Impact, sans-serif' },
+  'typewriter': { family: 'Special+Elite', stack: '"Special Elite", "Courier New", monospace' },
+  'y2k-tech': { family: 'Audiowide', stack: '"Audiowide", Eurostile, "Helvetica Neue", sans-serif' },
+  'rounded-soft': { family: 'Quicksand:wght@400;500;700', stack: '"Quicksand", "Avenir Next", system-ui, sans-serif' },
+  'web-geometric': { family: 'Montserrat:wght@400;500;600;700', stack: '"Montserrat", "Helvetica Neue", Arial, sans-serif' },
+  'neo-grotesque': { family: 'Inter:wght@400;500;600;700', stack: '"Inter", "Helvetica Neue", Arial, sans-serif' },
+  'contemporary-sans': { family: 'Sora:wght@400;500;700', stack: '"Sora", "Helvetica Neue", Arial, sans-serif' },
+  'playful-rounded': { family: 'Fredoka:wght@400;500;600', stack: '"Fredoka", Quicksand, system-ui, sans-serif' },
   'system-sans': { family: null, stack: '"Helvetica Neue", Helvetica, Arial, sans-serif' },
   'system-serif': { family: null, stack: 'Georgia, "Times New Roman", serif' },
   'system-mono': { family: null, stack: 'ui-monospace, "SFMono-Regular", "Courier New", Courier, monospace' },
@@ -1821,6 +1845,38 @@ const TEXTURES = {
   paper: `      opacity: 0.4;
       background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.02) 0 2px, transparent 2px 3px);
       mix-blend-mode: multiply;`,
+  engraving: `      opacity: 0.14;
+      background: repeating-linear-gradient(90deg, var(--ink) 0 0.5px, transparent 0.5px 4px);
+      mix-blend-mode: multiply;`,
+  'film-grain': `      opacity: 0.12;
+      background-image:
+        radial-gradient(rgba(255, 255, 255, 0.6) 0.4px, transparent 0.5px),
+        radial-gradient(rgba(0, 0, 0, 0.6) 0.4px, transparent 0.5px);
+      background-size: 3px 3px, 4px 4px;
+      background-position: 0 0, 1px 2px;
+      mix-blend-mode: overlay;`,
+  starfield: `      opacity: 0.5;
+      background-image:
+        radial-gradient(var(--paper) 0.7px, transparent 1px),
+        radial-gradient(var(--accent-b) 0.6px, transparent 1px);
+      background-size: 70px 70px, 110px 110px;
+      background-position: 12px 24px, 50px 70px;`,
+  'op-art': `      opacity: 0.1;
+      background: repeating-linear-gradient(90deg, var(--ink) 0 8px, transparent 8px 16px);
+      mix-blend-mode: multiply;`,
+  concrete: `      opacity: 0.5;
+      background:
+        repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.03) 0 1px, transparent 1px 2px),
+        radial-gradient(rgba(0, 0, 0, 0.05) 0.5px, transparent 0.6px);
+      background-size: auto, 4px 4px;
+      mix-blend-mode: multiply;`,
+  'chrome-gloss': `      opacity: 0.4;
+      background: linear-gradient(180deg, color-mix(in srgb, var(--accent-b) 30%, transparent), transparent 22%, transparent 70%, color-mix(in srgb, var(--accent-a) 22%, transparent));`,
+  'gradient-mesh': `      opacity: 0.55;
+      background:
+        radial-gradient(circle at 20% 20%, color-mix(in srgb, var(--accent-a) 40%, transparent), transparent 40%),
+        radial-gradient(circle at 80% 30%, color-mix(in srgb, var(--accent-b) 40%, transparent), transparent 42%),
+        radial-gradient(circle at 50% 85%, color-mix(in srgb, var(--accent-c) 32%, transparent), transparent 45%);`,
   none: `      display: none;`,
 };
 
@@ -1932,6 +1988,137 @@ const ORNAMENTS = {
       border: 1.5px solid var(--ink);
       background: var(--paper);
       z-index: 1;
+    }`,
+  'deco-sunburst': `    .hero::before {
+      top: -30%;
+      left: 50%;
+      translate: -50% 0;
+      width: min(70vw, 760px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: repeating-conic-gradient(from 0deg at 50% 50%, color-mix(in srgb, var(--accent-c) 40%, transparent) 0deg 4deg, transparent 4deg 11deg);
+      opacity: 0.5;
+    }
+
+    .hero::after {
+      left: 50%;
+      bottom: clamp(18px, 4vw, 60px);
+      translate: -50% 0;
+      width: min(50vw, 520px);
+      height: 4px;
+      background: var(--accent-c);
+      box-shadow: 0 12px 0 -1px var(--accent-c), 0 -12px 0 -1px var(--accent-c);
+      opacity: 0.85;
+    }`,
+  'nouveau-frame': `    .hero::before {
+      inset: 16px;
+      border: 2px solid color-mix(in srgb, var(--accent-c) 70%, var(--paper));
+      border-radius: 90px 12px 90px 12px;
+      opacity: 0.7;
+    }
+
+    .hero::after {
+      top: 24px;
+      right: 24px;
+      width: 120px;
+      height: 120px;
+      border: 2px solid color-mix(in srgb, var(--accent-c) 70%, var(--paper));
+      border-radius: 0 100% 0 100%;
+      opacity: 0.6;
+    }`,
+  'bauhaus-shapes': `    .hero::before {
+      top: -60px;
+      right: -40px;
+      width: min(40vw, 420px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--accent-b);
+      opacity: 0.85;
+    }
+
+    .hero::after {
+      left: clamp(20px, 5vw, 72px);
+      bottom: clamp(18px, 5vw, 70px);
+      width: 0;
+      height: 0;
+      border-left: 70px solid transparent;
+      border-right: 70px solid transparent;
+      border-bottom: 120px solid var(--accent-a);
+      transform: rotate(-6deg);
+      opacity: 0.9;
+    }`,
+  'diagonal-bar': `    .hero::before {
+      top: -20%;
+      left: -10%;
+      width: 140%;
+      height: 56px;
+      background: var(--accent-a);
+      transform: rotate(-18deg);
+      opacity: 0.9;
+    }
+
+    .hero::after {
+      bottom: 12%;
+      right: -10%;
+      width: 80%;
+      height: 10px;
+      background: var(--ink);
+      transform: rotate(-18deg);
+      opacity: 0.8;
+    }`,
+  'atomic-burst': `    .hero::before {
+      top: 12%;
+      right: 10%;
+      width: 160px;
+      aspect-ratio: 1;
+      background:
+        linear-gradient(0deg, transparent 47%, var(--accent-a) 47% 53%, transparent 53%),
+        linear-gradient(90deg, transparent 47%, var(--accent-a) 47% 53%, transparent 53%),
+        linear-gradient(45deg, transparent 47%, var(--accent-a) 47% 53%, transparent 53%),
+        linear-gradient(-45deg, transparent 47%, var(--accent-a) 47% 53%, transparent 53%);
+      opacity: 0.8;
+    }
+
+    .hero::after {
+      left: 8%;
+      bottom: 18%;
+      width: 90px;
+      height: 40px;
+      border: 3px solid var(--accent-b);
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      transform: rotate(-20deg);
+      opacity: 0.7;
+    }`,
+  blob: `    .hero::before {
+      top: -10%;
+      right: -6%;
+      width: min(46vw, 460px);
+      aspect-ratio: 1.1;
+      background: radial-gradient(circle at 35% 30%, color-mix(in srgb, var(--paper) 70%, var(--accent-b)), var(--accent-b) 45%, var(--accent-a));
+      border-radius: 62% 38% 47% 53% / 43% 51% 49% 57%;
+      opacity: 0.78;
+    }
+
+    .hero::after {
+      left: 6%;
+      bottom: 10%;
+      width: 130px;
+      aspect-ratio: 1;
+      background: radial-gradient(circle at 40% 35%, color-mix(in srgb, var(--paper) 65%, var(--accent-c)), var(--accent-c) 55%);
+      border-radius: 40% 60% 65% 35% / 55% 40% 60% 45%;
+      opacity: 0.7;
+    }`,
+  'color-bars': `    .hero::before {
+      top: 0;
+      right: 0;
+      width: clamp(120px, 22vw, 240px);
+      height: 100%;
+      background: repeating-linear-gradient(180deg, var(--accent-a) 0 18%, var(--accent-c) 18% 36%, var(--paper) 36% 54%, var(--accent-b) 54% 72%, var(--ink) 72% 90%);
+      opacity: 0.5;
+    }
+
+    .hero::after {
+      display: none;
     }`,
   none: `    .hero::before,
     .hero::after {
@@ -2287,6 +2474,506 @@ const LAYOUTS = {
 
     .layout-memphis .prompt {
       border-color: var(--accent-a);
+    }`,
+  },
+  nouveau: {
+    bodyClass: 'layout-nouveau',
+    css: `    .layout-nouveau .hero,
+    .layout-nouveau .section,
+    .layout-nouveau .rule {
+      border: 1px solid color-mix(in srgb, var(--accent-c) 55%, var(--line));
+      background: color-mix(in srgb, var(--ink) 30%, transparent);
+      box-shadow: none;
+    }
+
+    .layout-nouveau h1 {
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      text-transform: none;
+      text-shadow: none;
+    }
+
+    .layout-nouveau .eyebrow {
+      color: var(--accent-c);
+      background: none;
+      box-shadow: none;
+      letter-spacing: 0.34em;
+      transform: none;
+    }
+
+    .layout-nouveau .section h2 {
+      text-transform: none;
+      letter-spacing: -0.01em;
+    }
+
+    .layout-nouveau .note {
+      border: 1px solid color-mix(in srgb, var(--accent-c) 50%, var(--line));
+      box-shadow: none;
+      transform: none;
+    }
+
+    .layout-nouveau .recipe,
+    .layout-nouveau .prompt {
+      box-shadow: none;
+    }
+
+    .layout-nouveau .recipe::before {
+      display: none;
+    }`,
+  },
+  deco: {
+    bodyClass: 'layout-deco',
+    css: `    .layout-deco .hero,
+    .layout-deco .section,
+    .layout-deco .rule {
+      border: 2px solid var(--accent-c);
+      background: color-mix(in srgb, var(--ink) 34%, transparent);
+      box-shadow: none;
+    }
+
+    .layout-deco h1 {
+      color: var(--accent-c);
+      letter-spacing: 0.03em;
+      text-shadow: none;
+    }
+
+    .layout-deco .eyebrow {
+      color: var(--accent-c);
+      background: none;
+      border: 1px solid var(--accent-c);
+      box-shadow: none;
+      letter-spacing: 0.32em;
+      transform: none;
+    }
+
+    .layout-deco .section h2 {
+      letter-spacing: 0.02em;
+    }
+
+    .layout-deco .note {
+      box-shadow: none;
+      transform: none;
+    }
+
+    .layout-deco .recipe {
+      box-shadow: none;
+    }
+
+    .layout-deco .recipe::before {
+      display: none;
+    }`,
+  },
+  bauhaus: {
+    bodyClass: 'layout-bauhaus',
+    css: `    .layout-bauhaus .hero,
+    .layout-bauhaus .section,
+    .layout-bauhaus .rule {
+      border: 2px solid var(--ink);
+      background: color-mix(in srgb, var(--ink) 26%, transparent);
+      box-shadow: none;
+    }
+
+    .layout-bauhaus h1 {
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      text-shadow: none;
+    }
+
+    .layout-bauhaus .eyebrow {
+      color: var(--paper);
+      background: var(--accent-a);
+      box-shadow: none;
+      transform: none;
+    }
+
+    .layout-bauhaus .section h2 {
+      letter-spacing: -0.03em;
+    }
+
+    .layout-bauhaus .signal:nth-child(3n + 1) {
+      border-top: 6px solid var(--accent-a);
+    }
+
+    .layout-bauhaus .signal:nth-child(3n + 2) {
+      border-top: 6px solid var(--accent-b);
+    }
+
+    .layout-bauhaus .signal:nth-child(3n) {
+      border-top: 6px solid var(--accent-c);
+    }
+
+    .layout-bauhaus .note {
+      box-shadow: none;
+      transform: none;
+    }
+
+    .layout-bauhaus .recipe {
+      box-shadow: 6px 6px 0 var(--ink);
+    }
+
+    .layout-bauhaus .recipe::before {
+      display: none;
+    }`,
+  },
+  constructivist: {
+    bodyClass: 'layout-constructivist',
+    css: `    .layout-constructivist .hero,
+    .layout-constructivist .section,
+    .layout-constructivist .rule {
+      border: none;
+      border-left: 8px solid var(--accent-a);
+      background: color-mix(in srgb, var(--ink) 40%, transparent);
+      box-shadow: none;
+    }
+
+    .layout-constructivist h1 {
+      color: var(--accent-a);
+      letter-spacing: -0.03em;
+      text-shadow: none;
+      transform: skewX(-6deg);
+    }
+
+    .layout-constructivist .eyebrow {
+      color: var(--paper);
+      background: var(--accent-a);
+      box-shadow: none;
+      transform: skewX(-6deg);
+    }
+
+    .layout-constructivist .section h2 {
+      transform: skewX(-6deg);
+    }
+
+    .layout-constructivist .note {
+      color: var(--paper);
+      background: var(--accent-a);
+      box-shadow: none;
+      transform: none;
+    }
+
+    .layout-constructivist .note h2,
+    .layout-constructivist .note p {
+      color: var(--paper);
+    }
+
+    .layout-constructivist .recipe {
+      box-shadow: none;
+    }
+
+    .layout-constructivist .recipe::before {
+      display: none;
+    }`,
+  },
+  midcentury: {
+    bodyClass: 'layout-midcentury',
+    css: `    .layout-midcentury .hero,
+    .layout-midcentury .section,
+    .layout-midcentury .rule {
+      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--ink) 24%, transparent);
+      box-shadow: none;
+    }
+
+    .layout-midcentury h1 {
+      font-weight: 500;
+      letter-spacing: -0.04em;
+      text-shadow: none;
+    }
+
+    .layout-midcentury .eyebrow {
+      color: var(--accent-a);
+      background: none;
+      box-shadow: none;
+      letter-spacing: 0.3em;
+      transform: none;
+    }
+
+    .layout-midcentury .section h2 {
+      text-transform: none;
+      letter-spacing: -0.03em;
+    }
+
+    .layout-midcentury .note {
+      box-shadow: none;
+      transform: none;
+    }
+
+    .layout-midcentury .recipe {
+      box-shadow: none;
+    }
+
+    .layout-midcentury .recipe::before {
+      display: none;
+    }`,
+  },
+  psychedelic: {
+    bodyClass: 'layout-psychedelic',
+    css: `    .layout-psychedelic .hero,
+    .layout-psychedelic .section,
+    .layout-psychedelic .rule {
+      border: 3px solid var(--accent-a);
+      background: color-mix(in srgb, var(--ink) 30%, transparent);
+      box-shadow: 0 0 0 3px var(--accent-c);
+    }
+
+    .layout-psychedelic h1 {
+      letter-spacing: -0.05em;
+      text-shadow:
+        0.04em 0.04em 0 var(--accent-a),
+        -0.03em -0.03em 0 var(--accent-b);
+    }
+
+    .layout-psychedelic .eyebrow {
+      color: var(--ink);
+      background: var(--accent-b);
+      box-shadow: 5px 5px 0 var(--accent-a);
+      transform: rotate(-2deg);
+    }
+
+    .layout-psychedelic .section h2 {
+      color: var(--accent-c);
+    }
+
+    .layout-psychedelic .note {
+      transform: rotate(-1.5deg);
+    }
+
+    .layout-psychedelic .recipe::before {
+      display: none;
+    }`,
+  },
+  punk: {
+    bodyClass: 'layout-punk',
+    css: `    .layout-punk .hero,
+    .layout-punk .section,
+    .layout-punk .rule {
+      border: 2px solid var(--paper);
+      background: color-mix(in srgb, var(--ink) 55%, transparent);
+      box-shadow: none;
+    }
+
+    .layout-punk h1 {
+      letter-spacing: -0.03em;
+      text-shadow: none;
+      transform: rotate(-1.5deg);
+    }
+
+    .layout-punk .eyebrow {
+      color: var(--ink);
+      background: var(--paper);
+      box-shadow: none;
+      transform: rotate(2deg);
+    }
+
+    .layout-punk .section h2 {
+      display: inline-block;
+      padding: 0 8px;
+      color: var(--ink);
+      background: var(--paper);
+      transform: rotate(-1deg);
+    }
+
+    .layout-punk .note {
+      border: 2px solid var(--paper);
+      transform: rotate(1.5deg);
+    }
+
+    .layout-punk .signal:nth-child(2n) {
+      transform: rotate(1deg);
+    }
+
+    .layout-punk .recipe {
+      box-shadow: none;
+      transform: rotate(-0.6deg);
+    }
+
+    .layout-punk .recipe::before {
+      display: none;
+    }`,
+  },
+  grunge: {
+    bodyClass: 'layout-grunge',
+    css: `    .layout-grunge .hero,
+    .layout-grunge .section,
+    .layout-grunge .rule {
+      border: 1px solid color-mix(in srgb, var(--paper) 30%, transparent);
+      background: color-mix(in srgb, var(--ink) 50%, transparent);
+      box-shadow: none;
+    }
+
+    .layout-grunge h1 {
+      letter-spacing: -0.06em;
+      text-shadow: 0.05em 0.05em 0 rgba(0, 0, 0, 0.6);
+    }
+
+    .layout-grunge .eyebrow {
+      color: var(--accent-a);
+      background: none;
+      border: 1px solid var(--line);
+      box-shadow: none;
+      transform: rotate(-1deg);
+    }
+
+    .layout-grunge .section h2 {
+      letter-spacing: -0.05em;
+    }
+
+    .layout-grunge .note {
+      box-shadow: none;
+      transform: rotate(-1deg);
+    }
+
+    .layout-grunge .recipe {
+      box-shadow: none;
+    }
+
+    .layout-grunge .recipe::before {
+      display: none;
+    }`,
+  },
+  y2k: {
+    bodyClass: 'layout-y2k',
+    css: `    .layout-y2k .hero,
+    .layout-y2k .section,
+    .layout-y2k .rule {
+      border: 1px solid color-mix(in srgb, var(--accent-b) 40%, var(--line));
+      border-radius: 16px;
+      background: linear-gradient(160deg, color-mix(in srgb, var(--accent-b) 16%, transparent), color-mix(in srgb, var(--ink) 50%, transparent));
+      box-shadow: inset 0 1px 0 color-mix(in srgb, var(--paper) 30%, transparent);
+    }
+
+    .layout-y2k h1 {
+      letter-spacing: -0.04em;
+      text-shadow: 0 2px 8px color-mix(in srgb, var(--accent-b) 50%, transparent);
+    }
+
+    .layout-y2k .eyebrow {
+      color: var(--paper);
+      background: linear-gradient(180deg, var(--accent-b), var(--accent-a));
+      border-radius: 20px;
+      box-shadow: none;
+      transform: none;
+    }
+
+    .layout-y2k .note {
+      border-radius: 14px;
+      transform: none;
+    }
+
+    .layout-y2k .recipe {
+      border-radius: 14px;
+    }
+
+    .layout-y2k .recipe::before {
+      display: none;
+    }
+
+    .layout-y2k .signal,
+    .layout-y2k .map a,
+    .layout-y2k .prompt,
+    .layout-y2k .anti li {
+      border-radius: 12px;
+    }
+
+    .layout-y2k .nav-strip a {
+      border-radius: 20px;
+    }`,
+  },
+  flat: {
+    bodyClass: 'layout-flat',
+    css: `    .layout-flat .hero,
+    .layout-flat .section,
+    .layout-flat .rule {
+      border: none;
+      background: color-mix(in srgb, var(--ink) 30%, transparent);
+      box-shadow: none;
+    }
+
+    .layout-flat h1 {
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      text-shadow: none;
+    }
+
+    .layout-flat .eyebrow {
+      color: var(--paper);
+      background: var(--accent-a);
+      box-shadow: none;
+      transform: none;
+    }
+
+    .layout-flat .section h2 {
+      text-transform: none;
+      letter-spacing: -0.03em;
+    }
+
+    .layout-flat .note {
+      box-shadow: none;
+      transform: none;
+    }
+
+    .layout-flat .signal,
+    .layout-flat .map a,
+    .layout-flat .anti li {
+      border: none;
+      background: color-mix(in srgb, var(--paper) 8%, transparent);
+    }
+
+    .layout-flat .recipe {
+      box-shadow: none;
+    }
+
+    .layout-flat .recipe::before {
+      display: none;
+    }`,
+  },
+  'neo-brutalist': {
+    bodyClass: 'layout-neo-brutalist',
+    css: `    .layout-neo-brutalist .hero,
+    .layout-neo-brutalist .section,
+    .layout-neo-brutalist .rule {
+      border: 3px solid var(--ink);
+      background: color-mix(in srgb, var(--ink) 20%, transparent);
+      box-shadow: 8px 8px 0 var(--ink);
+    }
+
+    .layout-neo-brutalist h1 {
+      letter-spacing: -0.04em;
+      text-shadow: none;
+    }
+
+    .layout-neo-brutalist .eyebrow {
+      color: var(--ink);
+      background: var(--accent-a);
+      border: 2px solid var(--ink);
+      box-shadow: 4px 4px 0 var(--ink);
+      transform: none;
+    }
+
+    .layout-neo-brutalist .section h2 {
+      letter-spacing: -0.03em;
+    }
+
+    .layout-neo-brutalist .note {
+      border: 3px solid var(--ink);
+      box-shadow: 6px 6px 0 var(--ink);
+      transform: none;
+    }
+
+    .layout-neo-brutalist .signal,
+    .layout-neo-brutalist .map a,
+    .layout-neo-brutalist .anti li,
+    .layout-neo-brutalist .prompt {
+      border: 2px solid var(--ink);
+    }
+
+    .layout-neo-brutalist .recipe {
+      border: 3px solid var(--ink);
+      box-shadow: 6px 6px 0 var(--ink);
+    }
+
+    .layout-neo-brutalist .recipe::before {
+      display: none;
     }`,
   },
 };
