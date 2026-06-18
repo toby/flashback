@@ -270,8 +270,11 @@ git-ignored.
 
 #### One-time GitHub Pages setup
 
-In the repository, set **Settings -> Pages -> Build and deployment -> Source** to
-**GitHub Actions**. The `pages.yml` workflow then publishes the site.
+The `pages.yml` workflow enables Pages with the GitHub Actions source on its
+first run (`actions/configure-pages` with `enablement: true`). If your
+organization restricts that, enable it manually in the repository under
+**Settings -> Pages -> Build and deployment -> Source**, set to **GitHub
+Actions**.
 
 ### The /flashback skill
 
