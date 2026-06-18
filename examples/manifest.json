@@ -3,6 +3,1013 @@
   "source": "corpus/*.md",
   "examples": [
     {
+      "year": 1905,
+      "title": "1905: wild color, disciplined line",
+      "subtitle": "Fauves explode color in Paris, Die Brücke forms in Dresden, and Vienna's total-design dream begins to harden into stone, mosaic, furniture, and brandable surface.",
+      "status": "example",
+      "decadePosition": "belle epoque",
+      "sourcePath": "corpus/1905.md",
+      "examplePath": "examples/1905/index.html",
+      "feeling": "elegance under pressure from wild color and hard edges",
+      "primaryLens": [
+        "fauvist color breaks naturalism into emotional signal",
+        "die brucke turns youth, woodcut force, and urban anxiety into expressionist design pressure",
+        "viennese total design moves from workshops into monumental domestic architecture",
+        "the modern poster simplifies advertising into one memorable figure",
+        "nickelodeons make moving pictures a designed mass habit"
+      ],
+      "artDirection": {
+        "layout": "editorial",
+        "texture": "film-grain",
+        "ornament": "poster-classic",
+        "fonts": {
+          "display": "nouveau-display",
+          "body": "book-serif",
+          "mono": "terminal"
+        },
+        "palette": {
+          "ink": "#15191a",
+          "paper": "#eef0e6",
+          "muted": "#a7b1a8",
+          "bg": [
+            "#0e1414",
+            "#1a2422",
+            "#0a0f0f"
+          ],
+          "accents": [
+            "#b8843d",
+            "#9c4a3c",
+            "#6f8f86",
+            "#2f7d6b"
+          ]
+        }
+      },
+      "recipes": [
+        {
+          "number": 1,
+          "name": "Fauvist poster shock",
+          "anchor": "recipe-1-fauvist-poster-shock",
+          "useFor": "campaigns, music, exhibitions, editorial covers, product launches.",
+          "palette": "vermilion, emerald, ultramarine, acid yellow, black.",
+          "type": "hand-lettered display, irregular capitals, strong poster hierarchy.",
+          "layout": "one huge color field, one figure, compressed background, minimal copy.",
+          "imagery": "faces, animals, dancers, trees, interiors rendered in emotional color.",
+          "motion": "abrupt color cuts, fast wipes, painted flicker.",
+          "risk": "looking like generic psychedelic color rather than 1905 Paris.",
+          "addAccuracyWith": "flat lithographic color and a real Salon d'Automne reference."
+        },
+        {
+          "number": 2,
+          "name": "Dresden woodcut youth",
+          "anchor": "recipe-2-dresden-woodcut-youth",
+          "useFor": "art spaces, zines, cultural festivals, manifestos, independent brands.",
+          "palette": "black ink, raw cream paper, brick red, sap green.",
+          "type": "carved, uneven, compact lettering that feels printed by hand.",
+          "layout": "tight frame, rough border, figure pressed against the page.",
+          "imagery": "bathers, streets, dancers, studio interiors, angular bodies.",
+          "motion": "choppy cuts, carved-edge transitions, pressure marks.",
+          "risk": "confusing Expressionism with later punk without the woodcut logic.",
+          "addAccuracyWith": "visible block-print grain and Die Brücke's Dresden origin."
+        },
+        {
+          "number": 3,
+          "name": "Wiener total room",
+          "anchor": "recipe-3-wiener-total-room",
+          "useFor": "interiors, luxury goods, hospitality, cultural identity, packaging.",
+          "palette": "black, white, gold, olive, soft grey.",
+          "type": "refined serif or Secession capitals, centered or gridded.",
+          "layout": "rectangular panels, borders, repeated motifs, strict alignment.",
+          "imagery": "squares, stylized plants, metalwork, mosaic, controlled ornament.",
+          "motion": "measured panel reveals, hinge-like rotations, slow gilded glints.",
+          "risk": "making Vienna look like generic Art Deco twenty years too early.",
+          "addAccuracyWith": "Hoffmann geometry and Wiener Werkstätte craft references."
+        },
+        {
+          "number": 4,
+          "name": "Nickelodeon street",
+          "anchor": "recipe-4-nickelodeon-street",
+          "useFor": "event identities, video platforms, archives, playful civic projects.",
+          "palette": "lamp black, paper white, ticket red, brass, smoky blue.",
+          "type": "bold facade lettering, program serif, simple title-card hierarchy.",
+          "layout": "storefront sign, ticket window, stacked bills, sequential frames.",
+          "imagery": "projector cone, pianist, crowd, marquee bulbs, still photographs.",
+          "motion": "flicker, iris, title card, quick scene changes.",
+          "risk": "importing 1920s movie-palace glamour into a smaller 1905 venue.",
+          "addAccuracyWith": "five-cent simplicity and short-program rhythm."
+        }
+      ],
+      "promptSeeds": [
+        "Design this through a 1905 lens: Fauvism has just erupted at the Salon d'Automne,\nDie Brücke has formed in Dresden, and Hoffmann's Palais Stoclet is beginning in\nBrussels. Keep the result between wild color, cut expressionist line, and\nViennese total-design discipline.",
+        "Give me three historically grounded 1905 directions:\n1. Fauvist poster shock\n2. Dresden woodcut youth\n3. Wiener total room\nFor each, specify typography, color, material, layout, and the cliches to avoid.",
+        "Critique this brand as if it belonged to 1905. Does it understand Cappiello's\nposter simplification, Die Brücke's woodcut force, or the Wiener Werkstätte's\ncoordinated interior logic?"
+      ],
+      "referenceArtifacts": {
+        "objects": [
+          "Gillette safety razor and replaceable blade system",
+          "Wiener Werkstätte silver, textiles, and furniture by Josef Hoffmann and Koloman Moser",
+          "Thonet bentwood chairs used in cafes and public interiors",
+          "Early gramophones, cameras, and catalogued domestic mechanisms",
+          "Hand-pulled Die Brücke woodcuts and printed announcements"
+        ],
+        "printAndGraphics": [
+          "Fauvist paintings shown at the 1905 Salon d'Automne",
+          "Leonetto Cappiello advertising posters in Paris",
+          "Vienna Secession and Wiener Werkstätte printed material",
+          "Die Brücke early woodcuts and group graphics",
+          "Nickelodeon posters, programs, and storefront signs"
+        ],
+        "spaces": [
+          "Palais Stoclet, Brussels, begun 1905 by Josef Hoffmann",
+          "Paris Salon d'Automne galleries in 1905",
+          "Dresden studios associated with Die Brücke",
+          "Pittsburgh's Nickelodeon theater opened by Harry Davis and John P. Harris",
+          "Vienna Secession and Wiener Werkstätte interiors"
+        ]
+      },
+      "antiCliches": [
+        "A generic Mucha poster with no Fauvist or Expressionist pressure",
+        "Later Art Deco geometry with chrome, skyscrapers, and jazz-age polish",
+        "Psychedelic color detached from Salon d'Automne painting",
+        "Steampunk brass machinery standing in for Belle Epoque technology",
+        "Viennese design reduced to Klimt gold without Hoffmann's strict geometry",
+        "Cinema shown as a grand movie palace instead of a small nickelodeon",
+        "Arts and Crafts nostalgia with no advertising, city, or mass-entertainment edge"
+      ],
+      "sectionMap": [
+        {
+          "label": "Year thesis",
+          "anchor": "year-thesis",
+          "description": "elegance under pressure from wild color and hard edges"
+        },
+        {
+          "label": "1905 to 1904",
+          "anchor": "how-1905-differs-from-1904",
+          "description": "Year-to-year change."
+        },
+        {
+          "label": "Design climate",
+          "anchor": "design-climate",
+          "description": "1905 is pulled between cultivated total design and expressive rupture."
+        },
+        {
+          "label": "Timeline signals",
+          "anchor": "timeline-signals",
+          "description": "The 1905 Salon d'Automne introduces Fauvism to scandalized Paris, Louis Vauxcelles calls th..."
+        },
+        {
+          "label": "Typography",
+          "anchor": "typography",
+          "description": "1905 typography is still ornamental, but its manners are weakening."
+        },
+        {
+          "label": "Graphic design",
+          "anchor": "graphic-design",
+          "description": "1905 graphic design sits between the boulevard poster and the hand-pulled print."
+        },
+        {
+          "label": "Product design",
+          "anchor": "product-and-industrial-design",
+          "description": "1905 products are still dressed in craft, but they are beginning to behave like systems."
+        },
+        {
+          "label": "Architecture",
+          "anchor": "architecture-and-interiors",
+          "description": "Architecture in 1905 is where ornament starts to become a complete operating system."
+        },
+        {
+          "label": "Fashion",
+          "anchor": "fashion-and-self-design",
+          "description": "Fashion in 1905 still loves the S-curve silhouette, elaborate hats, lace, embroidery, and t..."
+        },
+        {
+          "label": "Music",
+          "anchor": "music",
+          "description": "1905 music offers designers atmosphere rather than structure alone."
+        },
+        {
+          "label": "Film",
+          "anchor": "film-and-moving-image",
+          "description": "The nickelodeon is the important design event of 1905."
+        },
+        {
+          "label": "Surface",
+          "anchor": "color-material-and-surface",
+          "description": "1905 color splits between two kinds of intensity."
+        },
+        {
+          "label": "Anti-cliches",
+          "anchor": "anti-cliches",
+          "description": "Do not make 1905 look like:"
+        }
+      ]
+    },
+    {
+      "year": 1906,
+      "title": "1906: the curve becomes masonry",
+      "subtitle": "Gaudi begins Casa Mila, Vienna's disciplined reform spreads through furniture and interiors, and early cinema stretches from fairground novelty toward narrative spectacle.",
+      "status": "example",
+      "decadePosition": "belle epoque",
+      "sourcePath": "corpus/1906.md",
+      "examplePath": "examples/1906/index.html",
+      "feeling": "ornament learning to stand up as structure",
+      "primaryLens": [
+        "catalan modernisme turns organic line into urban stone",
+        "secession discipline keeps simplifying ornament into geometry and total interiors",
+        "arts and crafts ethics remain active but face commercial modernity",
+        "early cinema expands narrative ambition and public appetite",
+        "fashion and poster culture make the body a designed silhouette"
+      ],
+      "artDirection": {
+        "layout": "deco",
+        "texture": "engraving",
+        "ornament": "none",
+        "fonts": {
+          "display": "victorian-fat",
+          "body": "roman-serif",
+          "mono": "typewriter"
+        },
+        "palette": {
+          "ink": "#1c1410",
+          "paper": "#f0e4cf",
+          "muted": "#c2a784",
+          "bg": [
+            "#150f0a",
+            "#251a12",
+            "#100a07"
+          ],
+          "accents": [
+            "#caa23d",
+            "#7a5230",
+            "#a8472f",
+            "#557a4e"
+          ]
+        }
+      },
+      "recipes": [
+        {
+          "number": 1,
+          "name": "Casa Mila organism",
+          "anchor": "recipe-1-casa-mila-organism",
+          "useFor": "architecture brands, cultural campaigns, hospitality, environmental graphics.",
+          "palette": "limestone, iron black, ceramic blue, moss green, warm shadow.",
+          "type": "restrained serif or hand-drawn capitals kept secondary to form.",
+          "layout": "flowing facade rhythm, stacked openings, balcony-like interruptions.",
+          "imagery": "stone waves, wrought iron, chimneys, sea forms, roof silhouettes.",
+          "motion": "slow undulation, parallax stone, iron tendrils opening like balconies.",
+          "risk": "turning Gaudi into generic fantasy architecture.",
+          "addAccuracyWith": "urban apartment-house logic, not fairy-tale castle styling."
+        },
+        {
+          "number": 2,
+          "name": "Secession room discipline",
+          "anchor": "recipe-2-secession-room-discipline",
+          "useFor": "interiors, museums, premium packaging, editorial systems, stationery.",
+          "palette": "cream, black, muted gold, olive, dusty rose.",
+          "type": "spaced capitals, quiet serif, rectilinear letter spacing.",
+          "layout": "panels, square motifs, borders, aligned captions, controlled margins.",
+          "imagery": "stylized leaves, grids, chair backs, metal fixtures, textile repeats.",
+          "motion": "measured reveals, panel slides, exact hinge movements.",
+          "risk": "jumping forward to 1920s Deco luxury.",
+          "addAccuracyWith": "Wiener Werkstätte craft and Hoffmann's severe geometry."
+        },
+        {
+          "number": 3,
+          "name": "Poster attention machine",
+          "anchor": "recipe-3-poster-attention-machine",
+          "useFor": "consumer brands, events, beverages, theater, transit advertising.",
+          "palette": "saturated red, cream, black, bottle green, poster yellow.",
+          "type": "large hand-lettered brand name, minimal supporting copy.",
+          "layout": "one figure, one product, one field, strong distance readability.",
+          "imagery": "mascot, performer, bottle, animal, oversized gesture.",
+          "motion": "snap zoom to emblem, pasted-bill layering, tram-speed read.",
+          "risk": "over-illustrating when the period's innovation is simplification.",
+          "addAccuracyWith": "color-lithograph flatness and Cappiello-like economy."
+        },
+        {
+          "number": 4,
+          "name": "Early cinema program",
+          "anchor": "recipe-4-early-cinema-program",
+          "useFor": "film archives, streaming retrospectives, event series, education.",
+          "palette": "black, cream, ticket red, smoky grey, brass.",
+          "type": "title-card serif, bold venue lettering, program hierarchy.",
+          "layout": "stacked acts, framed still, showtime block, ticket-like modules.",
+          "imagery": "projector, piano, crowd, outlaw scene, curtain, street facade.",
+          "motion": "flicker, title cards, reel change, iris transition.",
+          "risk": "using 1920s Hollywood glamour before it exists.",
+          "addAccuracyWith": "small-theater scale and short-to-long program transition."
+        }
+      ],
+      "promptSeeds": [
+        "Design this through a 1906 lens: Gaudi has begun Casa Mila in Barcelona while\nVienna Secession and Wiener Werkstätte designers are tightening ornament into\nrectangles, furniture, and coordinated rooms. Make the result Belle Epoque but\nstructural, not merely floral.",
+        "Give me three 1906 directions:\n1. Casa Mila organism\n2. Secession room discipline\n3. Poster attention machine\nFor each, explain type, color, material, composition, and what would be\nanachronistic.",
+        "Critique this interface as if it were an exhibition poster or program from 1906.\nDoes it read at street speed, belong to a total interior, or rely on later\nmodernist minimalism that has not arrived yet?"
+      ],
+      "referenceArtifacts": {
+        "objects": [
+          "Wiener Werkstätte furniture, metalwork, textiles, and tableware",
+          "Thonet bentwood chairs in cafes and public interiors",
+          "Early safety razors, gramophones, cameras, and typewriters",
+          "Fashion plates and hats of the Belle Epoque silhouette",
+          "Handcrafted Arts and Crafts domestic objects"
+        ],
+        "printAndGraphics": [
+          "Leonetto Cappiello advertising posters",
+          "Vienna Secession and Wiener Werkstätte printed matter",
+          "Die Brücke early woodcuts and announcements",
+          "Art Nouveau and Jugendstil magazines and exhibition posters",
+          "Programs and posters for early cinema venues"
+        ],
+        "spaces": [
+          "Casa Mila, Barcelona, begun 1906 by Antoni Gaudi",
+          "Sanatorium Purkersdorf near Vienna by Josef Hoffmann",
+          "Palais Stoclet in Brussels, under construction",
+          "Paris and Vienna poster-lined boulevards and shop windows",
+          "Nickelodeons and small film theaters"
+        ]
+      },
+      "antiCliches": [
+        "A generic Art Nouveau screensaver of endless vines",
+        "Pure Bauhaus minimalism before the Bauhaus exists",
+        "Jazz-age Deco with chrome, zigzags, and skyscraper glamour",
+        "Gaudi as fantasy illustration without construction, city, or stone",
+        "Vienna as only Klimt gold, ignoring Hoffmann's black-and-white discipline",
+        "Early cinema as a grand palace instead of modest commercial venues",
+        "Arts and Crafts nostalgia with no branded products or urban advertising"
+      ],
+      "sectionMap": [
+        {
+          "label": "Year thesis",
+          "anchor": "year-thesis",
+          "description": "ornament learning to stand up as structure"
+        },
+        {
+          "label": "1906 to 1905",
+          "anchor": "how-1906-differs-from-1905",
+          "description": "Year-to-year change."
+        },
+        {
+          "label": "Design climate",
+          "anchor": "design-climate",
+          "description": "1906 is pulled between organic structure and geometric reform."
+        },
+        {
+          "label": "Timeline signals",
+          "anchor": "timeline-signals",
+          "description": "Gaudi begins Casa Mila in Barcelona, The Story of the Kelly Gang is produced in Australia,..."
+        },
+        {
+          "label": "Typography",
+          "anchor": "typography",
+          "description": "1906 typography is decorative, public, and increasingly architectural."
+        },
+        {
+          "label": "Graphic design",
+          "anchor": "graphic-design",
+          "description": "1906 graphic design is mature poster culture under new stress."
+        },
+        {
+          "label": "Product design",
+          "anchor": "product-and-industrial-design",
+          "description": "1906 product design is divided between the crafted object and the repeatable commodity."
+        },
+        {
+          "label": "Architecture",
+          "anchor": "architecture-and-interiors",
+          "description": "Casa Mila is the central architectural signal of 1906."
+        },
+        {
+          "label": "Fashion",
+          "anchor": "fashion-and-self-design",
+          "description": "The fashionable body in 1906 is still Belle Epoque: corseted waist, dramatic hat, long skir..."
+        },
+        {
+          "label": "Music",
+          "anchor": "music",
+          "description": "1906 music sits between impressionist atmosphere and theatrical public life."
+        },
+        {
+          "label": "Film",
+          "anchor": "film-and-moving-image",
+          "description": "1906 is important because cinema begins to prove it can sustain longer narrative attention."
+        },
+        {
+          "label": "Surface",
+          "anchor": "color-material-and-surface",
+          "description": "1906 surfaces are tactile and divided."
+        },
+        {
+          "label": "Anti-cliches",
+          "anchor": "anti-cliches",
+          "description": "Do not make 1906 look like:"
+        }
+      ]
+    },
+    {
+      "year": 1907,
+      "title": "1907: industry gets a conscience",
+      "subtitle": "The Deutscher Werkbund forms, Peter Behrens joins AEG, and Picasso's studio rupture suggests that modern form can be corporate, geometric, and violently new at once.",
+      "status": "example",
+      "decadePosition": "belle epoque",
+      "sourcePath": "corpus/1907.md",
+      "examplePath": "examples/1907/index.html",
+      "feeling": "the hand, the factory, and the fractured figure entering the same argument",
+      "primaryLens": [
+        "the deutscher werkbund links artists, architects, craft, and industry",
+        "peter behrens begins turning aeg into an early corporate design system",
+        "picasso's les demoiselles d'avignon breaks figure and space into modern fracture",
+        "art nouveau gives ground to organization, identity, and industrial purpose",
+        "the poster and exhibition remain laboratories for public modernity"
+      ],
+      "artDirection": {
+        "layout": "nouveau",
+        "texture": "paper",
+        "ornament": "nouveau-frame",
+        "fonts": {
+          "display": "didone-display",
+          "body": "transitional-serif",
+          "mono": "terminal"
+        },
+        "palette": {
+          "ink": "#191317",
+          "paper": "#ece2dd",
+          "muted": "#b6a39c",
+          "bg": [
+            "#120d11",
+            "#211820",
+            "#0d090c"
+          ],
+          "accents": [
+            "#9c5a3c",
+            "#7d3b53",
+            "#3f6b5e",
+            "#b8924f"
+          ]
+        }
+      },
+      "recipes": [
+        {
+          "number": 1,
+          "name": "Early corporate electricity",
+          "anchor": "recipe-1-early-corporate-electricity",
+          "useFor": "technology brands, infrastructure, utilities, product systems, institutional campaigns.",
+          "palette": "electrical black, porcelain white, brass, industrial green, warm paper.",
+          "type": "sturdy capitals, rational serif, early logo discipline.",
+          "layout": "centered mark, ordered catalogue grid, product series, specification blocks.",
+          "imagery": "lamps, turbines, wires, switches, factory silhouettes, glow halos.",
+          "motion": "current pulse, switch-on reveal, diagram lines connecting products.",
+          "risk": "making it look like 1950s corporate identity instead of 1907 industrial reform.",
+          "addAccuracyWith": "Behrens and AEG references from the appointment year."
+        },
+        {
+          "number": 2,
+          "name": "Werkbund quality argument",
+          "anchor": "recipe-2-werkbund-quality-argument",
+          "useFor": "manufacturing, tools, public policy, educational design, exhibitions.",
+          "palette": "cream, charcoal, muted red, steel grey, dark green.",
+          "type": "clear serif or early sans-like display, minimal ornament.",
+          "layout": "comparison tables, catalog panels, product families, disciplined captions.",
+          "imagery": "workshop, factory, material samples, model objects, exhibition cases.",
+          "motion": "assembly of parts into a coherent series, measured not frantic.",
+          "risk": "confusing Werkbund reform with later Bauhaus reduction.",
+          "addAccuracyWith": "craft-and-industry tension, not pure machine worship."
+        },
+        {
+          "number": 3,
+          "name": "Cubist rupture seed",
+          "anchor": "recipe-3-cubist-rupture-seed",
+          "useFor": "art direction, editorial, cultural critique, experimental identity.",
+          "palette": "ochre, rose, charcoal, bone, deep blue.",
+          "type": "restrained captions so the fractured image carries the shock.",
+          "layout": "compressed space, faceted figure, shallow field, mask-like frontal force.",
+          "imagery": "bodies, masks, studio planes, angular still-life fragments.",
+          "motion": "planes sliding, viewpoints colliding, abrupt faceted cuts.",
+          "risk": "using fully developed Synthetic Cubism before 1912.",
+          "addAccuracyWith": "Les Demoiselles d'Avignon as a raw 1907 rupture, not polished Cubist branding."
+        },
+        {
+          "number": 4,
+          "name": "Secession under industry",
+          "anchor": "recipe-4-secession-under-industry",
+          "useFor": "luxury technology, museums, stationery, interiors, cultural institutions.",
+          "palette": "black, ivory, muted gold, violet brown, grey green.",
+          "type": "spaced capitals, refined serif, decorative but controlled initials.",
+          "layout": "gridded panels, frame within frame, motif repetition, calm margins.",
+          "imagery": "squares, abstract florals, metal fittings, tiled walls, furniture silhouettes.",
+          "motion": "slow panel sequencing, precise alignment, crafted transitions.",
+          "risk": "erasing the industrial pressure that makes 1907 distinct.",
+          "addAccuracyWith": "a visible negotiation between handcraft and repeatability."
+        }
+      ],
+      "promptSeeds": [
+        "Design this through a 1907 lens: the Deutscher Werkbund has just formed, Peter\nBehrens has become artistic adviser to AEG, and Picasso has painted Les\nDemoiselles d'Avignon. Build a direction where craft reform, corporate identity,\nand fractured modern form are distinct but related.",
+        "Give me three 1907-informed routes:\n1. Early corporate electricity\n2. Werkbund quality argument\n3. Cubist rupture seed\nFor each, explain historical lineage, type, material, color, and risks.",
+        "Critique this product system as if it were presented in 1907. Does it show\nWerkbund-quality thinking, AEG-style identity, or merely decorative Art Nouveau\nsurface?"
+      ],
+      "referenceArtifacts": {
+        "objects": [
+          "AEG electrical products associated with Peter Behrens's design program",
+          "Wiener Werkstätte furniture, metalwork, and textiles",
+          "Thonet bentwood chairs and industrially repeated cafe furniture",
+          "Early domestic electrical appliances, lamps, switches, and fans",
+          "Arts and Crafts and Werkbund exhibition-quality manufactured goods"
+        ],
+        "printAndGraphics": [
+          "Deutscher Werkbund founding documents and early publications",
+          "AEG marks, catalogues, advertisements, and product graphics by Peter Behrens",
+          "Picasso's Les Demoiselles d'Avignon as a formal rupture",
+          "Cappiello and other simplified Paris advertising posters",
+          "Die Brücke woodcuts, posters, and announcements"
+        ],
+        "spaces": [
+          "Munich context of the Deutscher Werkbund founding",
+          "AEG industrial and administrative environments in Berlin",
+          "Palais Stoclet under construction in Brussels",
+          "Casa Mila under construction in Barcelona",
+          "Dresden studios associated with Die Brücke"
+        ]
+      },
+      "antiCliches": [
+        "Finished Bauhaus minimalism fifteen years too early",
+        "Generic Art Nouveau vines with no Werkbund or AEG industrial pressure",
+        "1920s corporate identity with Helvetica-like neutrality",
+        "Fully developed Cubism with pasted newspaper and synthetic collage",
+        "Steampunk fantasy instead of electrical industry and catalog order",
+        "Vienna reduced to gold decoration without production discipline",
+        "A poster-only year, ignoring products, factories, and institutions"
+      ],
+      "sectionMap": [
+        {
+          "label": "Year thesis",
+          "anchor": "year-thesis",
+          "description": "the hand, the factory, and the fractured figure entering the same argument"
+        },
+        {
+          "label": "1907 to 1906",
+          "anchor": "how-1907-differs-from-1906",
+          "description": "Year-to-year change."
+        },
+        {
+          "label": "Design climate",
+          "anchor": "design-climate",
+          "description": "1907 is pulled between craft culture and industrial identity."
+        },
+        {
+          "label": "Timeline signals",
+          "anchor": "timeline-signals",
+          "description": "The Deutscher Werkbund is founded in Munich, Peter Behrens is appointed artistic adviser to..."
+        },
+        {
+          "label": "Typography",
+          "anchor": "typography",
+          "description": "1907 typography is caught between decorative individuality and system identity."
+        },
+        {
+          "label": "Graphic design",
+          "anchor": "graphic-design",
+          "description": "1907 graphic design is no longer only poster art. It is also industrial communication."
+        },
+        {
+          "label": "Product design",
+          "anchor": "product-and-industrial-design",
+          "description": "1907 is one of the decisive product-design years of the early twentieth century."
+        },
+        {
+          "label": "Architecture",
+          "anchor": "architecture-and-interiors",
+          "description": "Architecture in 1907 is pulled between private total art and industrial public identity."
+        },
+        {
+          "label": "Fashion",
+          "anchor": "fashion-and-self-design",
+          "description": "Fashion in 1907 remains corseted but restless."
+        },
+        {
+          "label": "Music",
+          "anchor": "music",
+          "description": "1907 sound belongs to late Romantic spectacle, impressionist atmosphere, and early modern u..."
+        },
+        {
+          "label": "Film",
+          "anchor": "film-and-moving-image",
+          "description": "By 1907, cinema is a business with design consequences."
+        },
+        {
+          "label": "Surface",
+          "anchor": "color-material-and-surface",
+          "description": "1907 surfaces are becoming more rational without becoming plain."
+        },
+        {
+          "label": "Anti-cliches",
+          "anchor": "anti-cliches",
+          "description": "Do not make 1907 look like:"
+        }
+      ]
+    },
+    {
+      "year": 1908,
+      "title": "1908: ornament on trial",
+      "subtitle": "Loos attacks ornament, Braque's L'Estaque paintings push form toward cubes, and the Ford Model T makes industrial modernity ordinary, affordable, and terrifyingly repeatable.",
+      "status": "example",
+      "decadePosition": "belle epoque",
+      "sourcePath": "corpus/1908.md",
+      "examplePath": "examples/1908/index.html",
+      "feeling": "the decorative century being cross-examined by cubes, cars, and plain walls",
+      "primaryLens": [
+        "ornament and crime turns decoration into a moral argument",
+        "cubism begins to name a new geometry of perception",
+        "the ford model t makes mass industrial design a public fact",
+        "aeg and the werkbund connect identity, factories, and standardization",
+        "fauvist color and arts and crafts material honesty remain active counterforces"
+      ],
+      "artDirection": {
+        "layout": "nouveau",
+        "texture": "halftone",
+        "ornament": "crop-marks",
+        "fonts": {
+          "display": "roman-serif",
+          "body": "book-serif",
+          "mono": "typewriter"
+        },
+        "palette": {
+          "ink": "#1d1812",
+          "paper": "#f3e9d2",
+          "muted": "#bfae8e",
+          "bg": [
+            "#15110b",
+            "#241c12",
+            "#0f0c08"
+          ],
+          "accents": [
+            "#9c6b3f",
+            "#3f6b5e",
+            "#b89150",
+            "#7d3b3b"
+          ]
+        }
+      },
+      "recipes": [
+        {
+          "number": 1,
+          "name": "Ornament on trial",
+          "anchor": "recipe-1-ornament-on-trial",
+          "useFor": "architecture critique, editorial, cultural institutions, reform brands.",
+          "palette": "marble white, walnut, black, oxblood, muted brass.",
+          "type": "sober serif, widely spaced capitals, minimal flourish.",
+          "layout": "severe margins, material swatches, before-and-after contrasts, plain frames.",
+          "imagery": "smooth walls, marble veining, mirror, chair, doorway, rejected ornament.",
+          "motion": "stripping away layers, reveal of material, slow proportional cuts.",
+          "risk": "mistaking Loos for cold minimalism with no luxury or sensual material.",
+          "addAccuracyWith": "Vienna, 1908 lecture context, and real material richness."
+        },
+        {
+          "number": 2,
+          "name": "Model T pragmatism",
+          "anchor": "recipe-2-model-t-pragmatism",
+          "useFor": "mobility, tools, repair, public services, manufacturing, logistics.",
+          "palette": "black, road dust, steel grey, cream paper, oil brown.",
+          "type": "practical serif, manual typography, strong product name.",
+          "layout": "parts diagram, price and utility hierarchy, dealer notice, catalogue page.",
+          "imagery": "chassis, wheel, road, wrench, farm, town street, driver.",
+          "motion": "crank, wheel rotation, assembly rhythm, road dust wipe.",
+          "risk": "using later assembly-line imagery as if it already defines 1908.",
+          "addAccuracyWith": "introduction-year affordability and repair logic, not 1913 line mythology."
+        },
+        {
+          "number": 3,
+          "name": "Early Cubist construction",
+          "anchor": "recipe-3-early-cubist-construction",
+          "useFor": "art direction, editorial covers, cultural analysis, experimental campaigns.",
+          "palette": "ochre, grey green, umber, black, pale sky blue.",
+          "type": "restrained serif or hand label kept secondary to image structure.",
+          "layout": "shallow space, faceted planes, compressed houses, multiple angles.",
+          "imagery": "L'Estaque houses, trees, table objects, masks, angular bodies.",
+          "motion": "planes tilting, space folding, viewpoint shifts without collage.",
+          "risk": "using later newspaper collage, bright Synthetic Cubism, or 1920s geometry.",
+          "addAccuracyWith": "Braque's 1908 L'Estaque landscapes and Vauxcelles' \"cubes\" context."
+        },
+        {
+          "number": 4,
+          "name": "AEG industrial trust",
+          "anchor": "recipe-4-aeg-industrial-trust",
+          "useFor": "energy, engineering, appliances, infrastructure, enterprise tools.",
+          "palette": "black, porcelain, electric green, brass, graphite.",
+          "type": "rational capitals, early corporate mark, catalogue hierarchy.",
+          "layout": "product family grid, technical captions, consistent logo placement.",
+          "imagery": "lamps, fans, turbines, switches, factory frame, electrical glow.",
+          "motion": "switch-on pulse, rotating turbine, line diagram animation.",
+          "risk": "making the identity too clean and late-modern.",
+          "addAccuracyWith": "Behrens's early AEG work and Werkbund reform context."
+        }
+      ],
+      "promptSeeds": [
+        "Design this through a 1908 lens: Loos has delivered Ornament and Crime, Braque's\nL'Estaque paintings are pushing toward Cubism, and the Ford Model T has appeared.\nMake the work feel like ornament under trial by material, mass production, and\ngeometric perception.",
+        "Give me four 1908 directions:\n1. Ornament on trial\n2. Model T pragmatism\n3. Early Cubist construction\n4. AEG industrial trust\nFor each, define type, color, layout, material, motion, and anachronism risks.",
+        "Critique this product page as if it were made in 1908. Does it rely on Art\nNouveau decoration, Werkbund industrial clarity, Loos material restraint, or a\nModel T-style promise of practical mass use?"
+      ],
+      "referenceArtifacts": {
+        "objects": [
+          "Ford Model T automobile introduced in 1908",
+          "AEG lamps, fans, kettles, and electrical products associated with Peter Behrens",
+          "Loos interiors using marble, wood, mirror, and proportion",
+          "Wiener Werkstätte furniture, metalwork, and textiles",
+          "Thonet bentwood chairs and catalogued mass furniture"
+        ],
+        "printAndGraphics": [
+          "Adolf Loos's \"Ornament and Crime\" lecture and later essay tradition",
+          "Braque's L'Estaque paintings and early Cubist criticism by Louis Vauxcelles",
+          "Ford Model T advertisements, manuals, and catalog materials",
+          "AEG catalogues, marks, and advertisements by Peter Behrens",
+          "Matisse's Harmony in Red and related Fauvist color work"
+        ],
+        "spaces": [
+          "Loos's Kärntner Bar, later called the American Bar, Vienna",
+          "AEG industrial sites in Berlin during Behrens's design program",
+          "Casa Mila under construction in Barcelona",
+          "Palais Stoclet under construction in Brussels",
+          "Werkbund and Secession exhibition contexts in German-speaking Europe"
+        ]
+      },
+      "antiCliches": [
+        "Pure white international style minimalism before its time",
+        "Fully developed Cubist collage from 1912 or later",
+        "A Ford factory assembly line as if 1913 had already happened",
+        "Generic Art Nouveau flowers with no anti-ornament critique",
+        "Bauhaus typography before the Bauhaus exists",
+        "Loos as cheap emptiness rather than expensive material restraint",
+        "Futurist speed graphics before the manifesto appears in 1909",
+        "Vienna as only Klimt gold, ignoring the attack on ornament"
+      ],
+      "sectionMap": [
+        {
+          "label": "Year thesis",
+          "anchor": "year-thesis",
+          "description": "the decorative century being cross-examined by cubes, cars, and plain walls"
+        },
+        {
+          "label": "1908 to 1907",
+          "anchor": "how-1908-differs-from-1907",
+          "description": "Year-to-year change."
+        },
+        {
+          "label": "Design climate",
+          "anchor": "design-climate",
+          "description": "1908 is pulled between ornament as culture and plainness as progress."
+        },
+        {
+          "label": "Timeline signals",
+          "anchor": "timeline-signals",
+          "description": "Adolf Loos delivers the \"Ornament and Crime\" lecture in Vienna, The Ford Model T is introdu..."
+        },
+        {
+          "label": "Typography",
+          "anchor": "typography",
+          "description": "1908 typography is being disciplined."
+        },
+        {
+          "label": "Graphic design",
+          "anchor": "graphic-design",
+          "description": "1908 graphic design is not suddenly plain, but it is newly self-conscious."
+        },
+        {
+          "label": "Product design",
+          "anchor": "product-and-industrial-design",
+          "description": "The Ford Model T is the year's central product signal."
+        },
+        {
+          "label": "Architecture",
+          "anchor": "architecture-and-interiors",
+          "description": "Loos makes 1908 architecture feel argumentative."
+        },
+        {
+          "label": "Fashion",
+          "anchor": "fashion-and-self-design",
+          "description": "Fashion in 1908 is poised between corset and release."
+        },
+        {
+          "label": "Music",
+          "anchor": "music",
+          "description": "1908 music has two useful design atmospheres."
+        },
+        {
+          "label": "Film",
+          "anchor": "film-and-moving-image",
+          "description": "Cinema in 1908 is increasingly organized as industry and language."
+        },
+        {
+          "label": "Surface",
+          "anchor": "color-material-and-surface",
+          "description": "1908 is a material argument."
+        },
+        {
+          "label": "Anti-cliches",
+          "anchor": "anti-cliches",
+          "description": "Do not make 1908 look like:"
+        }
+      ]
+    },
+    {
+      "year": 1909,
+      "title": "1909: speed enters the room",
+      "subtitle": "Marinetti publishes the Futurist Manifesto, the Ballets Russes detonates color in Paris, and industrial architecture learns to look like power itself.",
+      "status": "example",
+      "decadePosition": "belle epoque",
+      "sourcePath": "corpus/1909.md",
+      "examplePath": "examples/1909/index.html",
+      "feeling": "speed and color claiming the future before anyone has agreed what the future is",
+      "primaryLens": [
+        "futurism makes speed, machines, violence, and youth into a design myth",
+        "the ballets russes brings russian color, costume, and stage design to paris",
+        "aeg and behrens give industrial architecture monumental corporate form",
+        "frank lloyd wright's prairie house stretches domestic modernity horizontally",
+        "poiret pushes fashion toward uncorseted theatrical self-design"
+      ],
+      "artDirection": {
+        "layout": "editorial",
+        "texture": "film-grain",
+        "ornament": "poster-classic",
+        "fonts": {
+          "display": "classical-caps",
+          "body": "roman-serif",
+          "mono": "terminal"
+        },
+        "palette": {
+          "ink": "#15191a",
+          "paper": "#eef0e6",
+          "muted": "#a7b1a8",
+          "bg": [
+            "#0e1414",
+            "#1a2422",
+            "#0a0f0f"
+          ],
+          "accents": [
+            "#b8843d",
+            "#9c4a3c",
+            "#6f8f86",
+            "#2f7d6b"
+          ]
+        }
+      },
+      "recipes": [
+        {
+          "number": 1,
+          "name": "Futurist manifesto spark",
+          "anchor": "recipe-1-futurist-manifesto-spark",
+          "useFor": "campaigns, launches, music, editorial shocks, motion identities.",
+          "palette": "newspaper cream, black ink, danger red, steel grey, headlamp yellow.",
+          "type": "oversized serif and display fragments, shouting hierarchy, diagonal emphasis.",
+          "layout": "manifesto block, abrupt breaks, speed vectors, compressed headline force.",
+          "imagery": "automobile, streetlamp, crowd, smoke, wheels, newspaper front page.",
+          "motion": "acceleration, impact cuts, repeated words, vibrating lines.",
+          "risk": "sanitizing Futurism's violent politics into harmless racing graphics.",
+          "addAccuracyWith": "Marinetti's 20 February 1909 Le Figaro publication context."
+        },
+        {
+          "number": 2,
+          "name": "Ballets Russes color stage",
+          "anchor": "recipe-2-ballets-russes-color-stage",
+          "useFor": "fashion, performance, beauty, hospitality, music, exhibition design.",
+          "palette": "turquoise, saffron, vermilion, purple, black, gold.",
+          "type": "theatrical serif, elegant program hierarchy, hand-drawn accent lettering.",
+          "layout": "central dancer, curtain frame, costume silhouette, layered textiles.",
+          "imagery": "Bakst costume, drapery, jewels, stage flats, dancers, orientalized fantasy.",
+          "motion": "curtain rise, spinning fabric, footlight glow, choreographic sweeps.",
+          "risk": "using vague exoticism without acknowledging Ballets Russes specificity and its orientalist framing.",
+          "addAccuracyWith": "Diaghilev's 1909 Paris debut and Bakst's early designs."
+        },
+        {
+          "number": 3,
+          "name": "AEG turbine monument",
+          "anchor": "recipe-3-aeg-turbine-monument",
+          "useFor": "infrastructure, energy, engineering, civic technology, industrial brands.",
+          "palette": "steel grey, glass green, brick, black enamel, warm electric light.",
+          "type": "disciplined capitals, early corporate mark, technical catalogue text.",
+          "layout": "monumental gable, repeated bays, product-system grid, symmetric power.",
+          "imagery": "turbine hall, steel frame, crane, lamp, cable, factory window.",
+          "motion": "turbine rotation, electrical pulse, doors opening like a civic facade.",
+          "risk": "making it look like later brutalism or mid-century corporate modernism.",
+          "addAccuracyWith": "Peter Behrens's AEG program and 1909 turbine factory completion."
+        },
+        {
+          "number": 4,
+          "name": "Prairie horizontal home",
+          "anchor": "recipe-4-prairie-horizontal-home",
+          "useFor": "residential architecture, interiors, furniture, landscape brands, calm products.",
+          "palette": "brick red, autumn brown, art-glass amber, cream, dark wood.",
+          "type": "quiet serif, low horizontal lockups, architectural plan labels.",
+          "layout": "long bands, low roofline, hearth center, built-in modules, window rhythm.",
+          "imagery": "Robie House, prairie line, art glass, brick, hearth, cantilevered roof.",
+          "motion": "slow horizontal pan, hearth glow, sliding bands of light.",
+          "risk": "confusing Prairie style with later suburban ranch genericism.",
+          "addAccuracyWith": "Frank Lloyd Wright's 1909 Robie House context."
+        }
+      ],
+      "promptSeeds": [
+        "Design this through a 1909 lens: Marinetti has published the Futurist Manifesto\nin Le Figaro, the Ballets Russes has debuted in Paris, Behrens's AEG Turbine\nFactory is becoming industrial monument, and Wright's Robie House is stretching\ndomestic architecture horizontally.",
+        "Give me four 1909 routes:\n1. Futurist manifesto spark\n2. Ballets Russes color stage\n3. AEG turbine monument\n4. Prairie horizontal home\nFor each, specify typography, color, material, layout, motion, and historical\nrisks.",
+        "Critique this campaign as if it were made in 1909. Is its modernity based on\nspeed, theatrical color, industrial corporate order, Prairie domestic space, or\nanachronistic later modernism?"
+      ],
+      "referenceArtifacts": {
+        "objects": [
+          "Ford Model T in early production",
+          "AEG electrical products and turbine-related industrial equipment",
+          "Paul Poiret dresses associated with high waist, drape, and hobble silhouette",
+          "Ballets Russes costumes designed by Leon Bakst",
+          "Frank Lloyd Wright furniture and built-ins for Prairie interiors"
+        ],
+        "printAndGraphics": [
+          "Marinetti's Futurist Manifesto published in Le Figaro",
+          "Ballets Russes programs, costume drawings, and publicity material",
+          "AEG catalogues, trademarks, and advertisements by Peter Behrens",
+          "Poiret fashion illustrations and couture publicity",
+          "Early film posters and notices for nickelodeon programs and Griffith shorts"
+        ],
+        "spaces": [
+          "AEG Turbine Factory, Berlin, by Peter Behrens",
+          "Robie House, Chicago, by Frank Lloyd Wright",
+          "Paris theaters hosting the Ballets Russes 1909 season",
+          "Casa Mila under construction in Barcelona",
+          "Loos and Secession interiors in Vienna as anti-ornament context"
+        ]
+      },
+      "antiCliches": [
+        "1920s Futurist typography with fully developed parole in liberta as if already mature",
+        "Generic racing stripes detached from Marinetti's manifesto and politics",
+        "Ballets Russes color as vague bohemian exotic decor with no stage-design basis",
+        "Art Deco jazz glamour before the war",
+        "Bauhaus or International Style plainness before their institutions and language exist",
+        "Prairie style reduced to generic mid-century horizontals",
+        "Industrial architecture as later brutalism rather than Behrens's monumental factory image",
+        "Poiret fashion confused with 1920s flapper dress"
+      ],
+      "sectionMap": [
+        {
+          "label": "Year thesis",
+          "anchor": "year-thesis",
+          "description": "speed and color claiming the future before anyone has agreed what the future is"
+        },
+        {
+          "label": "1909 to 1908",
+          "anchor": "how-1909-differs-from-1908",
+          "description": "Year-to-year change."
+        },
+        {
+          "label": "Design climate",
+          "anchor": "design-climate",
+          "description": "1909 is pulled between machine speed and designed spectacle."
+        },
+        {
+          "label": "Timeline signals",
+          "anchor": "timeline-signals",
+          "description": "Marinetti's Futurist Manifesto appears in Le Figaro on 20 February, The Ballets Russes debu..."
+        },
+        {
+          "label": "Typography",
+          "anchor": "typography",
+          "description": "1909 typography is on the edge of becoming kinetic."
+        },
+        {
+          "label": "Graphic design",
+          "anchor": "graphic-design",
+          "description": "1909 graphic design has two dominant public faces: the manifesto and the stage poster."
+        },
+        {
+          "label": "Product design",
+          "anchor": "product-and-industrial-design",
+          "description": "1909 product design feels newly kinetic."
+        },
+        {
+          "label": "Architecture",
+          "anchor": "architecture-and-interiors",
+          "description": "The AEG Turbine Factory and Robie House make 1909 architecturally decisive."
+        },
+        {
+          "label": "Fashion",
+          "anchor": "fashion-and-self-design",
+          "description": "Fashion in 1909 becomes theatrical modern self-design."
+        },
+        {
+          "label": "Music",
+          "anchor": "music",
+          "description": "1909 music helps make design feel unstable."
+        },
+        {
+          "label": "Film",
+          "anchor": "film-and-moving-image",
+          "description": "Cinema in 1909 is learning grammar."
+        },
+        {
+          "label": "Surface",
+          "anchor": "color-material-and-surface",
+          "description": "1909 surfaces are hot, industrial, and theatrical."
+        },
+        {
+          "label": "Anti-cliches",
+          "anchor": "anti-cliches",
+          "description": "Do not make 1909 look like:"
+        }
+      ]
+    },
+    {
       "year": 1925,
       "title": "1925: the year design gets a name",
       "subtitle": "Paris stages the exposition that will later be called Art Deco, the Bauhaus reopens in Dessau, and luxury ornament and machine geometry argue in public for the soul of the modern object.",
