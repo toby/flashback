@@ -96,29 +96,17 @@ Want to read one cover to cover? Every year is browsable at
 Flashback starts its clock at 1900 — roughly when design began arguing with
 itself and never stopped. The whole century, in the time it takes to scroll:
 
-- **1900s–10s — the machine arrives.** Art Nouveau's vines run headlong into
-  Cubism and Futurism. Posters learn to shout.
-- **1920s — the grid is invented.** Bauhaus, De Stijl, Constructivism. Sans-serif
-  becomes a moral position and "form follows function" becomes law.
-- **1930s–40s — streamline, then persuade.** Aerodynamic everything, followed by
-  a decade of wartime propaganda that turns layout into a weapon.
-- **1950s — Switzerland wins.** The International Typographic Style, Helvetica
-  (1957), and the birth of corporate identity. Order as ideology.
-- **1960s — order gets a rebellion.** Psychedelia melts the grid; Pop drags
-  commercial art into the gallery.
-- **1970s — two futures at once.** Punk's photocopied rage on one side,
-  NASA-clean optimism and the first pixels on the other.
-- **1980s — style becomes infrastructure.** Memphis (Milan, 1981), MTV, the
-  desktop metaphor. Postmodernism torches the rulebook. *This is where the
-  archive begins.*
-- **1990s — type breaks on purpose.** David Carson, grunge, the rave flyer, and
-  the web's first awkward gray pages.
-- **2000s — everything turns glossy.** Web 2.0 gradients, reflections, and
-  skeuomorphic leather.
-- **2010s — the great flattening.** Flat design and Material sand every edge
-  smooth.
-- **2020s — all of it, at once.** Brutalist revivals, variable fonts, and crafted
-  maximalism shoving back against generic AI polish.
+- **1900s–10s — the machine arrives.** Art Nouveau gives way to Cubism and Futurism.
+- **1920s — the grid is invented.** Bauhaus, De Stijl, Constructivism, the rise of sans-serif.
+- **1930s–40s — streamline, then persuade.** Aerodynamic style, then wartime propaganda.
+- **1950s — Switzerland wins.** Helvetica (1957), the grid, and corporate identity.
+- **1960s — order gets a rebellion.** Psychedelia melts the grid; Pop floods in.
+- **1970s — two futures at once.** Punk's photocopier vs. NASA-clean optimism.
+- **1980s — style becomes infrastructure.** Memphis, MTV, the desktop metaphor.
+- **1990s — type breaks on purpose.** David Carson, grunge, rave flyers, the early web.
+- **2000s — everything turns glossy.** Web 2.0 gradients and skeuomorphic leather.
+- **2010s — the great flattening.** Flat design and Material smooth every edge.
+- **2020s — all of it, at once.** Brutalist revivals, variable fonts, crafted maximalism.
 
 None of it is costume. It's material. Flashback's whole job is pulling the right
 decade into the work — and knowing the difference between *referencing* 1984 and
