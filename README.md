@@ -2,140 +2,147 @@
 
 > A time machine for taste — historically literate agentic design.
 
-Flashback is a design partner that can move fluently between Bauhaus rigor, Swiss grid systems, Arts and Crafts humanity, Memphis irreverence, postmodern critique, cybernetic interfaces, spatial computing, generative UI, and whatever the frontier is doing next.
+Flashback is a design partner that moves fluently between Bauhaus rigor, Swiss
+grid systems, Memphis irreverence, postmodern critique, cybernetic interfaces,
+and whatever the frontier is doing next. It grounds design work in a specific
+year of history — the real movements, objects, typefaces, tensions, and cultural
+weather of that moment — instead of generic AI polish.
 
-It is not a moodboard generator. It is an agent that researches, reasons, critiques, and produces design direction with historical literacy and contemporary judgment.
+It ships today as a **Copilot skill**: `/flashback`.
 
 ## The idea
 
-Most design tools help you make the thing you already imagined.
+Most design tools help you make the thing you already imagined. Flashback helps
+you discover what the thing *should become*.
 
-Flashback helps you discover what the thing *should become*.
+Point it at a product, brand, interface, campaign, or raw hunch, and name a year
+or era. Flashback excavates that year's design research, reads what made it feel
+the way it felt, and turns it into usable direction — distinct creative
+territories, a brief, a design system, a critique, or an implementation-ready
+handoff.
 
-Give it a product, brand, interface, campaign, space, artifact, or raw hunch. Flashback excavates relevant design history, reads the current cultural moment, proposes distinct creative directions, and turns the best one into a usable design brief, system, prototype plan, critique, or implementation-ready handoff.
+The core belief: **history is material, not decoration.** A year is not a filter
+or a costume. It's a set of structural decisions — why a grid broke, why a
+palette narrowed, why an interface borrowed a metaphor — that can make new work
+specific, intentional, and alive.
 
-## Why now
+## What Flashback is
 
-AI design is moving from passive assistance to agentic collaboration. Interfaces are becoming generative, adaptive, multimodal, personalized, and measurable by user intent rather than surface engagement. At the same time, the best contemporary work is reacting against generic AI polish with stronger materiality, sharper constraints, richer references, and more deliberate human texture.
+Flashback is a Copilot skill backed by a year-by-year corpus of design research
+published on GitHub Pages.
 
-Flashback exists for that world: a designer-agent that knows the canon, tracks the zeitgeist, and refuses generic output.
+- **The skill** (`.github/skills/flashback/SKILL.md`) is invoked as `/flashback`,
+  or automatically whenever a request ties a design to a year or era.
+- **The corpus** is deep research on each year — its thesis, design climate,
+  typography, recipes, anti-cliches, and reference artifacts — published at
+  **https://toby.github.io/flashback/**.
 
-## What Flashback does
+When you give it a design task and a year, the skill fetches that year's research
+from the site and uses it to ground the work in real historical and cultural
+detail. It doesn't design from a vague memory of "the eighties"; it reads the
+actual record of, say, 1981 and builds from there.
 
-Flashback acts like a senior designer, design historian, strategist, and critic in one loop.
+The corpus currently covers **1980–1985** and is expanding toward full coverage
+from 1900 to the present.
 
-1. **Grounds the brief** — clarifies audience, medium, constraints, context, risk, and success criteria.
-2. **Travels through references** — pulls from movements, makers, objects, interfaces, typography, color theory, architecture, industrial design, fashion, games, film, and cultural moments.
-3. **Reads the present** — accounts for current interface patterns, AI-native workflows, accessibility expectations, brand fatigue, and emerging aesthetic signals.
-4. **Creates options** — proposes multiple distinct design directions instead of converging on the safest average.
-5. **Critiques itself** — evaluates concept strength, coherence, novelty, usability, accessibility, feasibility, and taste.
-6. **Hands off clearly** — produces briefs, art direction, design systems, prompts, wireframes, component specs, copy tone, motion notes, or implementation tickets.
+## How it can help you
 
-## Design intelligence
+- **Ground a design in a specific era.** "Make this landing page feel like 1983"
+  becomes concrete type, color, layout, and motion choices rooted in what 1983
+  actually was.
+- **Get distinct directions, not one safe average.** Ask for territories and
+  Flashback proposes two or three genuinely different routes with tradeoffs, then
+  recommends one.
+- **Diagnose an interface.** Hand it a screen and ask what era it unconsciously
+  belongs to, what it's trying to be, and where the hierarchy fails.
+- **Build a system rooted in a movement.** Turn a year's visual language into
+  tokens, components, copy tone, and motion notes.
+- **Blend or contrast years.** Name more than one year to fuse them into a
+  coherent direction — or set them against each other as competing territories.
 
-Flashback should reason across four layers:
+## Using the skill
 
-| Layer | What it knows | What it produces |
-| --- | --- | --- |
-| **History** | Movements, schools, manifestos, materials, visual languages, cultural context | Reference maps, lineage, constraints, avoid-list |
-| **Theory** | Gestalt, semiotics, affordance, grids, color, typography, hierarchy, attention, emotion | Design rationale, critique, principles |
-| **Now** | AI-native UX, generative UI, multimodal interaction, spatial influence, trust design, accessibility, current aesthetics | Trend-aware direction without trend-chasing |
-| **Making** | Product flows, design systems, frontend constraints, brand systems, prototyping, handoff | Specs, screens, components, prompts, tickets |
-
-## Agent loop
-
-Flashback follows a repeatable design process:
-
-```text
-brief -> context -> reference excavation -> creative territories
-      -> critique -> selection -> system definition -> handoff
-      -> test -> revise
-```
-
-Every run should answer:
-
-- What are we making?
-- Who is it for?
-- What should it feel like?
-- What historical or cultural lineage does it belong to?
-- What contemporary signals should it acknowledge or reject?
-- What constraints make it stronger?
-- What would make it generic, dishonest, inaccessible, or boring?
-- What should the next artifact be?
-
-## Example prompts
+In a Copilot session in this repository, describe the work and name a year:
 
 ```text
-Design a landing page for a local archive tool.
-Make it feel like Swiss modernism discovered interactive fiction.
-Give me three directions, critique them, then pick one.
+Use /flashback to design a landing page with a 1981 feeling.
 ```
 
 ```text
-Create a visual system for a developer tool that feels calm, precise,
-and slightly magical. Ground it in historical references and current
-AI-product design patterns. Include typography, color, motion, layout,
-and interaction principles.
+Give me three directions for a finance app, grounded in 1984, and critique them.
 ```
 
 ```text
-Review this interface like a design critic.
-Tell me what era it unconsciously belongs to, what it is trying to be,
-where the hierarchy fails, and how to make it more memorable without
-hurting usability.
+Review this interface like a design critic — tell me what era it belongs to
+and how to make it more memorable without hurting usability.
 ```
 
-## Output modes
+You can name one year or several. When a requested year isn't in the corpus yet,
+Flashback grounds the work in the nearest available year and tells you it did.
 
-Flashback should support several design artifacts:
+## What it gives you
+
+Choose the output mode that matches the ask:
 
 | Mode | Use it when you need |
 | --- | --- |
-| `territories` | 2-3 distinct creative directions with rationale and tradeoffs |
-| `brief` | A complete design brief with audience, constraints, principles, and success criteria |
+| `territories` | Two or three distinct creative directions with rationale and tradeoffs |
+| `brief` | A design brief with audience, constraints, principles, and success criteria |
 | `system` | Typography, color, layout, spacing, components, motion, imagery, and voice |
 | `critique` | A direct review of what works, what fails, and what to change |
-| `handoff` | Implementation-ready specs, tasks, tokens, components, and acceptance criteria |
-| `research` | Historical lineage, contemporary trend scan, references, and anti-references |
+| `handoff` | Implementation-ready specs, tokens, components, and acceptance criteria |
+| `research` | Historical lineage, a contemporary scan, references, and anti-references |
 
-## First milestone
+When the ask is open-ended, Flashback offers a few territories and recommends one.
 
-The first useful version of Flashback should be a CLI agent that accepts a design brief and returns a structured design direction.
+## What's inside a year
 
-Minimum viable loop:
+Each year in the corpus is a structured body of research the skill reads before
+it designs:
 
-1. Accept a prompt, target medium, audience, and constraints.
-2. Generate a historical reference map.
-3. Generate a current-context trend scan.
-4. Propose three creative territories.
-5. Critique the territories against the brief.
-6. Select or combine a direction.
-7. Produce a concrete handoff artifact.
+- **Year thesis** — the single idea that defines the year.
+- **Design climate** — the dominant tensions and what's emerging.
+- **Timeline signals** — the events that actually mattered for design.
+- **Typography & graphic design** — the visual language in detail.
+- **Design recipes** — named directions, each with `Use for`, `Palette`, `Type`,
+  `Layout`, `Imagery`, `Motion`, and `Risk`.
+- **Anti-cliches** — guardrails so the work stays specific instead of becoming a
+  costume of the era.
+- **Prompt seeds** — ready-to-run starting points.
+- **Reference artifacts** — the objects, print, and spaces to anchor on.
 
-Planned command shape:
+## How Flashback thinks
 
-```bash
-flashback brief "Design a portfolio site for an experimental type foundry"
-flashback critique ./screenshots/homepage.png
-flashback system ./product-brief.md --mode tokens
-flashback territories "A finance app that should feel trustworthy but not corporate"
-```
+Flashback reasons across four layers:
+
+| Layer | What it knows | What it produces |
+| --- | --- | --- |
+| **History** | Movements, schools, materials, visual languages, cultural context | Reference maps, lineage, constraints, an avoid-list |
+| **Theory** | Gestalt, semiotics, grids, color, type, hierarchy, attention, emotion | Design rationale and critique |
+| **Now** | AI-native UX, generative UI, accessibility, current aesthetics | Trend-aware direction without trend-chasing |
+| **Making** | Product flows, design systems, frontend constraints, handoff | Specs, components, tokens, tickets |
+
+And it works the same way every time: **lead with the year's thesis and
+feeling**, pick the recipe that fits the brief, carry it into concrete choices,
+respect the anti-cliches, critique the result, then hand off.
 
 ## Taste principles
 
-Flashback should be opinionated.
+Flashback is opinionated.
 
 - **Specific beats polished.** Generic beauty is failure.
-- **Constraints create style.** The agent should add useful constraints, not remove them.
-- **History is material, not decoration.** References must explain structure, not just vibes.
-- **The present matters.** A design that ignores the current moment feels accidentally dated.
-- **Accessibility is not optional.** Contrast, motion, semantics, readability, and cognitive load shape the design from the beginning.
-- **Critique before handoff.** The agent should expose weaknesses before producing confident specs.
-- **Taste is accountable.** Every recommendation should connect to user goals, cultural context, or making constraints.
+- **Constraints create style.** It adds useful constraints, it doesn't remove them.
+- **History is material, not decoration.** References explain structure, not just
+  vibes.
+- **The present matters.** A design that ignores the current moment feels
+  accidentally dated.
+- **Accessibility is not optional.** Contrast, motion, semantics, and readability
+  shape the work from the start.
+- **Critique before handoff.** Weaknesses get exposed before confident specs.
 
-## What makes a good Flashback response
+## A good Flashback response
 
-A strong response should feel like this:
+A strong response feels like this:
 
 ```text
 Here are three directions:
@@ -149,162 +156,19 @@ Here are three directions:
    Best for intimacy, exploration, and emotional distinctiveness.
 
 3. Liquid Catalog
-   Rooted in spatial interfaces, generative UI, and museum collection systems.
-   Best for adaptive browsing and a more future-facing product identity.
+   Rooted in spatial interfaces, generative UI, and collection systems.
+   Best for adaptive browsing and a more future-facing identity.
 
 Recommendation: Haunted Hypercard, because the product is about memory,
 not just storage. It gives the interface a reason to feel alive.
 ```
 
-## Roadmap
+## Browse the research
 
-- [ ] Define the agent prompt contract and response schemas.
-- [ ] Build the CLI interface.
-- [ ] Add research and citation support.
-- [ ] Add image/screenshot critique.
-- [ ] Add design-system output for tokens and components.
-- [ ] Add trend scans with date grounding.
-- [ ] Add reference packs for major design movements.
-- [ ] Add accessibility and usability critique passes.
-- [ ] Add export formats for Markdown, JSON, Figma-ready specs, and implementation tickets.
+The corpus is meant to be read by people, too:
 
-## Keeping corpus examples current
+- **Index of every year** — https://toby.github.io/flashback/
+- **A single year's page** — https://toby.github.io/flashback/examples/1981/
 
-The corpus is the source of truth for example pages. When research changes in
-`corpus/YYYY.md`, update the examples from the corpus instead of hand-copying
-recipe cards, corpus maps, prompt seeds, or reference artifacts.
-
-Each example-ready corpus file should include frontmatter for `year`, `status`,
-`title`, `subtitle`, `decade_position`, and `primary_lens`, plus these sections:
-
-- `Year thesis`
-- `Design climate`
-- `Timeline signals`
-- `Flashback design recipes`
-- `Anti-cliches`
-- `Design prompt seeds`
-- `Reference artifacts`
-
-Research workflow:
-
-1. Edit `corpus/YYYY.md`.
-2. Run `npm run sync:examples`.
-3. Review the generated changes under `examples/`.
-4. Run `npm run check:examples`.
-5. Commit the corpus and example updates together.
-
-Use `status: draft` for research that is not ready to publish. Use
-`status: researched` when a corpus entry is ready to become an example; the sync
-command promotes it to `status: example` after generating the page. Entries with
-`status: example` are always kept in sync.
-
-### Example sync commands
-
-```bash
-npm run sync:examples
-```
-
-Regenerates the root `index.html`, `examples/manifest.json`, and each
-`examples/YYYY/index.html` from the current corpus. It also updates
-`status: researched` to `status: example` for corpus entries that have just been
-synced.
-
-```bash
-npm run check:examples
-```
-
-Fails if generated examples are stale, if an example-ready corpus year is
-missing an example page, if generated links point at missing corpus anchors, or
-if an example page exists for a corpus entry that is not marked `status: example`.
-
-Generated example pages include a comment near the top of the HTML. Do not
-hand-edit corpus-derived sections there; change the corpus and rerun the sync.
-If a year needs a distinct visual treatment, add or adjust its theme in
-`scripts/flashback-examples.mjs` so the generated output stays reproducible.
-
-The generated manifest is useful for tooling and review because it exposes each
-year's source path, example path, recipes, prompt seeds, reference artifacts,
-anti-cliches, and corpus section map in one JSON file.
-
-### Corpus shape expected by examples
-
-Recipe headings should use this form:
-
-```text
-### Recipe 1: Direction name
-```
-
-Each recipe should include `Use for:` plus bullets for `Palette`, `Type`,
-`Layout`, `Imagery`, `Motion`, `Risk`, and optionally `Add accuracy with`.
-Section links use GitHub-style heading anchors, so renaming headings is safe as
-long as `npm run sync:examples` is rerun afterward.
-
-## Hosting and the Flashback skill
-
-Flashback is published with GitHub Pages at
-**https://toby.github.io/flashback/**. The site is assembled from the corpus by
-`npm run build:site` and deployed by `.github/workflows/pages.yml` on every push
-to `main`.
-
-The published surface is:
-
-| Path | What it is |
-| --- | --- |
-| `/` | Generated index of every year, built from the corpus |
-| `/examples/YYYY/` | Per-year example pages |
-| `/examples/manifest.json` | Machine-readable index of years, recipes, prompts, and references |
-| `/corpus/YYYY.md` | Raw research markdown, served as-is |
-| `/skill/` | The Flashback skill page and a copy of `SKILL.md` |
-
-A `.nojekyll` marker is written into the site so GitHub Pages serves the corpus
-`.md` files raw (which is what the agent fetches) and leaves the
-example-to-corpus links intact.
-
-```bash
-npm run build:site
-```
-
-Assembles `_site/` (index, examples, corpus, skill, and `.nojekyll`) for local
-preview and for the deploy workflow. `_site/` is generated output and is
-git-ignored.
-
-#### One-time GitHub Pages setup
-
-The `pages.yml` workflow enables Pages with the GitHub Actions source on its
-first run (`actions/configure-pages` with `enablement: true`). If your
-organization restricts that, enable it manually in the repository under
-**Settings -> Pages -> Build and deployment -> Source**, set to **GitHub
-Actions**.
-
-### The /flashback skill
-
-`.github/skills/flashback/SKILL.md` is a Copilot CLI project skill. Given a design
-task and one or more years, it fetches `examples/manifest.json` and the relevant
-`corpus/YYYY.md` from the site and uses that year's thesis, design climate,
-recipes, anti-cliches, prompt seeds, and references to ground the work.
-
-It is available automatically when you run Copilot CLI in this repository. In a
-session, reload and inspect it with:
-
-```bash
-/skills reload
-/skills info flashback
-```
-
-Then invoke it explicitly, for example:
-
-```text
-Use the /flashback skill to design a landing page with a 1981 feeling.
-```
-
-The skill reads the manifest to learn which years exist, so it stays correct as
-the corpus grows. When a requested year is not yet in the corpus, it grounds the
-work in the nearest available year and says so.
-
-## Project status
-
-Flashback is at the concept seed stage. This README defines the product direction, agent behavior, and first implementation target.
-
-The agentic interface/tooling implementation plan is published as a gist: https://gist.github.com/toby/c12172e7c6dc2f2b1cf12f1b4ff63912
-
-The next step is to turn this into a working CLI agent.
+Use the skill when you're designing; browse the site when you want to wander
+through the years.
