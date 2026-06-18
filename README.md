@@ -1,157 +1,128 @@
+<div align="center">
+
 # 🌆 Flashback
 
-> A time machine for taste — historically literate agentic design.
+**A time machine for taste — historically literate agentic design.**
 
-Most design tools help you make the thing you already imagined. Flashback helps
-you discover what it *should become*.
+[Live archive ↗](https://toby.github.io/flashback/) · [Install](#install) · [Using the skill](#using-the-skill) · [Design since 1900](#design-since-1900)
 
-Name a year and point it at a product, brand, interface, or raw hunch. Flashback
-moves fluently across design history — Bauhaus rigor, Swiss grids, Memphis
-irreverence, cybernetic interfaces, and whatever the frontier is doing next — and
-grounds the work in the real movements, objects, typefaces, and cultural weather
-of the moment you chose, instead of generic AI polish. Because history is
-**material, not decoration**: a year isn't a filter or a costume, it's a set of
-structural decisions — why a grid broke, why a palette narrowed, why an interface
-borrowed a metaphor — that make new work specific, intentional, and alive.
+</div>
 
-It ships as a Copilot skill — `/flashback`.
+Flashback is a design skill for your coding agent with a time machine bolted on.
+Name a year — 1984, 1972, whenever — and it pulls that moment's real design
+history into the work: the typefaces, the palettes, the arguments designers were
+having at the time. Not "make it retro." Actual 1984.
+
+Under the hood it's one `SKILL.md` and a research archive published on GitHub
+Pages. The skill teaches your agent to fetch the right year and design from it,
+so the references come out specific and true instead of the usual generic AI
+polish.
 
 ## Install
 
-Flashback fetches everything it needs from the published site at runtime, so
-installing it just means making the skill available to Copilot — there's no
-corpus to clone.
+Flashback is a single `SKILL.md`, and your agent pulls the research from the live
+site at runtime — so installing it is just dropping that one file where your
+agent keeps its skills.
 
-**Use it anywhere.** Install `/flashback` as a personal skill and it works in
-every project:
+| Agent | Skills directory |
+| --- | --- |
+| **Copilot CLI** | `~/.copilot/skills/` |
+| **Claude Code** | `~/.claude/skills/` |
+| **Codex** | `~/.agents/skills/` |
+| **OpenCode** | `~/.config/opencode/skills/` |
 
-```bash
-mkdir -p ~/.copilot/skills/flashback
-curl -fsSL https://toby.github.io/flashback/skill/SKILL.md \
-  -o ~/.copilot/skills/flashback/SKILL.md
-```
-
-**Or work in this repo.** Clone it and `/flashback` is available as a project
-skill the moment you start Copilot here:
+Pick your line and run it:
 
 ```bash
-git clone https://github.com/toby/flashback.git && cd flashback
+DIR=~/.claude/skills/flashback        # ← swap in the path for your agent
+mkdir -p "$DIR"
+curl -fsSL https://toby.github.io/flashback/skill/SKILL.md -o "$DIR/SKILL.md"
 ```
 
-Either way, reload skills and confirm it loaded:
+Restart the agent (or reload its skills). After that it pulls Flashback in on its
+own whenever you name a year — or you can call it out by name. (Claude Code also
+exposes it as a direct `/flashback` command.)
 
-```text
-/skills reload
-/skills info flashback
-```
-
-## What's Flashback?
-
-Two pieces working together:
-
-- **The skill** reads your design task, fetches the right year, and turns it into
-  direction. It activates automatically whenever a request ties a design to a
-  year or era — or call it directly with `/flashback`.
-- **The corpus** is deep research on each year — its thesis, design climate,
-  typography, recipes, anti-cliches, and reference artifacts — published on
-  GitHub Pages.
-
-When you give it a task and a year, the skill reads that year's research and
-grounds the work in real historical detail. It doesn't design from a vague memory
-of "the eighties"; it reads the actual record of, say, 1981 and builds from there.
-
-The corpus currently covers **1980–1985** and is expanding toward full coverage
-from 1900 to the present.
+It's the same file everywhere — all four read the [Agent Skills](https://agentskills.io)
+`SKILL.md` format. Codex and OpenCode both look in `~/.agents/skills/`, so one
+copy there can serve them both. Cloned this repo and running Copilot CLI? It's
+already wired up as a project skill.
 
 ## Using the skill
 
-In any Copilot session where the skill is installed, describe the work and name a
-year:
+Talk to your agent like you'd brief a creative director. Name a year, point at
+the work:
 
 ```text
-Use /flashback to design a landing page with a 1981 feeling.
+Design a landing page with a 1981 feeling.
 ```
 
 ```text
-Give me three directions for a finance app, grounded in 1984, and critique them.
+Three directions for a finance app, grounded in 1984 — then critique them.
 ```
 
 ```text
-Review this interface like a design critic — tell me what era it belongs to
-and how to make it more memorable without hurting usability.
+What era does this interface accidentally belong to, and how do I make it
+more memorable without hurting usability?
 ```
 
-You can name one year or several. When a requested year isn't in the corpus yet,
-Flashback grounds the work in the nearest available year and tells you it did.
-
-## What it gives you
-
-Choose the output mode that matches the ask:
-
-| Mode | Use it when you need |
-| --- | --- |
-| `territories` | Two or three distinct creative directions with rationale and tradeoffs |
-| `brief` | A design brief with audience, constraints, principles, and success criteria |
-| `system` | Typography, color, layout, spacing, components, motion, imagery, and voice |
-| `critique` | A direct review of what works, what fails, and what to change |
-| `handoff` | Implementation-ready specs, tokens, components, and acceptance criteria |
-| `research` | Historical lineage, a contemporary scan, references, and anti-references |
-
-When the ask is open-ended, Flashback offers a few territories and recommends one.
+Ask for whatever you want out the other end: a few distinct directions, a design
+brief, a full system (type, color, layout, motion, voice), a sharp critique, or
+an implementation-ready handoff. Name one year or several and Flashback will
+blend them or play them against each other. Ask for a year it hasn't researched
+yet and it grounds you in the nearest one it has — and tells you it did.
 
 ## What's inside a year
 
-Each year in the corpus is a structured body of research the skill reads before
-it designs:
+Every year in the archive is a real research dossier, not a mood board. The skill
+reads the whole thing before it designs:
 
-- **Year thesis** — the single idea that defines the year.
-- **Design climate** — the dominant tensions and what's emerging.
-- **Timeline signals** — the events that actually mattered for design.
-- **Typography & graphic design** — the visual language in detail.
-- **Design recipes** — named directions, each with `Use for`, `Palette`, `Type`,
-  `Layout`, `Imagery`, `Motion`, and `Risk`.
-- **Anti-cliches** — guardrails so the work stays specific instead of becoming a
-  costume of the era.
-- **Prompt seeds** — ready-to-run starting points.
-- **Reference artifacts** — the objects, print, and spaces to anchor on.
-- **Art direction** — each year sets its own palette, type pairing, layout, and
-  motifs, so its page reads like its era instead of a recolored template.
+- **Thesis** — the one idea that defines the year.
+- **Design climate** — the tensions in the air and what's about to break.
+- **Timeline signals** — the events that actually moved design.
+- **Typography & graphic design** — the visual language, up close.
+- **Recipes** — named directions, each with palette, type, layout, imagery,
+  motion, and the risk that comes with it.
+- **Anti-clichés** — the costume-y moves to skip, so the work reads as reference,
+  not fancy dress.
+- **Prompt seeds** — starting points you can run with.
+- **Reference artifacts** — the objects, prints, and spaces to anchor on.
 
-## How Flashback thinks
+Want to read one cover to cover? Every year is browsable at
+**[toby.github.io/flashback](https://toby.github.io/flashback/)**.
 
-Flashback reasons across four layers:
+## Design since 1900
 
-| Layer | What it knows | What it produces |
-| --- | --- | --- |
-| **History** | Movements, schools, materials, visual languages, cultural context | Reference maps, lineage, constraints, an avoid-list |
-| **Theory** | Gestalt, semiotics, grids, color, type, hierarchy, attention, emotion | Design rationale and critique |
-| **Now** | AI-native UX, generative UI, accessibility, current aesthetics | Trend-aware direction without trend-chasing |
-| **Making** | Product flows, design systems, frontend constraints, handoff | Specs, components, tokens, tickets |
+Flashback starts its clock at 1900 — roughly when design began arguing with
+itself and never stopped. The whole century, in the time it takes to scroll:
 
-Every run follows the same arc: **lead with the year's thesis and feeling**, pick
-the recipe that fits the brief, carry it into concrete choices, respect the
-anti-cliches, critique the result, then hand off.
+- **1900s–10s — the machine arrives.** Art Nouveau's vines run headlong into
+  Cubism and Futurism. Posters learn to shout.
+- **1920s — the grid is invented.** Bauhaus, De Stijl, Constructivism. Sans-serif
+  becomes a moral position and "form follows function" becomes law.
+- **1930s–40s — streamline, then persuade.** Aerodynamic everything, followed by
+  a decade of wartime propaganda that turns layout into a weapon.
+- **1950s — Switzerland wins.** The International Typographic Style, Helvetica
+  (1957), and the birth of corporate identity. Order as ideology.
+- **1960s — order gets a rebellion.** Psychedelia melts the grid; Pop drags
+  commercial art into the gallery.
+- **1970s — two futures at once.** Punk's photocopied rage on one side,
+  NASA-clean optimism and the first pixels on the other.
+- **1980s — style becomes infrastructure.** Memphis (Milan, 1981), MTV, the
+  desktop metaphor. Postmodernism torches the rulebook. *This is where the
+  archive begins.*
+- **1990s — type breaks on purpose.** David Carson, grunge, the rave flyer, and
+  the web's first awkward gray pages.
+- **2000s — everything turns glossy.** Web 2.0 gradients, reflections, and
+  skeuomorphic leather.
+- **2010s — the great flattening.** Flat design and Material sand every edge
+  smooth.
+- **2020s — all of it, at once.** Brutalist revivals, variable fonts, and crafted
+  maximalism shoving back against generic AI polish.
 
-## Taste principles
+None of it is costume. It's material. Flashback's whole job is pulling the right
+decade into the work — and knowing the difference between *referencing* 1984 and
+*cosplaying* it.
 
-Flashback is opinionated.
-
-- **Specific beats polished.** Generic beauty is failure.
-- **Constraints create style.** It adds useful constraints, it doesn't remove them.
-- **Lineage over vibes.** A reference has to explain a structural choice, or it
-  doesn't earn its place.
-- **The present matters.** A design that ignores the current moment feels
-  accidentally dated.
-- **Accessibility is not optional.** Contrast, motion, semantics, and readability
-  shape the work from the start.
-- **Critique before handoff.** Weaknesses get exposed before confident specs.
-
-## Browse the research
-
-The corpus is meant to be read by people, too:
-
-- **Index of every year** — https://toby.github.io/flashback/
-- **A single year's page** — https://toby.github.io/flashback/examples/1981/
-
-Use the skill when you're designing; browse the site when you want to wander
-through the years.
+The archive covers **1980–1985** today and is filling in outward toward the whole
+century.
