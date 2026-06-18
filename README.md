@@ -114,6 +114,8 @@ it designs:
   costume of the era.
 - **Prompt seeds** — ready-to-run starting points.
 - **Reference artifacts** — the objects, print, and spaces to anchor on.
+- **Art direction** — each year sets its own palette, type pairing, layout, and
+  motifs, so its page reads like its era instead of a recolored template.
 
 ## How Flashback thinks
 

@@ -18,6 +18,32 @@
         "fashion, music, film, and graphic design become one feedback loop",
         "pre-digital tools begin producing a digital-looking visual language"
       ],
+      "artDirection": {
+        "layout": "poster",
+        "texture": "scanlines",
+        "ornament": "poster-classic",
+        "fonts": {
+          "display": "grotesque-black",
+          "body": "humanist-sans",
+          "mono": "terminal"
+        },
+        "palette": {
+          "ink": "#11100e",
+          "paper": "#f2ead8",
+          "muted": "#d8cfbb",
+          "bg": [
+            "#0d0d0f",
+            "#17120f",
+            "#060607"
+          ],
+          "accents": [
+            "#ff3b1f",
+            "#00b8d9",
+            "#f2cc2f",
+            "#741b24"
+          ]
+        }
+      },
       "recipes": [
         {
           "number": 1,
@@ -197,6 +223,32 @@
         "New Romantic and Japanese avant-garde fashion redraw the body",
         "film design turns nostalgia, urban decay, and neon modernity into usable worlds"
       ],
+      "artDirection": {
+        "layout": "memphis",
+        "texture": "dots-memphis",
+        "ornament": "memphis-confetti",
+        "fonts": {
+          "display": "display-fat",
+          "body": "rounded-geometric",
+          "mono": "terminal"
+        },
+        "palette": {
+          "ink": "#111111",
+          "paper": "#fff3d1",
+          "muted": "#c9b894",
+          "bg": [
+            "#060609",
+            "#171118",
+            "#0e1012"
+          ],
+          "accents": [
+            "#ff3caf",
+            "#08b9bd",
+            "#b9ff2f",
+            "#1a3dff"
+          ]
+        }
+      },
       "recipes": [
         {
           "number": 1,
@@ -379,6 +431,32 @@
         "digital audio and CAD begin shifting design from analog media into encoded systems",
         "postmodernism leaves the showroom and becomes civic architecture"
       ],
+      "artDirection": {
+        "layout": "terminal",
+        "texture": "crt",
+        "ornament": "vector-horizon",
+        "fonts": {
+          "display": "techno",
+          "body": "geometric-future",
+          "mono": "terminal"
+        },
+        "palette": {
+          "ink": "#0b0c10",
+          "paper": "#f4f0df",
+          "muted": "#b8c1cc",
+          "bg": [
+            "#05070b",
+            "#101420",
+            "#1f100d"
+          ],
+          "accents": [
+            "#ff5a2d",
+            "#00d7ff",
+            "#d6ff3f",
+            "#7d42ff"
+          ]
+        }
+      },
       "recipes": [
         {
           "number": 1,
@@ -576,6 +654,32 @@
         "electronic music gains a shared protocol through MIDI",
         "play, portability, and personal technology reshape the domestic future"
       ],
+      "artDirection": {
+        "layout": "swiss",
+        "texture": "halftone",
+        "ornament": "crop-marks",
+        "fonts": {
+          "display": "geometric-deco",
+          "body": "humanist-sans",
+          "mono": "terminal"
+        },
+        "palette": {
+          "ink": "#11121a",
+          "paper": "#f8f2dc",
+          "muted": "#c9d0d8",
+          "bg": [
+            "#080a10",
+            "#13203a",
+            "#201126"
+          ],
+          "accents": [
+            "#ff315f",
+            "#36d6ff",
+            "#ffe14a",
+            "#79ff75"
+          ]
+        }
+      },
       "recipes": [
         {
           "number": 1,
@@ -777,6 +881,32 @@
         "pop music becomes film, performance, fashion, and award-show spectacle",
         "cyberpunk and tech-noir name the anxiety underneath personal computing"
       ],
+      "artDirection": {
+        "layout": "mac",
+        "texture": "dither",
+        "ornament": "mac-window",
+        "fonts": {
+          "display": "pixel",
+          "body": "humanist-sans",
+          "mono": "terminal"
+        },
+        "palette": {
+          "ink": "#141414",
+          "paper": "#f5f3ec",
+          "muted": "#8c8c86",
+          "bg": [
+            "#aab2bd",
+            "#9aa3af",
+            "#878f9b"
+          ],
+          "accents": [
+            "#111111",
+            "#5a5a5a",
+            "#0a4fb4",
+            "#9b9b9b"
+          ]
+        }
+      },
       "recipes": [
         {
           "number": 1,
@@ -980,6 +1110,32 @@
         "sneakers, consoles, and personal computers become lifestyle systems",
         "retrofuturism and time travel make the past a design material"
       ],
+      "artDirection": {
+        "layout": "editorial",
+        "texture": "paper",
+        "ornament": "crop-marks",
+        "fonts": {
+          "display": "editorial-serif",
+          "body": "transitional-serif",
+          "mono": "terminal"
+        },
+        "palette": {
+          "ink": "#17120c",
+          "paper": "#f4ecd9",
+          "muted": "#b6a98f",
+          "bg": [
+            "#0d0b08",
+            "#1c160f",
+            "#120d09"
+          ],
+          "accents": [
+            "#b8392b",
+            "#2f5aa0",
+            "#c79a3c",
+            "#6f6353"
+          ]
+        }
+      },
       "recipes": [
         {
           "number": 1,
