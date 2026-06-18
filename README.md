@@ -14,30 +14,59 @@ of the moment you chose, instead of generic AI polish. Because history is
 structural decisions — why a grid broke, why a palette narrowed, why an interface
 borrowed a metaphor — that make new work specific, intentional, and alive.
 
-It ships today as a **Copilot skill**: `/flashback`.
+It ships as a Copilot skill — `/flashback`.
+
+## Install
+
+Flashback fetches everything it needs from the published site at runtime, so
+installing it just means making the skill available to Copilot — there's no
+corpus to clone.
+
+**Use it anywhere.** Install `/flashback` as a personal skill and it works in
+every project:
+
+```bash
+mkdir -p ~/.copilot/skills/flashback
+curl -fsSL https://toby.github.io/flashback/skill/SKILL.md \
+  -o ~/.copilot/skills/flashback/SKILL.md
+```
+
+**Or work in this repo.** Clone it and `/flashback` is available as a project
+skill the moment you start Copilot here:
+
+```bash
+git clone https://github.com/toby/flashback.git && cd flashback
+```
+
+Either way, reload skills and confirm it loaded:
+
+```text
+/skills reload
+/skills info flashback
+```
 
 ## What's Flashback?
 
-A Copilot skill, backed by a year-by-year corpus of design research published on
-GitHub Pages.
+Two pieces working together:
 
-- **The skill** (`.github/skills/flashback/SKILL.md`) is invoked as `/flashback`,
-  or automatically whenever a request ties a design to a year or era.
+- **The skill** reads your design task, fetches the right year, and turns it into
+  direction. It activates automatically whenever a request ties a design to a
+  year or era — or call it directly with `/flashback`.
 - **The corpus** is deep research on each year — its thesis, design climate,
-  typography, recipes, anti-cliches, and reference artifacts — published at
-  **https://toby.github.io/flashback/**.
+  typography, recipes, anti-cliches, and reference artifacts — published on
+  GitHub Pages.
 
-When you give it a design task and a year, the skill fetches that year's research
-from the site and uses it to ground the work in real historical and cultural
-detail. It doesn't design from a vague memory of "the eighties"; it reads the
-actual record of, say, 1981 and builds from there.
+When you give it a task and a year, the skill reads that year's research and
+grounds the work in real historical detail. It doesn't design from a vague memory
+of "the eighties"; it reads the actual record of, say, 1981 and builds from there.
 
 The corpus currently covers **1980–1985** and is expanding toward full coverage
 from 1900 to the present.
 
 ## Using the skill
 
-In a Copilot session in this repository, describe the work and name a year:
+In any Copilot session where the skill is installed, describe the work and name a
+year:
 
 ```text
 Use /flashback to design a landing page with a 1981 feeling.
@@ -97,9 +126,9 @@ Flashback reasons across four layers:
 | **Now** | AI-native UX, generative UI, accessibility, current aesthetics | Trend-aware direction without trend-chasing |
 | **Making** | Product flows, design systems, frontend constraints, handoff | Specs, components, tokens, tickets |
 
-And it works the same way every time: **lead with the year's thesis and
-feeling**, pick the recipe that fits the brief, carry it into concrete choices,
-respect the anti-cliches, critique the result, then hand off.
+Every run follows the same arc: **lead with the year's thesis and feeling**, pick
+the recipe that fits the brief, carry it into concrete choices, respect the
+anti-cliches, critique the result, then hand off.
 
 ## Taste principles
 
@@ -107,8 +136,8 @@ Flashback is opinionated.
 
 - **Specific beats polished.** Generic beauty is failure.
 - **Constraints create style.** It adds useful constraints, it doesn't remove them.
-- **History is material, not decoration.** References explain structure, not just
-  vibes.
+- **Lineage over vibes.** A reference has to explain a structural choice, or it
+  doesn't earn its place.
 - **The present matters.** A design that ignores the current moment feels
   accidentally dated.
 - **Accessibility is not optional.** Contrast, motion, semantics, and readability
