@@ -1367,7 +1367,20 @@ function generateIndexHtml(entries) {
   const maxYear = Math.max(...years);
   const span = minYear === maxYear ? String(minYear) : `${minYear}-${maxYear}`;
   const totalRecipes = sorted.reduce((sum, entry) => sum + entry.recipes.length, 0);
-  const cards = sorted.map((entry) => renderYearCard(entry)).join('\n');
+
+  const decades = new Map();
+  for (const entry of sorted) {
+    const start = Math.floor(entry.year / 10) * 10;
+    if (!decades.has(start)) decades.set(start, []);
+    decades.get(start).push(entry);
+  }
+  const decadeStarts = [...decades.keys()].sort((a, b) => a - b);
+  const decadeNav = decadeStarts
+    .map((start) => `        <a href="#${start}s">${start}s</a>`)
+    .join('\n');
+  const decadeSections = decadeStarts
+    .map((start) => renderDecadeSection(start, decades.get(start)))
+    .join('\n');
 
   return `<!doctype html>
 <html lang="en">
@@ -1421,6 +1434,53 @@ ${siteBaseStyles()}
     }
     .meta dd { margin: 0; font-size: 1.4rem; font-weight: 700; }
     .meta dd a { text-decoration: none; color: var(--accent-3); }
+
+    .decades {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 10px;
+      margin: 0 0 clamp(30px, 5vw, 46px);
+      padding: 0;
+    }
+    .decades a {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 7px 12px;
+      color: color-mix(in srgb, var(--paper) 82%, transparent);
+      border: 1px solid var(--line);
+      transition: border-color 0.16s ease, color 0.16s ease, background 0.16s ease;
+    }
+    .decades a:hover {
+      color: #06070a;
+      background: var(--accent-3);
+      border-color: var(--accent-3);
+    }
+
+    .decade { margin: 0 0 clamp(38px, 6vw, 64px); scroll-margin-top: 24px; }
+    .decade-head {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      margin: 0 0 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+    .decade-title {
+      margin: 0;
+      font-size: clamp(1.7rem, 4vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .decade-count {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+    }
 
     .console {
       display: grid;
@@ -1536,9 +1596,11 @@ ${siteBaseStyles()}
       </dl>
     </header>
 
-    <section class="console" aria-label="Indexed years">
-${cards}
-    </section>
+    <nav class="decades" aria-label="Jump to a decade">
+${decadeNav}
+    </nav>
+
+${decadeSections}
 
     <footer class="footer">
       <span>Flashback &middot; a time machine for taste</span>
@@ -1578,6 +1640,20 @@ ${lens.map((item) => `          <li>${escapeHtml(item)}</li>`).join('\n')}
           </span>
         </div>
       </article>`;
+}
+
+function renderDecadeSection(start, entries) {
+  const count = entries.length;
+  const cards = entries.map((entry) => renderYearCard(entry)).join('\n');
+  return `    <section class="decade" id="${start}s" aria-label="The ${start}s">
+      <header class="decade-head">
+        <h2 class="decade-title">${start}s</h2>
+        <span class="decade-count">${count} year${count === 1 ? '' : 's'}</span>
+      </header>
+      <div class="console">
+${cards}
+      </div>
+    </section>`;
 }
 
 function readSkill() {

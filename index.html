@@ -124,6 +124,53 @@
     .meta dd { margin: 0; font-size: 1.4rem; font-weight: 700; }
     .meta dd a { text-decoration: none; color: var(--accent-3); }
 
+    .decades {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 10px;
+      margin: 0 0 clamp(30px, 5vw, 46px);
+      padding: 0;
+    }
+    .decades a {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 7px 12px;
+      color: color-mix(in srgb, var(--paper) 82%, transparent);
+      border: 1px solid var(--line);
+      transition: border-color 0.16s ease, color 0.16s ease, background 0.16s ease;
+    }
+    .decades a:hover {
+      color: #06070a;
+      background: var(--accent-3);
+      border-color: var(--accent-3);
+    }
+
+    .decade { margin: 0 0 clamp(38px, 6vw, 64px); scroll-margin-top: 24px; }
+    .decade-head {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      margin: 0 0 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+    .decade-title {
+      margin: 0;
+      font-size: clamp(1.7rem, 4vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .decade-count {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+    }
+
     .console {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -238,7 +285,28 @@
       </dl>
     </header>
 
-    <section class="console" aria-label="Indexed years">
+    <nav class="decades" aria-label="Jump to a decade">
+        <a href="#1900s">1900s</a>
+        <a href="#1910s">1910s</a>
+        <a href="#1920s">1920s</a>
+        <a href="#1930s">1930s</a>
+        <a href="#1940s">1940s</a>
+        <a href="#1950s">1950s</a>
+        <a href="#1960s">1960s</a>
+        <a href="#1970s">1970s</a>
+        <a href="#1980s">1980s</a>
+        <a href="#1990s">1990s</a>
+        <a href="#2000s">2000s</a>
+        <a href="#2010s">2010s</a>
+        <a href="#2020s">2020s</a>
+    </nav>
+
+    <section class="decade" id="1900s" aria-label="The 1900s">
+      <header class="decade-head">
+        <h2 class="decade-title">1900s</h2>
+        <span class="decade-count">10 years</span>
+      </header>
+      <div class="console">
       <article class="year" style="--card-a: #9c6b3f; --card-b: #3f6b5e; --card-c: #b89150;">
         <a class="year-open" href="examples/1900/index.html" aria-label="Open the 1900 example">
           <span class="year-num">1900</span>
@@ -439,6 +507,14 @@
           </span>
         </div>
       </article>
+      </div>
+    </section>
+    <section class="decade" id="1910s" aria-label="The 1910s">
+      <header class="decade-head">
+        <h2 class="decade-title">1910s</h2>
+        <span class="decade-count">10 years</span>
+      </header>
+      <div class="console">
       <article class="year" style="--card-a: #c0341f; --card-b: #1d1b18; --card-c: #c79a3c;">
         <a class="year-open" href="examples/1910/index.html" aria-label="Open the 1910 example">
           <span class="year-num">1910</span>
@@ -639,6 +715,14 @@
           </span>
         </div>
       </article>
+      </div>
+    </section>
+    <section class="decade" id="1920s" aria-label="The 1920s">
+      <header class="decade-head">
+        <h2 class="decade-title">1920s</h2>
+        <span class="decade-count">10 years</span>
+      </header>
+      <div class="console">
       <article class="year" style="--card-a: #d8332b; --card-b: #1f6fb2; --card-c: #f2c33b;">
         <a class="year-open" href="examples/1920/index.html" aria-label="Open the 1920 example">
           <span class="year-num">1920</span>
@@ -839,6 +923,14 @@
           </span>
         </div>
       </article>
+      </div>
+    </section>
+    <section class="decade" id="1930s" aria-label="The 1930s">
+      <header class="decade-head">
+        <h2 class="decade-title">1930s</h2>
+        <span class="decade-count">10 years</span>
+      </header>
+      <div class="console">
       <article class="year" style="--card-a: #2f7d8a; --card-b: #d9762f; --card-c: #e8c24a;">
         <a class="year-open" href="examples/1930/index.html" aria-label="Open the 1930 example">
           <span class="year-num">1930</span>
@@ -1039,6 +1131,14 @@
           </span>
         </div>
       </article>
+      </div>
+    </section>
+    <section class="decade" id="1940s" aria-label="The 1940s">
+      <header class="decade-head">
+        <h2 class="decade-title">1940s</h2>
+        <span class="decade-count">10 years</span>
+      </header>
+      <div class="console">
       <article class="year" style="--card-a: #c0341f; --card-b: #2c4a6b; --card-c: #cfae4a;">
         <a class="year-open" href="examples/1940/index.html" aria-label="Open the 1940 example">
           <span class="year-num">1940</span>
@@ -1239,6 +1339,14 @@
           </span>
         </div>
       </article>
+      </div>
+    </section>
+    <section class="decade" id="1950s" aria-label="The 1950s">
+      <header class="decade-head">
+        <h2 class="decade-title">1950s</h2>
+        <span class="decade-count">10 years</span>
+      </header>
+      <div class="console">
       <article class="year" style="--card-a: #e06a3b; --card-b: #2f9d9d; --card-c: #f2c84a;">
         <a class="year-open" href="examples/1950/index.html" aria-label="Open the 1950 example">
           <span class="year-num">1950</span>
@@ -1439,6 +1547,14 @@
           </span>
         </div>
       </article>
+      </div>
+    </section>
+    <section class="decade" id="1960s" aria-label="The 1960s">
+      <header class="decade-head">
+        <h2 class="decade-title">1960s</h2>
+        <span class="decade-count">10 years</span>
+      </header>
+      <div class="console">
       <article class="year" style="--card-a: #e8402c; --card-b: #1f6fb2; --card-c: #f2c63b;">
         <a class="year-open" href="examples/1960/index.html" aria-label="Open the 1960 example">
           <span class="year-num">1960</span>
@@ -1639,6 +1755,14 @@
           </span>
         </div>
       </article>
+      </div>
+    </section>
+    <section class="decade" id="1970s" aria-label="The 1970s">
+      <header class="decade-head">
+        <h2 class="decade-title">1970s</h2>
+        <span class="decade-count">10 years</span>
+      </header>
+      <div class="console">
       <article class="year" style="--card-a: #c2702f; --card-b: #6b7a2f; --card-c: #caa23d;">
         <a class="year-open" href="examples/1970/index.html" aria-label="Open the 1970 example">
           <span class="year-num">1970</span>
@@ -1839,6 +1963,14 @@
           </span>
         </div>
       </article>
+      </div>
+    </section>
+    <section class="decade" id="1980s" aria-label="The 1980s">
+      <header class="decade-head">
+        <h2 class="decade-title">1980s</h2>
+        <span class="decade-count">10 years</span>
+      </header>
+      <div class="console">
       <article class="year" style="--card-a: #ff3b1f; --card-b: #00b8d9; --card-c: #f2cc2f;">
         <a class="year-open" href="examples/1980/index.html" aria-label="Open the 1980 example">
           <span class="year-num">1980</span>
@@ -2039,6 +2171,14 @@
           </span>
         </div>
       </article>
+      </div>
+    </section>
+    <section class="decade" id="1990s" aria-label="The 1990s">
+      <header class="decade-head">
+        <h2 class="decade-title">1990s</h2>
+        <span class="decade-count">10 years</span>
+      </header>
+      <div class="console">
       <article class="year" style="--card-a: #9c7a2f; --card-b: #5a6b3f; --card-c: #b83b2f;">
         <a class="year-open" href="examples/1990/index.html" aria-label="Open the 1990 example">
           <span class="year-num">1990</span>
@@ -2239,6 +2379,14 @@
           </span>
         </div>
       </article>
+      </div>
+    </section>
+    <section class="decade" id="2000s" aria-label="The 2000s">
+      <header class="decade-head">
+        <h2 class="decade-title">2000s</h2>
+        <span class="decade-count">10 years</span>
+      </header>
+      <div class="console">
       <article class="year" style="--card-a: #2fb6ff; --card-b: #9cff3c; --card-c: #ff8a2f;">
         <a class="year-open" href="examples/2000/index.html" aria-label="Open the 2000 example">
           <span class="year-num">2000</span>
@@ -2439,6 +2587,14 @@
           </span>
         </div>
       </article>
+      </div>
+    </section>
+    <section class="decade" id="2010s" aria-label="The 2010s">
+      <header class="decade-head">
+        <h2 class="decade-title">2010s</h2>
+        <span class="decade-count">10 years</span>
+      </header>
+      <div class="console">
       <article class="year" style="--card-a: #2fb0a8; --card-b: #ff6b5a; --card-c: #2f4a8a;">
         <a class="year-open" href="examples/2010/index.html" aria-label="Open the 2010 example">
           <span class="year-num">2010</span>
@@ -2639,6 +2795,14 @@
           </span>
         </div>
       </article>
+      </div>
+    </section>
+    <section class="decade" id="2020s" aria-label="The 2020s">
+      <header class="decade-head">
+        <h2 class="decade-title">2020s</h2>
+        <span class="decade-count">7 years</span>
+      </header>
+      <div class="console">
       <article class="year" style="--card-a: #7c5cff; --card-b: #2fd6c0; --card-c: #ff5a8f;">
         <a class="year-open" href="examples/2020/index.html" aria-label="Open the 2020 example">
           <span class="year-num">2020</span>
@@ -2779,6 +2943,7 @@
           </span>
         </div>
       </article>
+      </div>
     </section>
 
     <footer class="footer">

@@ -94,19 +94,22 @@ Want to read one cover to cover? Every year is browsable at
 ## Design since 1900
 
 Flashback starts its clock at 1900 — roughly when design began arguing with
-itself and never stopped. The whole century, in the time it takes to scroll:
+itself and never stopped. The whole century, decade by decade — open any one to
+drop into the archive:
 
-- **1900s–10s — the machine arrives.** Art Nouveau gives way to Cubism and Futurism.
-- **1920s — the grid is invented.** Bauhaus, De Stijl, Constructivism, the rise of sans-serif.
-- **1930s–40s — streamline, then persuade.** Aerodynamic style, then wartime propaganda.
-- **1950s — Switzerland wins.** Helvetica (1957), the grid, and corporate identity.
-- **1960s — order gets a rebellion.** Psychedelia melts the grid; Pop floods in.
-- **1970s — two futures at once.** Punk's photocopier vs. NASA-clean optimism.
-- **1980s — style becomes infrastructure.** Memphis, MTV, the desktop metaphor.
-- **1990s — type breaks on purpose.** David Carson, grunge, rave flyers, the early web.
-- **2000s — everything turns glossy.** Web 2.0 gradients and skeuomorphic leather.
-- **2010s — the great flattening.** Flat design and Material smooth every edge.
-- **2020s — all of it, at once.** Brutalist revivals, variable fonts, crafted maximalism.
+- **[1900s](https://toby.github.io/flashback/#1900s) — ornament meets the machine.** Art Nouveau peaks as Cubism cracks it open.
+- **[1910s](https://toby.github.io/flashback/#1910s) — the avant-garde detonates.** Futurism, Suprematism, Dada, and war posters.
+- **[1920s](https://toby.github.io/flashback/#1920s) — the grid is invented.** Bauhaus, De Stijl, Constructivism, the new sans-serif.
+- **[1930s](https://toby.github.io/flashback/#1930s) — streamline and deco.** Aerodynamic glamour; the London Underground map (1933).
+- **[1940s](https://toby.github.io/flashback/#1940s) — design goes to war, then rebuilds.** Propaganda, then a clean postwar reset.
+- **[1950s](https://toby.github.io/flashback/#1950s) — Switzerland wins.** Helvetica (1957), the grid, and corporate identity.
+- **[1960s](https://toby.github.io/flashback/#1960s) — order gets a rebellion.** Psychedelia melts the grid; Pop floods in.
+- **[1970s](https://toby.github.io/flashback/#1970s) — two futures at once.** Punk's photocopier vs. NASA-clean optimism.
+- **[1980s](https://toby.github.io/flashback/#1980s) — style becomes infrastructure.** Memphis, MTV, the desktop metaphor.
+- **[1990s](https://toby.github.io/flashback/#1990s) — type breaks on purpose.** David Carson, grunge, rave flyers, the early web.
+- **[2000s](https://toby.github.io/flashback/#2000s) — everything turns glossy.** Web 2.0 gradients and skeuomorphic leather.
+- **[2010s](https://toby.github.io/flashback/#2010s) — the great flattening.** Flat design and Material smooth every edge.
+- **[2020s](https://toby.github.io/flashback/#2020s) — all of it, at once.** Brutalist revivals, variable fonts, crafted maximalism.
 
 None of it is costume. It's material. Flashback's whole job is pulling the right
 decade into the work — and knowing the difference between *referencing* 1984 and
