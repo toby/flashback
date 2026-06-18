@@ -168,6 +168,136 @@ not just storage. It gives the interface a reason to feel alive.
 - [ ] Add accessibility and usability critique passes.
 - [ ] Add export formats for Markdown, JSON, Figma-ready specs, and implementation tickets.
 
+## Keeping corpus examples current
+
+The corpus is the source of truth for example pages. When research changes in
+`corpus/YYYY.md`, update the examples from the corpus instead of hand-copying
+recipe cards, corpus maps, prompt seeds, or reference artifacts.
+
+Each example-ready corpus file should include frontmatter for `year`, `status`,
+`title`, `subtitle`, `decade_position`, and `primary_lens`, plus these sections:
+
+- `Year thesis`
+- `Design climate`
+- `Timeline signals`
+- `Flashback design recipes`
+- `Anti-cliches`
+- `Design prompt seeds`
+- `Reference artifacts`
+
+Research workflow:
+
+1. Edit `corpus/YYYY.md`.
+2. Run `npm run sync:examples`.
+3. Review the generated changes under `examples/`.
+4. Run `npm run check:examples`.
+5. Commit the corpus and example updates together.
+
+Use `status: draft` for research that is not ready to publish. Use
+`status: researched` when a corpus entry is ready to become an example; the sync
+command promotes it to `status: example` after generating the page. Entries with
+`status: example` are always kept in sync.
+
+### Example sync commands
+
+```bash
+npm run sync:examples
+```
+
+Regenerates the root `index.html`, `examples/manifest.json`, and each
+`examples/YYYY/index.html` from the current corpus. It also updates
+`status: researched` to `status: example` for corpus entries that have just been
+synced.
+
+```bash
+npm run check:examples
+```
+
+Fails if generated examples are stale, if an example-ready corpus year is
+missing an example page, if generated links point at missing corpus anchors, or
+if an example page exists for a corpus entry that is not marked `status: example`.
+
+Generated example pages include a comment near the top of the HTML. Do not
+hand-edit corpus-derived sections there; change the corpus and rerun the sync.
+If a year needs a distinct visual treatment, add or adjust its theme in
+`scripts/flashback-examples.mjs` so the generated output stays reproducible.
+
+The generated manifest is useful for tooling and review because it exposes each
+year's source path, example path, recipes, prompt seeds, reference artifacts,
+anti-cliches, and corpus section map in one JSON file.
+
+### Corpus shape expected by examples
+
+Recipe headings should use this form:
+
+```text
+### Recipe 1: Direction name
+```
+
+Each recipe should include `Use for:` plus bullets for `Palette`, `Type`,
+`Layout`, `Imagery`, `Motion`, `Risk`, and optionally `Add accuracy with`.
+Section links use GitHub-style heading anchors, so renaming headings is safe as
+long as `npm run sync:examples` is rerun afterward.
+
+## Hosting and the Flashback skill
+
+Flashback is published with GitHub Pages at
+**https://toby.github.io/flashback/**. The site is assembled from the corpus by
+`npm run build:site` and deployed by `.github/workflows/pages.yml` on every push
+to `main`.
+
+The published surface is:
+
+| Path | What it is |
+| --- | --- |
+| `/` | Generated index of every year, built from the corpus |
+| `/examples/YYYY/` | Per-year example pages |
+| `/examples/manifest.json` | Machine-readable index of years, recipes, prompts, and references |
+| `/corpus/YYYY.md` | Raw research markdown, served as-is |
+| `/skill/` | The Flashback skill page and a copy of `SKILL.md` |
+
+A `.nojekyll` marker is written into the site so GitHub Pages serves the corpus
+`.md` files raw (which is what the agent fetches) and leaves the
+example-to-corpus links intact.
+
+```bash
+npm run build:site
+```
+
+Assembles `_site/` (index, examples, corpus, skill, and `.nojekyll`) for local
+preview and for the deploy workflow. `_site/` is generated output and is
+git-ignored.
+
+#### One-time GitHub Pages setup
+
+In the repository, set **Settings -> Pages -> Build and deployment -> Source** to
+**GitHub Actions**. The `pages.yml` workflow then publishes the site.
+
+### The /flashback skill
+
+`.github/skills/flashback/SKILL.md` is a Copilot CLI project skill. Given a design
+task and one or more years, it fetches `examples/manifest.json` and the relevant
+`corpus/YYYY.md` from the site and uses that year's thesis, design climate,
+recipes, anti-cliches, prompt seeds, and references to ground the work.
+
+It is available automatically when you run Copilot CLI in this repository. In a
+session, reload and inspect it with:
+
+```bash
+/skills reload
+/skills info flashback
+```
+
+Then invoke it explicitly, for example:
+
+```text
+Use the /flashback skill to design a landing page with a 1981 feeling.
+```
+
+The skill reads the manifest to learn which years exist, so it stays correct as
+the corpus grows. When a requested year is not yet in the corpus, it grounds the
+work in the nearest available year and says so.
+
 ## Project status
 
 Flashback is at the concept seed stage. This README defines the product direction, agent behavior, and first implementation target.

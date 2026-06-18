@@ -1,0 +1,61 @@
+name: Deploy Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'corpus/**'
+      - 'examples/**'
+      - 'index.html'
+      - 'scripts/flashback-examples.mjs'
+      - 'package.json'
+      - '.github/skills/flashback/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Verify generated examples are current
+        run: npm run check:examples
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build site
+        run: npm run build:site
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
