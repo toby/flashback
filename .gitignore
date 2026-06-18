@@ -1,0 +1,6 @@
+# Build output for GitHub Pages (assembled by `npm run build:site`)
+_site/
+
+# Node
+node_modules/
+npm-debug.log*

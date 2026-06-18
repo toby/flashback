@@ -1,0 +1,1172 @@
+{
+  "generatedBy": "scripts/flashback-examples.mjs",
+  "source": "corpus/*.md",
+  "examples": [
+    {
+      "year": 1980,
+      "title": "1980: the hinge year",
+      "subtitle": "Late analog culture starts mutating into postmodern surface, portable media, style magazines, and video-era self-fashioning.",
+      "status": "example",
+      "decadePosition": "threshold",
+      "sourcePath": "corpus/1980.md",
+      "examplePath": "examples/1980/index.html",
+      "feeling": "modernism losing its monopoly",
+      "primaryLens": [
+        "postmodernism becomes public architecture",
+        "new wave and post-punk replace punk as the dominant style engine",
+        "personal electronics turn media into a private environment",
+        "fashion, music, film, and graphic design become one feedback loop",
+        "pre-digital tools begin producing a digital-looking visual language"
+      ],
+      "recipes": [
+        {
+          "number": 1,
+          "name": "Post-punk archive",
+          "anchor": "recipe-1-post-punk-archive",
+          "useFor": "memory tools, writing apps, research systems, local-first software, archives, personal knowledge tools.",
+          "palette": "black, bone, concrete, deep red.",
+          "type": "restrained serif or grotesk, wide tracking, sparse hierarchy.",
+          "layout": "strict grid with one destabilizing element.",
+          "imagery": "monochrome object photography, cropped documents, archival fragments.",
+          "motion": "slow reveal, fade, mechanical page change.",
+          "risk": "becoming joyless or too funeral.",
+          "addAccuracyWith": ""
+        },
+        {
+          "number": 2,
+          "name": "New Wave operating manual",
+          "anchor": "recipe-2-new-wave-operating-manual",
+          "useFor": "creative tools, music software, experimental interfaces, developer tools with personality.",
+          "palette": "white, black, cyan, red-orange, plastic yellow.",
+          "type": "condensed sans, rotated labels, symbol bullets, asymmetric composition.",
+          "layout": "grid visible but broken.",
+          "imagery": "cutout photography, halftone, primitive digital masks.",
+          "motion": "snap cuts, rhythmic panels, jumpy transitions.",
+          "risk": "becoming \"80s party\" costume.",
+          "addAccuracyWith": ""
+        },
+        {
+          "number": 3,
+          "name": "Portable private world",
+          "anchor": "recipe-3-portable-private-world",
+          "useFor": "audio products, journaling, wearables, focus tools, personal AI companions.",
+          "palette": "silver, blue, charcoal, soft black, small red indicators.",
+          "type": "technical sans, small caps, mechanical labels.",
+          "layout": "object-first, tactile controls, compact modules.",
+          "imagery": "hands, streets, headphones, transit, pockets.",
+          "motion": "button depressions, tape movement, LED pulses.",
+          "risk": "nostalgia gadget cosplay.",
+          "addAccuracyWith": ""
+        },
+        {
+          "number": 4,
+          "name": "Pre-Memphis threshold",
+          "anchor": "recipe-4-pre-memphis-threshold",
+          "useFor": "brand refreshes, furniture/product concepts, playful AI tools, education products.",
+          "palette": "primary colors plus black-white pattern.",
+          "type": "simple geometric forms, not overly wacky.",
+          "layout": "objects as symbols, components as characters.",
+          "imagery": "laminate, squiggle, block, arch, stepped shape.",
+          "motion": "theatrical reveals, object entrances, stage-like transitions.",
+          "risk": "accidentally using 1981-1987 Memphis as a lazy shorthand.",
+          "addAccuracyWith": "more Alchimia critique, less Saved-by-the-Bell pastiche."
+        }
+      ],
+      "promptSeeds": [
+        "Design this as if it were made in 1980, at the exact moment when Swiss typography\nstarts absorbing post-punk, cassette culture, and primitive computer graphics.\nKeep it analog, severe, stylish, and slightly unstable.",
+        "Give me three 1980-informed directions:\n1. Post-punk archive\n2. New Wave operating manual\n3. Portable private world\nFor each, explain the historical lineage, typography, color, motion, and what to avoid.",
+        "Critique this interface through a 1980 lens. Where is it too frictionless?\nWhere could it use stronger materiality, identity, rhythm, or cultural tension?"
+      ],
+      "referenceArtifacts": {
+        "objects": [
+          "Sony TPS-L2 Walkman",
+          "Cassette tapes and cases",
+          "CRT monitors and broadcast equipment",
+          "Arcade cabinets and control panels",
+          "Zines, flyers, Letraset sheets, paste-up boards",
+          "Chrome/glass furniture and soft neutral tailoring"
+        ],
+        "printAndGraphics": [
+          "The Face, first issue and early identity",
+          "Joy Division - Closer sleeve",
+          "Talking Heads - Remain in Light sleeve",
+          "David Bowie - Scary Monsters (and Super Creeps) visuals",
+          "Punk and post-punk flyers",
+          "Graffiti tags and subway pieces"
+        ],
+        "spaces": [
+          "La Strada Novissima",
+          "Blitz club",
+          "The Overlook Hotel",
+          "Cloud City",
+          "American Gigolo interiors",
+          "Early-80s record shops, arcades, and clubs"
+        ]
+      },
+      "antiCliches": [
+        "Generic vaporwave",
+        "Full Memphis overload",
+        "Smooth cyberpunk UI",
+        "Neon grid wallpaper",
+        "1984 Macintosh desktop nostalgia",
+        "MTV-era visual saturation as if it already exists",
+        "Aerobics mall graphics unless the brief specifically wants mass-market mid-80s",
+        "Pixel art that looks like late-1980s/1990s game nostalgia"
+      ],
+      "sectionMap": [
+        {
+          "label": "Year thesis",
+          "anchor": "year-thesis",
+          "description": "modernism losing its monopoly"
+        },
+        {
+          "label": "1980 to 1979",
+          "anchor": "how-1980-differs-from-1979",
+          "description": "Year-to-year change."
+        },
+        {
+          "label": "Design climate",
+          "anchor": "design-climate",
+          "description": "1980 is caught between two design instincts:"
+        },
+        {
+          "label": "Timeline signals",
+          "anchor": "timeline-signals",
+          "description": "The first Venice Architecture Biennale, The Presence of the Past, presents La Strada Noviss..."
+        },
+        {
+          "label": "Typography",
+          "anchor": "typography",
+          "description": "Typography in 1980 is still living in the shadow of Swiss modernism, but the grid is no lon..."
+        },
+        {
+          "label": "Graphic design",
+          "anchor": "graphic-design",
+          "description": "Graphic design in 1980 is split between austerity and signal overload."
+        },
+        {
+          "label": "Product design",
+          "anchor": "product-and-industrial-design",
+          "description": "1980 product design is where lifestyle starts overpowering object logic."
+        },
+        {
+          "label": "Architecture",
+          "anchor": "architecture-and-interiors",
+          "description": "Architecture in 1980 is arguing in public."
+        },
+        {
+          "label": "Fashion",
+          "anchor": "fashion-and-self-design",
+          "description": "1980 fashion is about self-invention under pressure."
+        },
+        {
+          "label": "Music",
+          "anchor": "music",
+          "description": "1980 music is the sound of punk's explosion reorganizing itself."
+        },
+        {
+          "label": "Film",
+          "anchor": "film-and-moving-image",
+          "description": "1980 film design is unusually useful because it gives several competing futures:"
+        },
+        {
+          "label": "Surface",
+          "anchor": "color-material-and-surface",
+          "description": "1980 surfaces often do one of three things:"
+        },
+        {
+          "label": "Anti-cliches",
+          "anchor": "anti-cliches",
+          "description": "Do not make 1980 look like:"
+        }
+      ]
+    },
+    {
+      "year": 1981,
+      "title": "1981: the broadcast interface",
+      "subtitle": "Memphis debuts, MTV goes on air, desktop computing becomes a commercial design problem, and style starts moving at television speed.",
+      "status": "example",
+      "decadePosition": "ignition",
+      "sourcePath": "corpus/1981.md",
+      "examplePath": "examples/1981/index.html",
+      "feeling": "style becomes infrastructure",
+      "primaryLens": [
+        "postmodern object language becomes visible at scale",
+        "music becomes a moving-image identity system",
+        "personal computing splits into beige standardization and graphical metaphor",
+        "New Romantic and Japanese avant-garde fashion redraw the body",
+        "film design turns nostalgia, urban decay, and neon modernity into usable worlds"
+      ],
+      "recipes": [
+        {
+          "number": 1,
+          "name": "Mutable broadcast identity",
+          "anchor": "recipe-1-mutable-broadcast-identity",
+          "useFor": "media brands, AI assistants, creative tools, music products, launch campaigns.",
+          "palette": "black, white, electric blue, hot pink, acid green.",
+          "type": "massive block logo plus graffiti/handmade interruption.",
+          "layout": "simple core mark, endlessly changing surface.",
+          "imagery": "texture fills, video stills, broadcast artifacts, fast edits.",
+          "motion": "morph, wipe, smash cut, analog glitch, logo costume changes.",
+          "risk": "looking like generic retro TV.",
+          "addAccuracyWith": "a stable silhouette under all variation."
+        },
+        {
+          "number": 2,
+          "name": "Memphis object-system",
+          "anchor": "recipe-2-memphis-object-system",
+          "useFor": "playful hardware, education tools, furniture, toy-like interfaces, optimistic brand systems.",
+          "palette": "turquoise, red, yellow, black-white pattern, lavender.",
+          "type": "simple geometric labels, not novelty fonts.",
+          "layout": "asymmetric blocks, object-like modules, pattern fields.",
+          "imagery": "laminate, ceramic, shelves, lamps, arches, columns, terrazzo/speckle.",
+          "motion": "theatrical object entrances, parts stacking, pattern swaps.",
+          "risk": "flattening Memphis into random squiggles.",
+          "addAccuracyWith": ""
+        },
+        {
+          "number": 3,
+          "name": "Beige platform future",
+          "anchor": "recipe-3-beige-platform-future",
+          "useFor": "developer tools, databases, enterprise AI, documentation systems, productivity products.",
+          "palette": "beige, cream, warm grey, green CRT, black text.",
+          "type": "monospaced labels, system sans, dot-matrix output.",
+          "layout": "modular panels, forms, folders, tables, expandable slots.",
+          "imagery": "keyboards, CRTs, manuals, disks, cables, printer paper.",
+          "motion": "cursor blink, boot sequence, fan hum, print feed.",
+          "risk": "becoming boring or ironic-only.",
+          "addAccuracyWith": ""
+        },
+        {
+          "number": 4,
+          "name": "Black architectural fashion",
+          "anchor": "recipe-4-black-architectural-fashion",
+          "useFor": "fashion brands, privacy tools, serious AI companions, writing environments, galleries.",
+          "palette": "black, charcoal, ink, off-white, shadow.",
+          "type": "restrained, spacious, slightly severe.",
+          "layout": "asymmetry, negative space, concealed structure.",
+          "imagery": "fabric texture, volume, folds, unfinished edges.",
+          "motion": "slow drape, reveal, conceal, shift in silhouette.",
+          "risk": "turning into generic luxury minimalism.",
+          "addAccuracyWith": "imperfection, volume, and refusal of body-display norms."
+        }
+      ],
+      "promptSeeds": [
+        "Design this through a 1981 lens: Memphis has just arrived, MTV has just gone on air,\nand the personal computer is becoming a business object. Give me a system that can\nmove between object, screen, logo, and editorial layout.",
+        "Give me three 1981-informed directions:\n1. Mutable broadcast identity\n2. Beige platform future\n3. Black architectural fashion\nFor each, explain the historical lineage, typography, color, motion, interaction,\nand what to avoid.",
+        "Critique this product as if it launched in 1981. Is it more Memphis object,\nMTV identity, IBM platform, Xerox interface, or New Romantic persona?\nWhat would make that lineage stronger?"
+      ],
+      "referenceArtifacts": {
+        "objects": [
+          "Memphis first collection objects",
+          "IBM 5150 Personal Computer",
+          "Xerox Star 8010 Information System",
+          "Sony WM-2 Walkman",
+          "CRT monitors, keyboards, floppy disks, dot-matrix printers",
+          "Decorative laminate, ceramic lamps, shelving totems"
+        ],
+        "printAndGraphics": [
+          "MTV logo and early bumpers",
+          "The Face under Neville Brody",
+          "Grace Jones - Nightclubbing imagery",
+          "Kraftwerk - Computer World sleeve",
+          "The Human League - Dare sleeve",
+          "Early PC manuals and setup diagrams"
+        ],
+        "spaces": [
+          "Arc '74 Memphis debut",
+          "MTV control rooms and early cable broadcast environments",
+          "IBM office desks",
+          "Xerox-style graphical office",
+          "New Romantic clubs",
+          "Neon city streets in Thief",
+          "Dystopian urban ruins in Escape from New York",
+          "Industrial lofts and Parisian pop modernity in Diva"
+        ]
+      },
+      "antiCliches": [
+        "Fully developed mid-80s mall graphics",
+        "Vaporwave",
+        "Pure neon cyberpunk",
+        "Late-80s hair metal",
+        "Macintosh 1984 nostalgia",
+        "Windows 95 desktop nostalgia",
+        "Generic Memphis squiggle wallpaper with no object logic",
+        "MTV maximalism without a stable identity structure",
+        "Digital smoothness that could only come from later tools"
+      ],
+      "sectionMap": [
+        {
+          "label": "Year thesis",
+          "anchor": "year-thesis",
+          "description": "style becomes infrastructure"
+        },
+        {
+          "label": "1981 to 1980",
+          "anchor": "how-1981-differs-from-1980",
+          "description": "Year-to-year change."
+        },
+        {
+          "label": "Design climate",
+          "anchor": "design-climate",
+          "description": "1981 is pulled between two opposite futures:"
+        },
+        {
+          "label": "Timeline signals",
+          "anchor": "timeline-signals",
+          "description": "Memphis shows its first collection at Arc '74 in Milan on September 19, 1981, MTV launches..."
+        },
+        {
+          "label": "Typography",
+          "anchor": "typography",
+          "description": "1981 typography wants to move."
+        },
+        {
+          "label": "Graphic design",
+          "anchor": "graphic-design",
+          "description": "1981 graphic design is about identity that can travel through media."
+        },
+        {
+          "label": "Product design",
+          "anchor": "product-and-interaction-design",
+          "description": "1981 product design is split between expressive objects and platform objects."
+        },
+        {
+          "label": "Architecture",
+          "anchor": "architecture-and-interiors",
+          "description": "After the 1980 Venice Architecture Biennale, 1981 feels like postmodernism moving from stag..."
+        },
+        {
+          "label": "Fashion",
+          "anchor": "fashion-and-self-design",
+          "description": "1981 fashion splits into glamour, refusal, and broadcast persona."
+        },
+        {
+          "label": "Music",
+          "anchor": "music",
+          "description": "1981 is when music has to look back at you."
+        },
+        {
+          "label": "Film",
+          "anchor": "film-and-moving-image",
+          "description": "1981 film design gives the decade several reusable worlds:"
+        },
+        {
+          "label": "Surface",
+          "anchor": "color-material-and-surface",
+          "description": "1981 surfaces often do one of four things:"
+        },
+        {
+          "label": "Anti-cliches",
+          "anchor": "anti-cliches",
+          "description": "Do not make 1981 look like:"
+        }
+      ]
+    },
+    {
+      "year": 1982,
+      "title": "1982: synthetic futures",
+      "subtitle": "Cyberpunk rain, vector glow, compact discs, home computers, postmodern civic color, and the first real sense that the future has multiple competing skins.",
+      "status": "example",
+      "decadePosition": "acceleration",
+      "sourcePath": "corpus/1982.md",
+      "examplePath": "examples/1982/index.html",
+      "feeling": "the future has become a style war",
+      "primaryLens": [
+        "Blade Runner makes the future dense, wet, retrofitted, and multicultural",
+        "Tron makes computation visible as black space, glowing geometry, and synthetic motion",
+        "home computing becomes mass-market culture through machines like the Commodore 64",
+        "digital audio and CAD begin shifting design from analog media into encoded systems",
+        "postmodernism leaves the showroom and becomes civic architecture"
+      ],
+      "recipes": [
+        {
+          "number": 1,
+          "name": "Retrofitted cyber-noir",
+          "anchor": "recipe-1-retrofitted-cyber-noir",
+          "useFor": "data tools, memory systems, urban products, security software, archival interfaces, fiction brands.",
+          "palette": "wet black, sodium orange, cyan signage, neon red, smoke grey.",
+          "type": "dense signage, condensed labels, multilingual overlays, corporate marks.",
+          "layout": "layered panels, vertical crowding, hidden infrastructure, street-level detail.",
+          "imagery": "rain, vents, cables, ducts, old buildings with new machinery.",
+          "motion": "slow scan, flicker, steam reveal, light reflection.",
+          "risk": "becoming generic cyberpunk.",
+          "addAccuracyWith": "retrofit logic, not random neon."
+        },
+        {
+          "number": 2,
+          "name": "Vector ritual",
+          "anchor": "recipe-2-vector-ritual",
+          "useFor": "games, simulation tools, AI visualizers, technical demos, motion identities.",
+          "palette": "black, electric blue, red, white, yellow.",
+          "type": "minimal, geometric, glowing, interface-like.",
+          "layout": "arenas, grids, lines, discs, directional paths.",
+          "imagery": "vector forms, circuitry, luminous suits, abstract vehicles.",
+          "motion": "linear paths, snaps, pulses, collisions, transformations.",
+          "risk": "looking like 1990s rave graphics.",
+          "addAccuracyWith": "early-computer restraint and simple geometry."
+        },
+        {
+          "number": 3,
+          "name": "Optical digital audio",
+          "anchor": "recipe-3-optical-digital-audio",
+          "useFor": "music products, audio apps, archives, media libraries, physical-digital packaging.",
+          "palette": "mirror silver, black glass, rainbow edge, fluorescent green.",
+          "type": "precise sans, small technical labels, track numbers.",
+          "layout": "tray, index, track modularity, circular geometry.",
+          "imagery": "disc reflection, laser, jewel case, hi-fi display.",
+          "motion": "tray open, spin-up, track skip, laser seek.",
+          "risk": "generic futuristic minimalism.",
+          "addAccuracyWith": "format ritual and physical optics."
+        },
+        {
+          "number": 4,
+          "name": "Home computer room",
+          "anchor": "recipe-4-home-computer-room",
+          "useFor": "learning tools, playful dev environments, retro computing brands, education products.",
+          "palette": "beige, brown, warm grey, TV blue, black.",
+          "type": "monospaced, low-res, manual-like.",
+          "layout": "keyboard-first, TV frame, typed commands, cartridge/floppy/cassette modules.",
+          "imagery": "manuals, cables, carpet, desk lamps, disks, BASIC prompts.",
+          "motion": "boot screen, cursor blink, sprite movement, loading wait.",
+          "risk": "confusing 1982 with later pixel nostalgia.",
+          "addAccuracyWith": "domestic plastic hardware and early software awkwardness."
+        },
+        {
+          "number": 5,
+          "name": "Postmodern civic facade",
+          "anchor": "recipe-5-postmodern-civic-facade",
+          "useFor": "public-sector brands, museums, cultural institutions, civic tech, placemaking.",
+          "palette": "terracotta, teal, cream, copper, muted blue-green.",
+          "type": "formal but playful, architectural, legible from distance.",
+          "layout": "base/middle/top, column-like side structures, central emblem.",
+          "imagery": "facade, sculpture, city seal, public threshold.",
+          "motion": "slow reveal, facade assembly, color-block transitions.",
+          "risk": "ironic decoration without civic purpose.",
+          "addAccuracyWith": "symbol, hierarchy, and public legibility."
+        }
+      ],
+      "promptSeeds": [
+        "Design this through a 1982 lens: Blade Runner and Tron have just created two\ncompeting futures, the Commodore 64 has brought computing home, and the compact\ndisc has made music feel optical and digital. Give me directions that keep those\nfutures distinct instead of blending them into generic retrofuturism.",
+        "Give me three 1982-informed directions:\n1. Retrofitted cyber-noir\n2. Vector ritual\n3. Optical digital audio\nFor each, explain the historical lineage, typography, color, motion, product logic,\nand what to avoid.",
+        "Critique this interface as if it launched in 1982. Is it a home computer, a CAD\ntool, a Tron-like simulation, a Blade Runner street interface, or a postmodern\ncivic object? What evidence supports that lineage?"
+      ],
+      "referenceArtifacts": {
+        "objects": [
+          "Commodore 64",
+          "Sony CDP-101",
+          "Compact discs and jewel cases",
+          "Floppy disks and home-computer manuals",
+          "CAD screens, plotter output, and drafting boards",
+          "CRT televisions used as computer displays",
+          "Hi-fi stacks with fluorescent displays"
+        ],
+        "printAndGraphics": [
+          "Blade Runner signage and production design",
+          "Tron posters, title graphics, and concept art",
+          "Duran Duran - Rio sleeve",
+          "Michael Jackson - Thriller sleeve and styling",
+          "Grandmaster Flash and the Furious Five - \"The Message\" visual world",
+          "The Face under Neville Brody",
+          "Portland Building facade studies"
+        ],
+        "spaces": [
+          "Blade Runner street-level Los Angeles",
+          "Tron game grid and digital arenas",
+          "Portland Building facade and civic lobby",
+          "EPCOT Future World",
+          "Home computer rooms",
+          "Hi-fi listening rooms",
+          "Downtown New York club environments",
+          "CAD offices and engineering workstations"
+        ]
+      },
+      "antiCliches": [
+        "Generic cyberpunk wallpaper",
+        "1990s hacker green code rain",
+        "Vaporwave sunsets",
+        "Fully polished CGI",
+        "Late-80s corporate chrome",
+        "Windows 95 or Macintosh desktop nostalgia",
+        "Random Memphis squiggles with no object or postmodern logic",
+        "Tron aesthetics with modern LED smoothness",
+        "Compact disc nostalgia without acknowledging the format was brand new and expensive"
+      ],
+      "sectionMap": [
+        {
+          "label": "Year thesis",
+          "anchor": "year-thesis",
+          "description": "the future has become a style war"
+        },
+        {
+          "label": "1982 to 1981",
+          "anchor": "how-1982-differs-from-1981",
+          "description": "Year-to-year change."
+        },
+        {
+          "label": "Design climate",
+          "anchor": "design-climate",
+          "description": "1982 is pulled between retrofitted reality and synthetic abstraction."
+        },
+        {
+          "label": "Timeline signals",
+          "anchor": "timeline-signals",
+          "description": "Blade Runner is released, Tron is released, The Commodore 64 is introduced, Time names the..."
+        },
+        {
+          "label": "Typography",
+          "anchor": "typography",
+          "description": "1982 typography is caught between street density, screen logic, and postmodern quotation."
+        },
+        {
+          "label": "Graphic design",
+          "anchor": "graphic-design",
+          "description": "1982 graphic design learns to live across paper, screen, street, sleeve, and object."
+        },
+        {
+          "label": "Product design",
+          "anchor": "product-and-interaction-design",
+          "description": "1982 product design is where the decade's digital future starts to become domestic and comm..."
+        },
+        {
+          "label": "Architecture",
+          "anchor": "architecture-and-interiors",
+          "description": "1982 architecture is no longer only debating postmodernism. It is building it."
+        },
+        {
+          "label": "Fashion",
+          "anchor": "fashion-and-self-design",
+          "description": "1982 fashion is about silhouette as signal."
+        },
+        {
+          "label": "Music",
+          "anchor": "music",
+          "description": "1982 music sits at the moment when pop becomes multimedia architecture."
+        },
+        {
+          "label": "Film",
+          "anchor": "film-and-moving-image",
+          "description": "1982 is one of the most design-important film years in the corpus."
+        },
+        {
+          "label": "Surface",
+          "anchor": "color-material-and-surface",
+          "description": "1982 surfaces often do one of five things:"
+        },
+        {
+          "label": "Anti-cliches",
+          "anchor": "anti-cliches",
+          "description": "Do not make 1982 look like:"
+        }
+      ]
+    },
+    {
+      "year": 1983,
+      "title": "1983: lifestyle interfaces",
+      "subtitle": "GUI, MIDI, Swatch, Famicom, mobile phones, MTV pop, and dancewear turn technology and identity into things you wear, play, touch, and perform.",
+      "status": "example",
+      "decadePosition": "consumerization",
+      "sourcePath": "corpus/1983.md",
+      "examplePath": "examples/1983/index.html",
+      "feeling": "the interface moves onto the body",
+      "primaryLens": [
+        "interfaces become visible, tactile, and personal",
+        "pop image becomes a full audiovisual operating system",
+        "design moves from object language into lifestyle accessory",
+        "electronic music gains a shared protocol through MIDI",
+        "play, portability, and personal technology reshape the domestic future"
+      ],
+      "recipes": [
+        {
+          "number": 1,
+          "name": "Friendly GUI office",
+          "anchor": "recipe-1-friendly-gui-office",
+          "useFor": "productivity tools, personal AI dashboards, document systems, local-first apps.",
+          "palette": "beige, paper white, black, cool grey.",
+          "type": "bitmap-like sans, menu labels, document titles.",
+          "layout": "windows, icons, folders, desk metaphor, clear hierarchy.",
+          "imagery": "mouse, documents, floppy disks, office desktop.",
+          "motion": "open window, drag, select, save, print.",
+          "risk": "becoming Macintosh 1984 nostalgia.",
+          "addAccuracyWith": "Lisa-like office seriousness and high price/early-adopter feel."
+        },
+        {
+          "number": 2,
+          "name": "Wrist-scale pop",
+          "anchor": "recipe-2-wrist-scale-pop",
+          "useFor": "wearables, collectibles, fashion-tech, youth brands, modular identity systems.",
+          "palette": "white plastic plus primary and candy brights.",
+          "type": "simple, graphic, high contrast.",
+          "layout": "circular face as poster; tiny information with big personality.",
+          "imagery": "watch hands, straps, packaging walls, multiples.",
+          "motion": "tick, swap, collect, stack, color rotate.",
+          "risk": "generic toy color.",
+          "addAccuracyWith": "Swiss precision plus disposable second-watch attitude."
+        },
+        {
+          "number": 3,
+          "name": "MIDI studio network",
+          "anchor": "recipe-3-midi-studio-network",
+          "useFor": "music tools, creative workflows, node editors, automation products.",
+          "palette": "black, grey, LED red, synth blue, cable black.",
+          "type": "panel labels, numbers, channel names, ports.",
+          "layout": "modular devices connected by cables and signal routes.",
+          "imagery": "keyboards, drum machines, cables, rack units, diagrams.",
+          "motion": "sync pulse, sequence steps, channel routing, clock blink.",
+          "risk": "looking like later DAW software.",
+          "addAccuracyWith": "hardware-first communication and five-pin cable logic."
+        },
+        {
+          "number": 4,
+          "name": "Domestic game computer",
+          "anchor": "recipe-4-domestic-game-computer",
+          "useFor": "learning games, family tech, playful software, console-inspired products.",
+          "palette": "cream, red, black, TV blue.",
+          "type": "cartridge label, pixel title, manual diagrams.",
+          "layout": "console, controllers, cartridges, TV frame.",
+          "imagery": "family room, cables, game boxes, custom chips.",
+          "motion": "cartridge insert, power switch, sprite start, pause.",
+          "risk": "importing grey NES nostalgia too early.",
+          "addAccuracyWith": "Japanese Famicom red/cream warmth and toy-like confidence."
+        },
+        {
+          "number": 5,
+          "name": "Screen anxiety",
+          "anchor": "recipe-5-screen-anxiety",
+          "useFor": "cybersecurity, media critique, horror interfaces, command centers, network-risk products.",
+          "palette": "CRT green, black, signal blue, flesh pink, military grey.",
+          "type": "command line, warning labels, terminal output.",
+          "layout": "nested screens, control rooms, tapes, feeds, system maps.",
+          "imagery": "TV static, scanlines, hands on keyboards, broadcast equipment.",
+          "motion": "signal distortion, boot sequence, access granted/denied, feed glitch.",
+          "risk": "modern hacker cliche.",
+          "addAccuracyWith": "Cold War command logic and analog video texture."
+        }
+      ],
+      "promptSeeds": [
+        "Design this through a 1983 lens: the Lisa has made the GUI commercial, MIDI has\nconnected instruments, Swatch has turned time into fashion, and MTV has made pop\nidentity copyable. Give me directions that treat interface as lifestyle.",
+        "Give me three 1983-informed directions:\n1. Friendly GUI office\n2. Wrist-scale pop\n3. Screen anxiety\nFor each, explain the historical lineage, typography, color, motion, interaction,\nand what to avoid.",
+        "Critique this product as if it launched in 1983. Is it more Lisa GUI, Swatch\naccessory, MIDI studio, Famicom living room, mobile executive object, or MTV\nperformance identity? What evidence supports that lineage?"
+      ],
+      "referenceArtifacts": {
+        "objects": [
+          "Apple Lisa",
+          "Swatch first collection",
+          "Motorola DynaTAC 8000X",
+          "Nintendo Family Computer / Famicom",
+          "Sequential Circuits Prophet-600 and Roland Jupiter-6 as MIDI-era symbols",
+          "Compaq Portable",
+          "5.25-inch floppy disks",
+          "Synth panels, drum machines, MIDI cables",
+          "Leg warmers, rubber bracelets, Swatch straps"
+        ],
+        "printAndGraphics": [
+          "Lisa interface screens and manuals",
+          "Swatch packaging and watch faces",
+          "Famicom cartridge labels and manuals",
+          "The Face under Neville Brody",
+          "Style Wars titles and graffiti documentation",
+          "Madonna early single imagery",
+          "Thriller video stills and poster-like choreography",
+          "Chanel codes under Lagerfeld's arrival"
+        ],
+        "spaces": [
+          "GUI office desktop",
+          "MIDI studio",
+          "Famicom family room",
+          "Swatch retail wall",
+          "Subway yards and trains in Style Wars",
+          "Military command center in WarGames",
+          "TV station/body-horror interiors in Videodrome",
+          "Dance studio / steel mill / audition room in Flashdance",
+          "Parc de la Villette as event-grid landscape"
+        ]
+      },
+      "antiCliches": [
+        "Fully developed Macintosh design language",
+        "Windows 95 nostalgia",
+        "Generic neon cyberpunk",
+        "Late-80s mall graphics",
+        "Swatch colors without Swiss/plastic/watch logic",
+        "Famicom confused with the later grey NES",
+        "MIDI represented as a modern DAW timeline",
+        "Hip-hop reduced to random graffiti texture",
+        "Thriller treated only as Halloween imagery without choreography and video-event structure"
+      ],
+      "sectionMap": [
+        {
+          "label": "Year thesis",
+          "anchor": "year-thesis",
+          "description": "the interface moves onto the body"
+        },
+        {
+          "label": "1983 to 1982",
+          "anchor": "how-1983-differs-from-1982",
+          "description": "Year-to-year change."
+        },
+        {
+          "label": "Design climate",
+          "anchor": "design-climate",
+          "description": "1983 is pulled between friendly access and system anxiety."
+        },
+        {
+          "label": "Timeline signals",
+          "anchor": "timeline-signals",
+          "description": "Apple introduces the Lisa, MIDI is introduced at NAMM, Swatch presents its first 12-model c..."
+        },
+        {
+          "label": "Typography",
+          "anchor": "typography",
+          "description": "1983 typography wants to be clickable, wearable, and televised."
+        },
+        {
+          "label": "Graphic design",
+          "anchor": "graphic-design",
+          "description": "1983 graphic design is about small systems with big cultural reach."
+        },
+        {
+          "label": "Product design",
+          "anchor": "product-and-interaction-design",
+          "description": "1983 product design is about the personal interface."
+        },
+        {
+          "label": "Architecture",
+          "anchor": "architecture-and-interiors",
+          "description": "1983 architecture begins shifting from postmodern symbol to deconstructed system."
+        },
+        {
+          "label": "Fashion",
+          "anchor": "fashion-and-self-design",
+          "description": "1983 fashion is where performance becomes copyable."
+        },
+        {
+          "label": "Music",
+          "anchor": "music",
+          "description": "1983 music becomes a designed performance environment."
+        },
+        {
+          "label": "Film",
+          "anchor": "film-and-moving-image",
+          "description": "1983 film design is obsessed with screens, excess, and systems."
+        },
+        {
+          "label": "Surface",
+          "anchor": "color-material-and-surface",
+          "description": "1983 surfaces often do one of five things:"
+        },
+        {
+          "label": "Anti-cliches",
+          "anchor": "anti-cliches",
+          "description": "Do not make 1983 look like:"
+        }
+      ]
+    },
+    {
+      "year": 1984,
+      "title": "1984: the graphical turn",
+      "subtitle": "Macintosh icons, LA Olympic color, Emigre type, cyberpunk language, portable digital audio, MTV ritual, and blockbuster identity make design feel newly graphical, public, and mythic.",
+      "status": "example",
+      "decadePosition": "mainstreaming",
+      "sourcePath": "corpus/1984.md",
+      "examplePath": "examples/1984/index.html",
+      "feeling": "the screen learns to smile while the future learns to threaten",
+      "primaryLens": [
+        "graphical user interfaces become popular imagination",
+        "environmental graphics turn a city into a temporary identity system",
+        "digital typography gets an independent culture",
+        "pop music becomes film, performance, fashion, and award-show spectacle",
+        "cyberpunk and tech-noir name the anxiety underneath personal computing"
+      ],
+      "recipes": [
+        {
+          "number": 1,
+          "name": "Friendly bitmap tool",
+          "anchor": "recipe-1-friendly-bitmap-tool",
+          "useFor": "creative software, local-first apps, personal AI tools, educational products.",
+          "palette": "warm beige, black, white, cool grey.",
+          "type": "bitmap-like sans, compact labels, menu text.",
+          "layout": "windows, icons, tools, document surfaces.",
+          "imagery": "mouse, sketchbook grid, Happy Mac-like warmth, printouts.",
+          "motion": "cursor move, icon select, window open, tool stamp.",
+          "risk": "becoming generic retro Mac cosplay.",
+          "addAccuracyWith": "low-resolution constraints and genuine usability."
+        },
+        {
+          "number": 2,
+          "name": "Olympic graphitecture",
+          "anchor": "recipe-2-olympic-graphitecture",
+          "useFor": "events, festivals, civic tech, placemaking, wayfinding systems.",
+          "palette": "magenta, turquoise, yellow, vermillion, acid blue.",
+          "type": "bold wayfinding, multilingual welcome, supergraphic scale.",
+          "layout": "banners, columns, flags, temporary structures, citywide rhythm.",
+          "imagery": "sun, sports, Pacific Rim color, temporary architecture.",
+          "motion": "procession, crowd flow, flags, wayfinding reveal.",
+          "risk": "random confetti color.",
+          "addAccuracyWith": "functional orientation plus celebratory inclusivity."
+        },
+        {
+          "number": 3,
+          "name": "Emigre digital lab",
+          "anchor": "recipe-3-emigre-digital-lab",
+          "useFor": "experimental publishing, type tools, creative communities, design research.",
+          "palette": "black, white, grey, early screen blue.",
+          "type": "bitmap, custom, rough, system-constrained.",
+          "layout": "magazine-as-lab, type specimens, immigrant/transnational fragments.",
+          "imagery": "early Mac output, print artifacts, type experiments.",
+          "motion": "page turn, pixel redraw, font substitution, printer output.",
+          "risk": "illegibility as affectation.",
+          "addAccuracyWith": "exploration of digital constraints and typographic argument."
+        },
+        {
+          "number": 4,
+          "name": "Tech-noir threat",
+          "anchor": "recipe-4-tech-noir-threat",
+          "useFor": "cybersecurity, AI-risk interfaces, speculative fiction, dark product launches.",
+          "palette": "black, neon red, chrome, wet asphalt, police blue.",
+          "type": "neon noir wordmark plus dot-matrix tech labels.",
+          "layout": "night street, club signage, surveillance frame, factory corridor.",
+          "imagery": "leather, glass, red eye, machinery, smoke.",
+          "motion": "scan, target lock, light flicker, hard cut, hydraulic reveal.",
+          "risk": "generic cyberpunk.",
+          "addAccuracyWith": "noir typography plus 1984 machine anxiety."
+        },
+        {
+          "number": 5,
+          "name": "Pop-world identity",
+          "anchor": "recipe-5-pop-world-identity",
+          "useFor": "music brands, launches, creator tools, campaign worlds.",
+          "palette": "one dominant myth color plus black/white support.",
+          "type": "cinematic title treatment, tour-poster clarity, album sleeve confidence.",
+          "layout": "film still, stage, wardrobe, object, logo, single image repeated.",
+          "imagery": "motorcycle, glove, wedding cake, big suit, uniform, logo patch.",
+          "motion": "performance entrance, camera push, spotlight, pose.",
+          "risk": "shallow nostalgia.",
+          "addAccuracyWith": "one world that connects sound, body, object, and media."
+        }
+      ],
+      "promptSeeds": [
+        "Design this through a 1984 lens: the Macintosh has made computers friendly,\nLA84 has turned a city into color and wayfinding, Emigre has made digital type\nexperimental, and Neuromancer has made cyberspace feel dark and mythic.\nGive me directions that keep friendly bitmap culture and tech-noir anxiety distinct.",
+        "Give me three 1984-informed directions:\n1. Friendly bitmap tool\n2. Olympic graphitecture\n3. Tech-noir threat\nFor each, explain the historical lineage, typography, color, motion, interaction,\nand what to avoid.",
+        "Critique this product as if it launched in 1984. Is it more Macintosh icon,\nLA Olympic environment, Emigre type experiment, Ghostbusters franchise mark,\nPurple Rain pop world, or Terminator tech-noir machine? What evidence supports that?"
+      ],
+      "referenceArtifacts": {
+        "objects": [
+          "Original Apple Macintosh",
+          "Susan Kare icon sketchbook and bitmap fonts",
+          "Sony D-50 portable CD player",
+          "IBM PC/AT and PCjr",
+          "CD-ROM media",
+          "Olympic banners, columns, and wayfinding pieces",
+          "Ghostbusters logo patch and proton pack",
+          "Purple motorcycle / Prince wardrobe",
+          "David Byrne's big suit"
+        ],
+        "printAndGraphics": [
+          "Apple 1984 commercial frames",
+          "Macintosh UI screenshots",
+          "Emigre magazine issue 1",
+          "The Face issue 49 / \"ELECTRO\" cover and Industria",
+          "LA84 environmental graphics and posters",
+          "Ghostbusters no-ghost logo",
+          "Purple Rain album/film imagery",
+          "Run-DMC album imagery",
+          "Neuromancer covers and cyberpunk typography"
+        ],
+        "spaces": [
+          "Macintosh desktop",
+          "LA Olympic venues and streets",
+          "Emigre studio / early digital type lab",
+          "Tech Noir nightclub",
+          "Ghostbusters firehouse",
+          "First Avenue / Purple Rain stage world",
+          "MTV VMA stage",
+          "Run-DMC street/stage space",
+          "CD listening room and portable CD context"
+        ]
+      },
+      "antiCliches": [
+        "Windows 95",
+        "Late-90s web design",
+        "Smooth vector app icons",
+        "Generic vaporwave",
+        "Generic cyberpunk without noir typography",
+        "Macintosh nostalgia without bitmap constraints",
+        "Olympic color without wayfinding/environmental purpose",
+        "Prince reduced to purple alone",
+        "Hip-hop reduced to graffiti texture without style, sound, and dress",
+        "MTV reduced to random fast cuts without performance mythology"
+      ],
+      "sectionMap": [
+        {
+          "label": "Year thesis",
+          "anchor": "year-thesis",
+          "description": "the screen learns to smile while the future learns to threaten"
+        },
+        {
+          "label": "1984 to 1983",
+          "anchor": "how-1984-differs-from-1983",
+          "description": "Year-to-year change."
+        },
+        {
+          "label": "Design climate",
+          "anchor": "design-climate",
+          "description": "1984 is pulled between humanized technology and machine mythology."
+        },
+        {
+          "label": "Timeline signals",
+          "anchor": "timeline-signals",
+          "description": "Apple's 1984 commercial airs during Super Bowl XVIII, Apple launches the Macintosh, Susan K..."
+        },
+        {
+          "label": "Typography",
+          "anchor": "typography",
+          "description": "1984 typography is suddenly pixelated, architectural, and liberated from one medium."
+        },
+        {
+          "label": "Graphic design",
+          "anchor": "graphic-design",
+          "description": "1984 graphic design is about identity systems that become environments."
+        },
+        {
+          "label": "Product design",
+          "anchor": "product-and-interaction-design",
+          "description": "1984 product design is about making advanced systems approachable, portable, or culturally..."
+        },
+        {
+          "label": "Architecture",
+          "anchor": "architecture-and-interiors",
+          "description": "1984 is a year of temporary urban transformation and graphical space."
+        },
+        {
+          "label": "Fashion",
+          "anchor": "fashion-and-self-design",
+          "description": "1984 fashion is about making identity theatrical and legible from far away."
+        },
+        {
+          "label": "Music",
+          "anchor": "music",
+          "description": "1984 music becomes cinema, fashion, and broadcast ceremony."
+        },
+        {
+          "label": "Film",
+          "anchor": "film-and-moving-image",
+          "description": "1984 film design is obsessed with logos, machines, bodies, and myth."
+        },
+        {
+          "label": "Surface",
+          "anchor": "color-material-and-surface",
+          "description": "1984 surfaces often do one of five things:"
+        },
+        {
+          "label": "Anti-cliches",
+          "anchor": "anti-cliches",
+          "description": "Do not make 1984 look like:"
+        }
+      ]
+    },
+    {
+      "year": 1985,
+      "title": "1985: the publishing desktop",
+      "subtitle": "LaserWriter, PageMaker, Windows, Amiga, NES, Live Aid, Air Jordan, rotoscoped MTV, and time-machine pop turn screens into publishing tools and brands into portable worlds.",
+      "status": "example",
+      "decadePosition": "distribution",
+      "sourcePath": "corpus/1985.md",
+      "examplePath": "examples/1985/index.html",
+      "feeling": "design becomes a distribution engine",
+      "primaryLens": [
+        "desktop publishing joins screen layout to printed output",
+        "consumer platforms recover through stricter ecosystems and stronger identities",
+        "broadcast events and music videos become global design infrastructure",
+        "sneakers, consoles, and personal computers become lifestyle systems",
+        "retrofuturism and time travel make the past a design material"
+      ],
+      "recipes": [
+        {
+          "number": 1,
+          "name": "Desktop publishing revolution",
+          "anchor": "recipe-1-desktop-publishing-revolution",
+          "useFor": "writing tools, design apps, publishing platforms, documentation products.",
+          "palette": "beige, paper white, printer black, cyan layout guides.",
+          "type": "early digital serif/sans mix, page headings, font menus.",
+          "layout": "columns, pasteboard, text boxes, placed images, print preview.",
+          "imagery": "Macintosh, LaserWriter, paper stack, toner, page grids.",
+          "motion": "drag frame, print spool, page output, font change.",
+          "risk": "polished modern publishing UI.",
+          "addAccuracyWith": "early Mac constraints and visible page-production logic."
+        },
+        {
+          "number": 2,
+          "name": "Platform trust rebuild",
+          "anchor": "recipe-2-platform-trust-rebuild",
+          "useFor": "game platforms, marketplaces, education products, app stores, creator ecosystems.",
+          "palette": "NES grey, black, red, controlled box-art color.",
+          "type": "clear labels, official badges, manual diagrams.",
+          "layout": "cartridge, box, seal, grid, library.",
+          "imagery": "TV, controller, shelf, mascot, instruction booklet.",
+          "motion": "cartridge insert, boot, title screen, quality seal reveal.",
+          "risk": "generic 8-bit nostalgia.",
+          "addAccuracyWith": "post-crash trust and ecosystem control."
+        },
+        {
+          "number": 3,
+          "name": "Rotoscoped romance",
+          "anchor": "recipe-3-rotoscoped-romance",
+          "useFor": "music videos, storytelling apps, illustration systems, onboarding sequences.",
+          "palette": "graphite, cream paper, blue live-action shadows, pop accents.",
+          "type": "hand-drawn captions or minimal video titles.",
+          "layout": "split live-action/drawn worlds, panels, portals, frames.",
+          "imagery": "pencil lines, hands, faces, frame-by-frame motion.",
+          "motion": "live-action-to-drawing transition, page tear, chase, reach-through.",
+          "risk": "generic comic-book filter.",
+          "addAccuracyWith": "analog rotoscope labor and emotional transition."
+        },
+        {
+          "number": 4,
+          "name": "Court-to-street sneaker myth",
+          "anchor": "recipe-4-court-to-street-sneaker-myth",
+          "useFor": "sports brands, wearable tech, youth campaigns, creator merchandise.",
+          "palette": "black, red, white, leather grain.",
+          "type": "bold athletic labels, winged marks, campaign headlines.",
+          "layout": "shoe silhouette as hero object, athlete as myth, colorway as story.",
+          "imagery": "court, street, locker room, close-up materials.",
+          "motion": "jump, lace, pivot, ban notice, logo flash.",
+          "risk": "hype without performance.",
+          "addAccuracyWith": "athlete, color conflict, and logo origin."
+        },
+        {
+          "number": 5,
+          "name": "Retrofuture bureaucracy",
+          "anchor": "recipe-5-retrofuture-bureaucracy",
+          "useFor": "speculative fiction, civic satire, compliance tools, institutional critique.",
+          "palette": "dirty grey, beige, duct metal, fluorescent green.",
+          "type": "forms, stamps, labels, office memos, old terminals.",
+          "layout": "cramped desks, tubes, ducts, forms, windows that do not help.",
+          "imagery": "obsolete machines, papers, pipes, low ceilings.",
+          "motion": "stamp, pneumatic tube, jammed printer, flickering fluorescent.",
+          "risk": "generic steampunk.",
+          "addAccuracyWith": "bureaucratic absurdity and mid-century future logic."
+        }
+      ],
+      "promptSeeds": [
+        "Design this through a 1985 lens: PageMaker, LaserWriter, and PostScript have made\nthe desktop a publishing system; NES is rebuilding game-platform trust; Air Jordan\nhas turned a shoe into a myth; and MTV videos are becoming animation labs.\nGive me directions that treat output and distribution as the core design problem.",
+        "Give me three 1985-informed directions:\n1. Desktop publishing revolution\n2. Platform trust rebuild\n3. Rotoscoped romance\nFor each, explain the historical lineage, typography, color, motion, interaction,\nand what to avoid.",
+        "Critique this product as if it launched in 1985. Is it more PageMaker/LaserWriter,\nNES platform, Air Jordan identity, Amiga multimedia, Live Aid broadcast, or\nBack to the Future retrofuture object? What evidence supports that lineage?"
+      ],
+      "referenceArtifacts": {
+        "objects": [
+          "Apple LaserWriter",
+          "Aldus PageMaker",
+          "Macintosh desktop publishing setup",
+          "NES console, cartridges, boxes, manuals",
+          "Commodore Amiga 1000",
+          "Atari ST with MIDI ports",
+          "Air Jordan 1",
+          "DeLorean time machine",
+          "VHS tapes and MTV broadcast monitors",
+          "Rotoscope drawings for \"Take On Me.\""
+        ],
+        "printAndGraphics": [
+          "Early PageMaker layouts",
+          "LaserWriter output",
+          "Emigre magazine",
+          "NES package/manual systems",
+          "Air Jordan Wings logo and campaign materials",
+          "Live Aid broadcast identity",
+          "\"Take On Me\" video frames",
+          "\"Money for Nothing\" CGI frames",
+          "Back to the Future title and prop graphics",
+          "Brazil forms, ducts, and bureaucratic labels"
+        ],
+        "spaces": [
+          "Desktop publishing workstation",
+          "Small design studio with printer",
+          "NES family room / toy-electronics retail",
+          "Amiga launch/demo environment",
+          "MIDI home studio",
+          "Live Aid stage and broadcast control room",
+          "Doc Brown's garage",
+          "Brazil-style bureaucratic office",
+          "Mall sneaker store"
+        ]
+      },
+      "antiCliches": [
+        "Fully mature desktop publishing from the 1990s",
+        "Windows 95",
+        "Polished vector design software",
+        "Generic 8-bit nostalgia without platform-trust context",
+        "Sneaker hype divorced from basketball and colorway controversy",
+        "MTV visuals as random fast cuts without technique",
+        "Cyberpunk if you mean Brazil's bureaucratic retrofuture",
+        "CD ubiquity as if it has already replaced all analog music",
+        "Modern social media charity aesthetics for Live Aid"
+      ],
+      "sectionMap": [
+        {
+          "label": "Year thesis",
+          "anchor": "year-thesis",
+          "description": "design becomes a distribution engine"
+        },
+        {
+          "label": "1985 to 1984",
+          "anchor": "how-1985-differs-from-1984",
+          "description": "Year-to-year change."
+        },
+        {
+          "label": "Design climate",
+          "anchor": "design-climate",
+          "description": "1985 is pulled between democratized production and controlled platforms."
+        },
+        {
+          "label": "Timeline signals",
+          "anchor": "timeline-signals",
+          "description": "Aldus announces PageMaker, Apple LaserWriter and Adobe PostScript converge with the Mac, Mi..."
+        },
+        {
+          "label": "Typography",
+          "anchor": "typography",
+          "description": "1985 typography is no longer waiting for a typesetter."
+        },
+        {
+          "label": "Graphic design",
+          "anchor": "graphic-design",
+          "description": "1985 graphic design is about output."
+        },
+        {
+          "label": "Product design",
+          "anchor": "product-and-interaction-design",
+          "description": "1985 product design is about systems that create output or recover trust."
+        },
+        {
+          "label": "Architecture",
+          "anchor": "architecture-and-interiors",
+          "description": "1985 interiors are increasingly production spaces."
+        },
+        {
+          "label": "Fashion",
+          "anchor": "fashion-and-self-design",
+          "description": "1985 fashion is where consumer brands become identity equipment."
+        },
+        {
+          "label": "Music",
+          "anchor": "music",
+          "description": "1985 music becomes global broadcast, animation lab, and brand platform."
+        },
+        {
+          "label": "Film",
+          "anchor": "film-and-moving-image",
+          "description": "1985 film design is fascinated by time, bureaucracy, youth identity, and media hallucinatio..."
+        },
+        {
+          "label": "Surface",
+          "anchor": "color-material-and-surface",
+          "description": "1985 surfaces often do one of five things:"
+        },
+        {
+          "label": "Anti-cliches",
+          "anchor": "anti-cliches",
+          "description": "Do not make 1985 look like:"
+        }
+      ]
+    }
+  ]
+}

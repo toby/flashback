@@ -1,0 +1,11 @@
+{
+  "name": "flashback",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync:examples": "node scripts/flashback-examples.mjs sync",
+    "check:examples": "node scripts/flashback-examples.mjs check",
+    "build:site": "node scripts/flashback-examples.mjs site"
+  }
+}
