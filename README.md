@@ -1,6 +1,6 @@
-# Flashback
+# 🌆 Flashback
 
-> An agentic design tool with a time machine for taste.
+> A time machine for taste — historically literate agentic design.
 
 Flashback is a design partner that can move fluently between Bauhaus rigor, Swiss grid systems, Arts and Crafts humanity, Memphis irreverence, postmodern critique, cybernetic interfaces, spatial computing, generative UI, and whatever the frontier is doing next.
 
