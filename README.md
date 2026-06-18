@@ -111,6 +111,3 @@ itself and never stopped. The whole century, in the time it takes to scroll:
 None of it is costume. It's material. Flashback's whole job is pulling the right
 decade into the work — and knowing the difference between *referencing* 1984 and
 *cosplaying* it.
-
-The archive covers **1980–1985** today and is filling in outward toward the whole
-century.
