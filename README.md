@@ -34,7 +34,7 @@ agent keeps its skills.
 Pick your line and run it:
 
 ```bash
-DIR=~/.claude/skills/flashback        # ← swap in the path for your agent
+DIR=~/.copilot/skills/flashback        # ← swap in the path for your agent
 mkdir -p "$DIR"
 curl -fsSL https://toby.github.io/flashback/skill/SKILL.md -o "$DIR/SKILL.md"
 ```
