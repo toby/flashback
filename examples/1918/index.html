@@ -221,6 +221,84 @@
       background: var(--accent-c);
     }
 
+    .year-rail {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .year-rail-title {
+      margin: 0;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .year-rail-track {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .year-chip {
+      --chip-a: var(--accent-a);
+      --chip-b: var(--accent-b);
+      --chip-c: var(--accent-c);
+      display: inline-flex;
+      align-items: baseline;
+      gap: 10px;
+      padding: 8px 12px;
+      color: var(--paper);
+      text-decoration: none;
+      border: 1px solid color-mix(in srgb, var(--chip-b) 55%, var(--line));
+      border-top: 3px solid var(--chip-a);
+      background: color-mix(in srgb, var(--chip-a) 12%, rgba(0, 0, 0, 0.42));
+      box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.34);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+
+    .year-chip:hover,
+    .year-chip:focus-visible {
+      color: var(--ink);
+      border-color: var(--chip-c);
+      background: var(--chip-c);
+      box-shadow: 7px 7px 0 rgba(0, 0, 0, 0.4);
+      transform: translate(-2px, -2px);
+    }
+
+    .year-chip-num {
+      font-family: var(--display);
+      font-size: clamp(1.05rem, 2.6vw, 1.5rem);
+      line-height: 1;
+      letter-spacing: -0.08em;
+      text-transform: uppercase;
+    }
+
+    .year-chip-stamp {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink);
+      background: var(--chip-c);
+      padding: 4px 7px;
+      white-space: nowrap;
+    }
+
+    .year-chip[aria-current="page"] {
+      color: var(--ink);
+      border-color: var(--chip-c);
+      background: color-mix(in srgb, var(--chip-c) 74%, var(--paper));
+      box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.42);
+      pointer-events: none;
+    }
+
+    .year-chip[aria-current="page"] .year-chip-stamp {
+      background: color-mix(in srgb, var(--chip-a) 16%, var(--paper));
+    }
+
     .backlink {
       display: inline-flex;
       align-items: center;
@@ -652,6 +730,59 @@
           <li><a href="../../corpus/1918.md">Full corpus</a></li>
         </ul>
       </nav>
+      <nav class="year-rail" aria-label="Browse nearby years">
+        <p class="year-rail-title">Jump nearby</p>
+        <div class="year-rail-track">
+        <a class="year-chip" style="--chip-a: #b8843d; --chip-b: #9c4a3c; --chip-c: #6f8f86;" href="../1909/index.html" aria-label="Open the 1909 example">
+          <span class="year-chip-num">1909</span>
+          <span class="year-chip-stamp">Speed myth</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #c0341f; --chip-b: #1d1b18; --chip-c: #c79a3c;" href="../1910/index.html" aria-label="Open the 1910 example">
+          <span class="year-chip-num">1910</span>
+          <span class="year-chip-stamp">Futurist</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #33484f; --chip-b: #cfa94a; --chip-c: #2c2a26;" href="../1911/index.html" aria-label="Open the 1911 example">
+          <span class="year-chip-num">1911</span>
+          <span class="year-chip-stamp">Blue Rider</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #b9923f; --chip-b: #1c1f24; --chip-c: #c43d2a;" href="../1912/index.html" aria-label="Open the 1912 example">
+          <span class="year-chip-num">1912</span>
+          <span class="year-chip-stamp">Collage</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #6f3b2c; --chip-b: #a83a25; --chip-c: #5a6b3f;" href="../1913/index.html" aria-label="Open the 1913 example">
+          <span class="year-chip-num">1913</span>
+          <span class="year-chip-stamp">Armory</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #c0341f; --chip-b: #1d1b18; --chip-c: #c79a3c;" href="../1914/index.html" aria-label="Open the 1914 example">
+          <span class="year-chip-num">1914</span>
+          <span class="year-chip-stamp">Werkbund</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #33484f; --chip-b: #cfa94a; --chip-c: #2c2a26;" href="../1915/index.html" aria-label="Open the 1915 example">
+          <span class="year-chip-num">1915</span>
+          <span class="year-chip-stamp">Zero-ten</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #b9923f; --chip-b: #1c1f24; --chip-c: #c43d2a;" href="../1916/index.html" aria-label="Open the 1916 example">
+          <span class="year-chip-num">1916</span>
+          <span class="year-chip-stamp">Dada</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #6f3b2c; --chip-b: #a83a25; --chip-c: #5a6b3f;" href="../1917/index.html" aria-label="Open the 1917 example">
+          <span class="year-chip-num">1917</span>
+          <span class="year-chip-stamp">De Stijl</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #c0341f; --chip-b: #1d1b18; --chip-c: #c79a3c;" href="../1918/index.html" aria-current="page" aria-label="Viewing 1918">
+          <span class="year-chip-num">1918</span>
+          <span class="year-chip-stamp">Armistice</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #33484f; --chip-b: #cfa94a; --chip-c: #2c2a26;" href="../1919/index.html" aria-label="Open the 1919 example">
+          <span class="year-chip-num">1919</span>
+          <span class="year-chip-stamp">Bauhaus</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #d8332b; --chip-b: #1f6fb2; --chip-c: #f2c33b;" href="../1920/index.html" aria-label="Open the 1920 example">
+          <span class="year-chip-num">1920</span>
+          <span class="year-chip-stamp">Jazz age</span>
+        </a>
+        </div>
+      </nav>
     </section>
 
     <section class="section" id="climate" aria-labelledby="climate-title">
@@ -862,6 +993,60 @@ bureaucracy? What evidence supports that lineage?</pre>
       <b>18</b>
       <p>1918 rule: a world ending in noise while abstraction lowers its voice to white.</p>
     </section>
+
+      <nav class="year-rail" aria-label="Browse nearby years">
+        <p class="year-rail-title">Jump nearby</p>
+        <div class="year-rail-track">
+        <a class="year-chip" style="--chip-a: #b8843d; --chip-b: #9c4a3c; --chip-c: #6f8f86;" href="../1909/index.html" aria-label="Open the 1909 example">
+          <span class="year-chip-num">1909</span>
+          <span class="year-chip-stamp">Speed myth</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #c0341f; --chip-b: #1d1b18; --chip-c: #c79a3c;" href="../1910/index.html" aria-label="Open the 1910 example">
+          <span class="year-chip-num">1910</span>
+          <span class="year-chip-stamp">Futurist</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #33484f; --chip-b: #cfa94a; --chip-c: #2c2a26;" href="../1911/index.html" aria-label="Open the 1911 example">
+          <span class="year-chip-num">1911</span>
+          <span class="year-chip-stamp">Blue Rider</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #b9923f; --chip-b: #1c1f24; --chip-c: #c43d2a;" href="../1912/index.html" aria-label="Open the 1912 example">
+          <span class="year-chip-num">1912</span>
+          <span class="year-chip-stamp">Collage</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #6f3b2c; --chip-b: #a83a25; --chip-c: #5a6b3f;" href="../1913/index.html" aria-label="Open the 1913 example">
+          <span class="year-chip-num">1913</span>
+          <span class="year-chip-stamp">Armory</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #c0341f; --chip-b: #1d1b18; --chip-c: #c79a3c;" href="../1914/index.html" aria-label="Open the 1914 example">
+          <span class="year-chip-num">1914</span>
+          <span class="year-chip-stamp">Werkbund</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #33484f; --chip-b: #cfa94a; --chip-c: #2c2a26;" href="../1915/index.html" aria-label="Open the 1915 example">
+          <span class="year-chip-num">1915</span>
+          <span class="year-chip-stamp">Zero-ten</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #b9923f; --chip-b: #1c1f24; --chip-c: #c43d2a;" href="../1916/index.html" aria-label="Open the 1916 example">
+          <span class="year-chip-num">1916</span>
+          <span class="year-chip-stamp">Dada</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #6f3b2c; --chip-b: #a83a25; --chip-c: #5a6b3f;" href="../1917/index.html" aria-label="Open the 1917 example">
+          <span class="year-chip-num">1917</span>
+          <span class="year-chip-stamp">De Stijl</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #c0341f; --chip-b: #1d1b18; --chip-c: #c79a3c;" href="../1918/index.html" aria-current="page" aria-label="Viewing 1918">
+          <span class="year-chip-num">1918</span>
+          <span class="year-chip-stamp">Armistice</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #33484f; --chip-b: #cfa94a; --chip-c: #2c2a26;" href="../1919/index.html" aria-label="Open the 1919 example">
+          <span class="year-chip-num">1919</span>
+          <span class="year-chip-stamp">Bauhaus</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #d8332b; --chip-b: #1f6fb2; --chip-c: #f2c33b;" href="../1920/index.html" aria-label="Open the 1920 example">
+          <span class="year-chip-num">1920</span>
+          <span class="year-chip-stamp">Jazz age</span>
+        </a>
+        </div>
+      </nav>
 
     <footer class="footer">
       <span>Flashback / examples / 1918</span>

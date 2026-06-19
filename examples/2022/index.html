@@ -225,6 +225,84 @@
       background: var(--accent-c);
     }
 
+    .year-rail {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .year-rail-title {
+      margin: 0;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .year-rail-track {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .year-chip {
+      --chip-a: var(--accent-a);
+      --chip-b: var(--accent-b);
+      --chip-c: var(--accent-c);
+      display: inline-flex;
+      align-items: baseline;
+      gap: 10px;
+      padding: 8px 12px;
+      color: var(--paper);
+      text-decoration: none;
+      border: 1px solid color-mix(in srgb, var(--chip-b) 55%, var(--line));
+      border-top: 3px solid var(--chip-a);
+      background: color-mix(in srgb, var(--chip-a) 12%, rgba(0, 0, 0, 0.42));
+      box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.34);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+
+    .year-chip:hover,
+    .year-chip:focus-visible {
+      color: var(--ink);
+      border-color: var(--chip-c);
+      background: var(--chip-c);
+      box-shadow: 7px 7px 0 rgba(0, 0, 0, 0.4);
+      transform: translate(-2px, -2px);
+    }
+
+    .year-chip-num {
+      font-family: var(--display);
+      font-size: clamp(1.05rem, 2.6vw, 1.5rem);
+      line-height: 1;
+      letter-spacing: -0.08em;
+      text-transform: uppercase;
+    }
+
+    .year-chip-stamp {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink);
+      background: var(--chip-c);
+      padding: 4px 7px;
+      white-space: nowrap;
+    }
+
+    .year-chip[aria-current="page"] {
+      color: var(--ink);
+      border-color: var(--chip-c);
+      background: color-mix(in srgb, var(--chip-c) 74%, var(--paper));
+      box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.42);
+      pointer-events: none;
+    }
+
+    .year-chip[aria-current="page"] .year-chip-stamp {
+      background: color-mix(in srgb, var(--chip-a) 16%, var(--paper));
+    }
+
     .backlink {
       display: inline-flex;
       align-items: center;
@@ -656,6 +734,43 @@
           <li><a href="../../corpus/2022.md">Full corpus</a></li>
         </ul>
       </nav>
+      <nav class="year-rail" aria-label="Browse nearby years">
+        <p class="year-rail-title">Jump nearby</p>
+        <div class="year-rail-track">
+        <a class="year-chip" style="--chip-a: #ff7a3c; --chip-b: #2fb6d6; --chip-c: #3f2f6b;" href="../2019/index.html" aria-label="Open the 2019 example">
+          <span class="year-chip-num">2019</span>
+          <span class="year-chip-stamp">Mono hipster</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #7c5cff; --chip-b: #2fd6c0; --chip-c: #ff5a8f;" href="../2020/index.html" aria-label="Open the 2020 example">
+          <span class="year-chip-num">2020</span>
+          <span class="year-chip-stamp">Remote shock</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #ff5a3c; --chip-b: #2fb6ff; --chip-c: #1a1a1a;" href="../2021/index.html" aria-label="Open the 2021 example">
+          <span class="year-chip-num">2021</span>
+          <span class="year-chip-stamp">Spec surf</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #ffd23c; --chip-b: #3a2f5a; --chip-c: #ff4d8d;" href="../2022/index.html" aria-current="page" aria-label="Viewing 2022">
+          <span class="year-chip-num">2022</span>
+          <span class="year-chip-stamp">Prompt shock</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #2f3a4a; --chip-b: #3cf0c0; --chip-c: #b45aff;" href="../2023/index.html" aria-label="Open the 2023 example">
+          <span class="year-chip-num">2023</span>
+          <span class="year-chip-stamp">Human texture</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #7c5cff; --chip-b: #2fd6c0; --chip-c: #ff5a8f;" href="../2024/index.html" aria-label="Open the 2024 example">
+          <span class="year-chip-num">2024</span>
+          <span class="year-chip-stamp">Spatial fatigue</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #ff5a3c; --chip-b: #2fb6ff; --chip-c: #1a1a1a;" href="../2025/index.html" aria-label="Open the 2025 example">
+          <span class="year-chip-num">2025</span>
+          <span class="year-chip-stamp">Glass grit</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #ffd23c; --chip-b: #3a2f5a; --chip-c: #ff4d8d;" href="../2026/index.html" aria-label="Open the 2026 example">
+          <span class="year-chip-num">2026</span>
+          <span class="year-chip-stamp">Adaptive bloom</span>
+        </a>
+        </div>
+      </nav>
     </section>
 
     <section class="section" id="climate" aria-labelledby="climate-title">
@@ -864,6 +979,44 @@ using gradients and blobs?</pre>
       <b>22</b>
       <p>2022 rule: the image machine wakes up inside a nostalgia rave.</p>
     </section>
+
+      <nav class="year-rail" aria-label="Browse nearby years">
+        <p class="year-rail-title">Jump nearby</p>
+        <div class="year-rail-track">
+        <a class="year-chip" style="--chip-a: #ff7a3c; --chip-b: #2fb6d6; --chip-c: #3f2f6b;" href="../2019/index.html" aria-label="Open the 2019 example">
+          <span class="year-chip-num">2019</span>
+          <span class="year-chip-stamp">Mono hipster</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #7c5cff; --chip-b: #2fd6c0; --chip-c: #ff5a8f;" href="../2020/index.html" aria-label="Open the 2020 example">
+          <span class="year-chip-num">2020</span>
+          <span class="year-chip-stamp">Remote shock</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #ff5a3c; --chip-b: #2fb6ff; --chip-c: #1a1a1a;" href="../2021/index.html" aria-label="Open the 2021 example">
+          <span class="year-chip-num">2021</span>
+          <span class="year-chip-stamp">Spec surf</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #ffd23c; --chip-b: #3a2f5a; --chip-c: #ff4d8d;" href="../2022/index.html" aria-current="page" aria-label="Viewing 2022">
+          <span class="year-chip-num">2022</span>
+          <span class="year-chip-stamp">Prompt shock</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #2f3a4a; --chip-b: #3cf0c0; --chip-c: #b45aff;" href="../2023/index.html" aria-label="Open the 2023 example">
+          <span class="year-chip-num">2023</span>
+          <span class="year-chip-stamp">Human texture</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #7c5cff; --chip-b: #2fd6c0; --chip-c: #ff5a8f;" href="../2024/index.html" aria-label="Open the 2024 example">
+          <span class="year-chip-num">2024</span>
+          <span class="year-chip-stamp">Spatial fatigue</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #ff5a3c; --chip-b: #2fb6ff; --chip-c: #1a1a1a;" href="../2025/index.html" aria-label="Open the 2025 example">
+          <span class="year-chip-num">2025</span>
+          <span class="year-chip-stamp">Glass grit</span>
+        </a>
+        <a class="year-chip" style="--chip-a: #ffd23c; --chip-b: #3a2f5a; --chip-c: #ff4d8d;" href="../2026/index.html" aria-label="Open the 2026 example">
+          <span class="year-chip-num">2026</span>
+          <span class="year-chip-stamp">Adaptive bloom</span>
+        </a>
+        </div>
+      </nav>
 
     <footer class="footer">
       <span>Flashback / examples / 2022</span>
