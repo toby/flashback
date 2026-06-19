@@ -1304,7 +1304,6 @@ ${layoutCss(art.layout)}
           <li><a href="../../corpus/${escapeAttribute(entry.year)}.md">Full corpus</a></li>
         </ul>
       </nav>
-${yearNavigator}
     </section>
 
     <section class="section" id="climate" aria-labelledby="climate-title">
