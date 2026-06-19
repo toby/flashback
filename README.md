@@ -114,3 +114,9 @@ drop into the archive:
 None of it is costume. It's material. Flashback's whole job is pulling the right
 decade into the work — and knowing the difference between *referencing* 1984 and
 *cosplaying* it.
+
+## Origin
+
+Flashback started as a live coding project at Microsoft Build — built on stream,
+in front of an audience. You can watch where it began in
+[the original Build stream](https://www.youtube.com/live/Wn5r4uqfsGY?t=7518s).
