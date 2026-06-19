@@ -448,7 +448,7 @@ function syncExamples(entries) {
   for (const entry of entries) {
     const yearDir = join(EXAMPLES_DIR, String(entry.year));
     mkdirSync(yearDir, { recursive: true });
-    writeFileSync(join(yearDir, 'index.html'), generateExampleHtml(entry));
+    writeFileSync(join(yearDir, 'index.html'), generateExampleHtml(entry, entries));
   }
 
   writeFileSync(INDEX_PATH, generateIndexHtml(entries));
@@ -477,7 +477,7 @@ function checkExamples(entries) {
   for (const entry of entries) {
     const examplePath = join(EXAMPLES_DIR, String(entry.year), 'index.html');
     const relativeExamplePath = relative(ROOT, examplePath);
-    const expectedHtml = generateExampleHtml(entry);
+    const expectedHtml = generateExampleHtml(entry, entries);
 
     if (!existsSync(examplePath)) {
       errors.push(`${relativeExamplePath} is missing. Run npm run sync:examples.`);
@@ -630,12 +630,13 @@ function cleanupObsoleteExamples(entries) {
   }
 }
 
-function generateExampleHtml(entry) {
+function generateExampleHtml(entry, entries = [entry]) {
   const theme = getTheme(entry);
   const art = theme.art;
   const recipeNames = entry.recipes.map((recipe) => recipe.name).join(', ');
   const timelineItems = entry.timeline.slice(0, 6);
   const emergingItems = entry.designClimate.emerging.slice(0, 6);
+  const yearNavigator = renderExampleYearNavigator(entry, entries);
 
   return `<!doctype html>
 <html lang="en">
@@ -837,6 +838,84 @@ ${ornamentCss(art.ornament)}
     .nav-strip a:hover {
       color: var(--ink);
       background: var(--accent-c);
+    }
+
+    .year-rail {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .year-rail-title {
+      margin: 0;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .year-rail-track {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .year-chip {
+      --chip-a: var(--accent-a);
+      --chip-b: var(--accent-b);
+      --chip-c: var(--accent-c);
+      display: inline-flex;
+      align-items: baseline;
+      gap: 10px;
+      padding: 8px 12px;
+      color: var(--paper);
+      text-decoration: none;
+      border: 1px solid color-mix(in srgb, var(--chip-b) 55%, var(--line));
+      border-top: 3px solid var(--chip-a);
+      background: color-mix(in srgb, var(--chip-a) 12%, rgba(0, 0, 0, 0.42));
+      box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.34);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+
+    .year-chip:hover,
+    .year-chip:focus-visible {
+      color: var(--ink);
+      border-color: var(--chip-c);
+      background: var(--chip-c);
+      box-shadow: 7px 7px 0 rgba(0, 0, 0, 0.4);
+      transform: translate(-2px, -2px);
+    }
+
+    .year-chip-num {
+      font-family: var(--display);
+      font-size: clamp(1.05rem, 2.6vw, 1.5rem);
+      line-height: 1;
+      letter-spacing: -0.08em;
+      text-transform: uppercase;
+    }
+
+    .year-chip-stamp {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink);
+      background: var(--chip-c);
+      padding: 4px 7px;
+      white-space: nowrap;
+    }
+
+    .year-chip[aria-current="page"] {
+      color: var(--ink);
+      border-color: var(--chip-c);
+      background: color-mix(in srgb, var(--chip-c) 74%, var(--paper));
+      box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.42);
+      pointer-events: none;
+    }
+
+    .year-chip[aria-current="page"] .year-chip-stamp {
+      background: color-mix(in srgb, var(--chip-a) 16%, var(--paper));
     }
 
     .backlink {
@@ -1225,6 +1304,7 @@ ${layoutCss(art.layout)}
           <li><a href="../../corpus/${escapeAttribute(entry.year)}.md">Full corpus</a></li>
         </ul>
       </nav>
+${yearNavigator}
     </section>
 
     <section class="section" id="climate" aria-labelledby="climate-title">
@@ -1294,6 +1374,8 @@ ${entry.antiCliches.map((item) => `        <li>${escapeHtml(item)}</li>`).join('
       <p>${escapeHtml(entry.feeling ? `${entry.year} rule: ${entry.feeling}.` : entry.frontmatter.subtitle)}</p>
     </section>
 
+${yearNavigator}
+
     <footer class="footer">
       <span>Flashback / examples / ${escapeHtml(entry.year)}</span>
       <a href="../../corpus/${escapeAttribute(entry.year)}.md">Read the full ${escapeHtml(entry.year)} corpus</a>
@@ -1302,6 +1384,49 @@ ${entry.antiCliches.map((item) => `        <li>${escapeHtml(item)}</li>`).join('
 </body>
 </html>
 `;
+}
+
+function renderExampleYearNavigator(entry, entries) {
+  const nearbyYears = buildExampleYearSet(entry.year, entries);
+  if (nearbyYears.length <= 1) return '';
+
+  const entryByYear = new Map(entries.map((candidate) => [candidate.year, candidate]));
+  const chips = nearbyYears
+    .map((year) => {
+      const candidate = entryByYear.get(year);
+      if (!candidate) return '';
+      const chipTheme = getTheme(candidate);
+      const current = year === entry.year;
+      const currentAttr = current ? ' aria-current="page"' : '';
+      const label = current ? `Viewing ${year}` : `Open the ${year} example`;
+      return `        <a class="year-chip" style="--chip-a: ${chipTheme.accentA}; --chip-b: ${chipTheme.accentB}; --chip-c: ${chipTheme.accentC};" href="../${escapeAttribute(year)}/index.html"${currentAttr} aria-label="${escapeAttribute(label)}">
+          <span class="year-chip-num">${escapeHtml(year)}</span>
+          <span class="year-chip-stamp">${escapeHtml(chipTheme.stamp)}</span>
+        </a>`;
+    })
+    .filter(Boolean)
+    .join('\n');
+
+  return `      <nav class="year-rail" aria-label="Browse nearby years">
+        <p class="year-rail-title">Jump nearby</p>
+        <div class="year-rail-track">
+${chips}
+        </div>
+      </nav>`;
+}
+
+function buildExampleYearSet(currentYear, entries) {
+  const sortedYears = [...new Set(entries.map((candidate) => candidate.year))].sort((a, b) => a - b);
+  const decadeStart = Math.floor(currentYear / 10) * 10;
+  const decadeEnd = decadeStart + 9;
+  const years = sortedYears.filter((year) => year >= decadeStart && year <= decadeEnd);
+  const previous = [...sortedYears].reverse().find((year) => year < decadeStart);
+  const next = sortedYears.find((year) => year > decadeEnd);
+
+  if (previous !== undefined) years.unshift(previous);
+  if (next !== undefined) years.push(next);
+
+  return years;
 }
 
 function siteBaseStyles() {
@@ -2138,7 +2263,7 @@ function buildSite(entries) {
   for (const entry of entries) {
     const yearDir = join(siteExamples, String(entry.year));
     mkdirSync(yearDir, { recursive: true });
-    writeFileSync(join(yearDir, 'index.html'), generateExampleHtml(entry));
+    writeFileSync(join(yearDir, 'index.html'), generateExampleHtml(entry, entries));
     writeFileSync(join(siteCorpus, `${entry.year}.md`), entry.source);
   }
 
